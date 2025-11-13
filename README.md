@@ -27,20 +27,34 @@
 
 ## 🤝 Contributing
 
-We welcome contributions!  
-If you’d like to improve **Mail Karo**, follow these steps:
+We warmly welcome contributions to **Mail Karo – AI Email Writer**!  
+If you’re interested in improving the project, fixing bugs, or adding new features, here’s how you can get started:
 
-1. Fork the repository  
-2. Clone your fork  
-3. Create a new branch: `git checkout -b feature-name`  
-4. Make your changes  
-5. Commit and push:  
-   ```bash
-   git add .
-   git commit -m "Added new feature"
-   git push origin feature-name
-   ```
-6. Open a Pull Request 🚀
+### 💡 Start Here
+Check our open issues to see what you can work on:  
+👉 **https://github.com/Code-By-Adarsh/Mail-Karo/issues**
+
+### 🛠 How to Contribute
+1. Find an issue you want to work on.
+2. Comment **“I want to work on this”** on the issue.
+3. Wait for assignment from the maintainer.
+4. Fork the repository.
+5. Create a new branch for your feature or fix.
+6. Commit your changes with a clear message.
+7. Open a Pull Request (PR).
+
+### 📦 For New Contributors
+We label beginner-friendly issues as:  
+- `good first issue`  
+- `help wanted`
+
+If you're new to open source, these are great places to start!
+
+### 📜 Code of Conduct
+Be respectful and helpful. Maintain a positive environment for all contributors.
+
+If you have questions, feel free to open a discussion or comment on an issue.
+Happy contributing! 🚀
 
 ---
 
