@@ -1,0 +1,25 @@
+{
+  "name": "mail-karo-backend",
+  "version": "1.0.0",
+  "description": "Backend API for Mail Karo - AI Email Writer using Google Gemini",
+  "main": "server.js",
+  "type": "module",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node --watch server.js"
+  },
+  "keywords": [
+    "email",
+    "ai",
+    "gemini",
+    "email-writer"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "@google/generative-ai": "^0.2.1",
+    "cors": "^2.8.5",
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2"
+  }
+}

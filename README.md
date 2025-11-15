@@ -27,20 +27,103 @@ Every contribution counts. ❤️
 
 ## 🚀 Features
 
-- ✍️ AI Email Writing (using OpenAI API)
+- ✍️ AI Email Writing (using Google Gemini API)
 - 📤 Email Sending Automation(coming soon)
 - 📊 Smart Email Analytics (coming soon)
 - 💻 Clean UI built with HTML, CSS, and JavaScript
-- ⚙️ Backend integration planned for authentication & data storage
+- ⚙️ Backend API for secure AI email generation
 
 ---
 
 ## 🧠 Tech Stack
 
 - Frontend: HTML, CSS, JavaScript  
-- Backend: Node.js (planned), Express, MongoDB (future)  
-- AI: OpenAI API (GPT-5 model)  
+- Backend: Node.js, Express  
+- AI: Google Gemini API  
 - Deployment: Netlify  (Future-Hostinger)
+
+---
+
+## 🛠️ Setup Instructions
+
+### Prerequisites
+- Node.js (v14 or higher)
+- npm or yarn
+- Google Gemini API Key ([Get it here](https://makersuite.google.com/app/apikey))
+
+### Backend Setup
+
+1. **Navigate to the backend directory:**
+   ```bash
+   cd backend
+   ```
+
+2. **Install dependencies:**
+   ```bash
+   npm install
+   ```
+
+3. **Create a `.env` file:**
+   ```bash
+   # Create .env file in the backend directory
+   GEMINI_API_KEY=your_gemini_api_key_here
+   PORT=3000
+   ```
+   
+   > **Note:** Replace `your_gemini_api_key_here` with your actual Gemini API key from [Google AI Studio](https://makersuite.google.com/app/apikey)
+
+4. **Start the backend server:**
+   ```bash
+   npm start
+   ```
+   
+   For development with auto-reload:
+   ```bash
+   npm run dev
+   ```
+
+5. **Verify the server is running:**
+   - The server should start on `http://localhost:3000`
+   - You can test the health endpoint: `http://localhost:3000/health`
+   - The email generation endpoint is available at: `http://localhost:3000/api/generate-email`
+
+### Frontend Setup
+
+1. **Open the project:**
+   - Simply open `index.html` in your browser, or
+   - Use a local development server (e.g., Live Server extension in VS Code)
+
+2. **Make sure the backend is running:**
+   - The frontend is configured to connect to `http://localhost:3000`
+   - Ensure the backend server is running before using the email generation feature
+
+### API Endpoint
+
+**POST** `/api/generate-email`
+
+**Request Body:**
+```json
+{
+  "prompt": "Follow up after meeting with client"
+}
+```
+
+**Success Response:**
+```json
+{
+  "success": true,
+  "email": "Subject: Follow-up on Our Recent Meeting\n\nDear [Client Name],\n\n...",
+  "prompt": "Follow up after meeting with client"
+}
+```
+
+**Error Response:**
+```json
+{
+  "success": false,
+  "error": "Error message here"
+}
+```
 
 ---
 

@@ -19,21 +19,32 @@ document.addEventListener("DOMContentLoaded", () => {
     outputText.classList.add("loading");
 
     try {
-      // 🔗 Connect to your Pipedream URL
-      const response = await fetch("https://eong4rgmyx99crf.m.pipedream.net", {
+      // 🔗 Connect to local backend API
+      const API_URL = "http://localhost:3000/api/generate-email";
+      const response = await fetch(API_URL, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ prompt }),
       });
 
-      const text = await response.text();
-      outputText.classList.remove("loading");
-      outputText.style.color = "#EAEAEA";
-      outputText.innerText = text;
+      const data = await response.json();
+      
+      if (!response.ok) {
+        throw new Error(data.error || "Failed to generate email");
+      }
+
+      if (data.success && data.email) {
+        outputText.classList.remove("loading");
+        outputText.style.color = "#EAEAEA";
+        outputText.innerText = data.email;
+      } else {
+        throw new Error("Invalid response from server");
+      }
 
     } catch (err) {
       outputText.classList.remove("loading");
-      outputText.innerText = "⚠️ Error generating email. Please try again.";
+      outputText.innerText = `⚠️ Error: ${err.message || "Failed to generate email. Please try again."}`;
+      outputText.style.color = "#FF6B6B";
       console.error("❌ Fetch Error:", err);
     }
   });
