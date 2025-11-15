@@ -1,10 +1,12 @@
-# 💌 Mail Karo - AI Email Writer
+# 💌 Mail Karo - AI Email Assistant
 ![Banner](https://github.com/Code-By-Adarsh/Mail-Karo/blob/9bb438725f2a88d4aa13d212b62874c61a73333d/All%20Images/Banner.png)
 <br>
-# 🇮🇳 India’s First AI Email Writer — **Mail Karo**
+# 🇮🇳 India’s First Community-Driven AI Email Assistant — **Mail Karo**
 
-**Mail Karo** is a community-driven AI SaaS platform that makes email writing effortless.  
-It helps users **generate**, **send**, and **analyze** emails with smart automation — built with the vision of creating India’s most powerful AI-based email productivity tool.
+**Mail Karo** is an AI-powered email productivity platform designed to make email writing effortless for everyone.  
+From generating professional emails to sending and analyzing them with smart automation, Mail Karo aims to become **India’s most powerful AI-based communication tool**.
+
+Built by a passionate and growing community of **developers, designers, and contributors**, Mail Karo is focused on delivering fast, simple, and intelligent email solutions for **students, professionals, founders, and teams**.
 
 ---
 
@@ -171,8 +173,9 @@ Founder & Developer of **Mail Karo – AI Email Writer**
 📧 **Email:** adarshmishra70931@gmail.com   
 🧠 Always open to collaborations, suggestions, and contributions to make **Mail Karo** even better.
 
-📫**Company Email:** mailkaro2026@gmail.com
-
+📫**Company Email:** mailkaro2026@gmail.com <br>
+ **Company LinkedIn:** [Mail Karo](https://www.linkedin.com/company/mail-karo/)
+ 
 ---
 
 ## 📄 License
