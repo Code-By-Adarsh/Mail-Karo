@@ -8,6 +8,8 @@ From generating professional emails to sending and analyzing them with smart aut
 
 Built by a passionate and growing community of **developers, designers, and contributors**, Mail Karo is focused on delivering fast, simple, and intelligent email solutions for **students, professionals, founders, and teams**.
 
+**🔗 Live Preview :** https://mail-karo.netlify.app
+
 ---
 
 ## 🤝 Contribute & Build With Us
