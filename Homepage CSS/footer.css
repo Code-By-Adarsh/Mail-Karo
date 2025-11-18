@@ -152,10 +152,17 @@
     gap: 8px;
     flex-direction: column;
   }
-}
 
-@media (max-width: 600px) {
   .footer-links { gap: 15px; }
+  .footer-info .pipe-separator {
+    display: none !important; /* Hides the pipe separator entirely */
+  }
+
+  .footer-info {
+    /* ... (rest of the footer-info styling) ... */
+    /* Ensure there is a gap between the stacked items */
+    gap: 15px !important; 
+  }
 }
 
 
