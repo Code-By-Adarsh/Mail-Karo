@@ -186,15 +186,17 @@
 
   /* Stacking links vertically is better for mobile tapping */
   .footer-links {
-    flex-direction: column; 
-    gap: 15px !important;
+    flex-direction: row !important; 
+    flex-wrap: wrap;  
+    justify-content: center; 
+    gap: 20px !important;   
     width: 100%;
   }
 
   .footer-links a {
-    display: block;
-    padding: 5px 0; /* Increase touch target area */
-    font-size: 1rem;
+    display: inline-block;
+    padding: 5px 5px; 
+    font-size: 0.95rem;
   }
 
   .social-icons {
@@ -224,5 +226,15 @@
     display: block; 
     width: 100%;
     line-height: 1.5;
+  }
+
+  .footer-info .pipe-separator {
+    display: none !important; /* Hides the pipe separator entirely */
+  }
+
+  .footer-info {
+    /* ... (rest of the footer-info styling) ... */
+    /* Ensure there is a gap between the stacked items */
+    gap: 15px !important; 
   }
 }

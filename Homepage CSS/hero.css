@@ -165,36 +165,7 @@
     width: 220px;
   }
 }
-@media screen and (max-width: 480px) {
-  body, .hero, .prompt-section, .footer {
-    overflow-x: hidden; /* Prevents side-scrolling */
-  }
 
-  /* --- HERO SECTION BALANCING --- */
-  .hero {
-    min-height: auto !important; 
-    padding-top: 100px !important; 
-    padding-bottom: 40px !important;
-    padding-left: 20px !important;
-    padding-right: 20px !important;
-  }
-
-  .hero-container {
-    gap: 30px !important; /* Reduce gap between text and logo */
-  }
-
-  .hero-title {
-    font-size: 2rem !important; /* Prevent huge text breaking layout */
-    line-height: 1.2 !important;
-  }
-
-  .mailkaro-logo {
-    /* Fix logo being too wide on small phones */
-    width: 70% !important; 
-    max-width: 200px !important;
-    margin-bottom: 10px;
-  }
-}
 /* Light mode visibility fix for hero section */
 [data-theme="light"] .hero-title {
   color: #000;
