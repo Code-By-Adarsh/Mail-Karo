@@ -157,3 +157,72 @@
 @media (max-width: 600px) {
   .footer-links { gap: 15px; }
 }
+
+
+@media screen and (max-width: 480px) {
+  .footer {
+    /* Reduce top/bottom padding for a compact look */
+    padding: 40px 20px 30px !important; 
+    height: auto;
+  }
+
+  .footer-container {
+    gap: 30px; /* Consistent vertical spacing between sections */
+    width: 100%;
+  }
+
+  .footer-logo img {
+    width: 50px; /* Scale down slightly */
+    height: 50px;
+  }
+
+  .footer-logo h2 {
+    font-size: 1.4rem; /* Prevent heading from feeling too heavy */
+  }
+
+  .footer-logo .tagline {
+    font-size: 0.85rem;
+  }
+
+  /* Stacking links vertically is better for mobile tapping */
+  .footer-links {
+    flex-direction: column; 
+    gap: 15px !important;
+    width: 100%;
+  }
+
+  .footer-links a {
+    display: block;
+    padding: 5px 0; /* Increase touch target area */
+    font-size: 1rem;
+  }
+
+  .social-icons {
+    gap: 25px; /* More breathing room between icons */
+    margin-top: 10px;
+  }
+
+  .social-icons a {
+    font-size: 1.6rem; /* Slightly smaller icons */
+  }
+
+  .footer-bottom {
+    margin-top: 30px !important;
+    padding-top: 20px !important;
+  }
+
+  .footer-info {
+    /* Ensure text stacks neatly without squishing */
+    flex-direction: column !important; 
+    gap: 15px !important;
+    font-size: 0.85rem !important;
+    width: 100%;
+  }
+
+  /* Ensures the "Founder", "Made in India", etc. take full width */
+  .footer-info span {
+    display: block; 
+    width: 100%;
+    line-height: 1.5;
+  }
+}

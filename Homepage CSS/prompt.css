@@ -335,19 +335,30 @@
 }
 
 /* Extra small screens below 480px */
-@media (max-width: 480px) {
+@media screen and (max-width: 480px) {
+  .prompt-section {
+    padding: 40px 20px !important; /* Consistent with Hero/Footer */
+  }
+
+  .prompt-container {
+    width: 100%;
+    padding: 0;
+  }
 
   .prompt-title {
-    font-size: 1.6rem;
+    font-size: 1.6rem !important; /* Prevent header from being too huge */
+    line-height: 1.3;
+    margin-bottom: 10px;
   }
 
   .prompt-subtitle {
-    font-size: 0.95rem;
+    font-size: 0.9rem !important;
+    padding: 0 10px; /* Prevent text touching edges */
   }
 
   .prompt-box textarea {
-    min-height: 90px;
-    font-size: 0.95rem;
+    font-size: 16px; /* Prevents iOS zoom on focus */
+    padding: 15px;
   }
 
   .prompt-box button {
@@ -356,7 +367,61 @@
   }
 
   .output-box {
+    padding: 20px 15px;
+  }
+
+  .template-box, .tone-box {
+    display: flex;
+    flex-direction: column; /* Stack Label, Select, and Buttons vertically */
+    align-items: stretch; /* Make them full width */
+    gap: 10px;
+    margin-bottom: 20px;
+  }
+
+  .template-box select, .tone-box select {
+    width: 100%; /* Full width dropdowns are easier to tap */
+    margin-right: 0;
+  }
+
+  .template-box button {
+    width: 100%;
+    margin-top: 5px;
+  }
+
+  #generateBtn {
+    width: 100%; /* Full width "Generate" button */
     padding: 14px;
+    font-size: 1.1rem;
+  }
+
+  .action-buttons {
+    display: flex;
+    flex-wrap: wrap; /* Allow buttons to wrap to next line */
+    gap: 10px;
+    justify-content: center;
+  }
+
+  .action-buttons .ghost-btn {
+    flex: 1 1 auto; /* Buttons grow to fill space */
+    min-width: 100px; /* Minimum touch target size */
+    font-size: 0.9rem;
+  }
+
+  .wizard-card {
+    width: 95% !important; /* Fit within screen */
+    max-height: 90vh; /* Prevent being taller than screen */
+    overflow-y: auto; /* Scroll inside modal if content is long */
+    padding: 20px;
+    margin: 10px auto;
+  }
+  
+  .wizard-footer {
+    flex-direction: column-reverse; /* Stack buttons, "Back" on bottom */
+    gap: 10px;
+  }
+  
+  .wizard-footer button {
+    width: 100%;
   }
 }
 

@@ -249,10 +249,15 @@ body {
 }
 
 /* Mobile Menu */
+
+/* =========================================
+   NAVBAR LAYOUT FIX (Prevents button dropping)
+   ========================================= */
 @media (max-width: 850px) {
   .nav-container {
     padding: 15px 20px;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;  /*FIX: Keeps everything on one line */
+    gap: 10px;
   }
 
   .logo-area {
@@ -263,12 +268,13 @@ body {
   .menu-btn {
     display: flex;
     order: 3;
+    flex-shrink: 0; /* FIX: Ensures button stays visible */
   }
 
   .theme-toggle {
     order: 2;
-    margin-left: auto;
-    margin-right: 10px;
+    margin-left: 0px;
+    margin-right: 5px;
     width: 40px;
     height: 40px;
   }
@@ -340,5 +346,17 @@ body {
   .nav-links.active {
     max-height: 500px; /* Enough height to open fully */
     opacity: 1;
+  }
+}
+
+/* Specific Fix for very small screens (< 380px) */
+@media (max-width: 380px) {
+  .brand-name {
+    font-size: 1rem !important; /* Shrink text so buttons fit */
+  }
+  
+  .logo {
+    width: 35px;
+    height: 35px;
   }
 }
