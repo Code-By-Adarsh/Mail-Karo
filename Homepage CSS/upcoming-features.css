@@ -1,0 +1,123 @@
+/* --- New Advanced Upcoming Features Section Styling --- */
+
+/* Base Section Styling */
+#upcoming-features {
+    padding: 100px 0;
+    background-color: var(--color-background-primary, #000); /* Ensures true black background */
+    color: var(--color-text-primary, #fff);
+    text-align: center;
+    overflow: hidden; 
+}
+
+.features-container {
+    max-width: 1000px; /* Slightly narrower container for focus */
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Titles */
+.section-title {
+    font-family: 'Orbitron', sans-serif;
+    font-weight: 700;
+    font-size: 3em;
+    color: var(--color-primary, #FFD700); /* Your main yellow/gold accent color */
+    margin-bottom: 15px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    text-shadow: 0 0 10px rgba(255, 215, 0, 0.5); /* Subtle glow effect */
+}
+
+.section-subtitle {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.1em;
+    color: var(--color-text-secondary, #aaa);
+    margin-bottom: 60px;
+}
+
+/* Features List Container (Grid replacement) */
+.features-grid {
+    display: grid;
+    /* Use a simple two-column layout */
+    grid-template-columns: 1fr 1fr;
+    gap: 25px 50px; /* Vertical and horizontal gap */
+    text-align: left;
+}
+
+/* Individual Feature Card (Now a Feature Box) */
+.feature-card {
+    background: transparent; /* Transparent background */
+    padding: 20px 0; /* Padding for spacing */
+    border-bottom: 2px solid var(--color-border, #333); /* Separator line */
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+    cursor: default;
+    
+    /* Flexbox for icon/title alignment */
+    display: flex;
+    flex-direction: column;
+}
+
+.feature-card:hover {
+    /* Subtle background and border change on hover */
+    background-color: var(--color-hover-bg, rgba(255, 215, 0, 0.05));
+    border-bottom: 2px solid var(--color-primary, #FFD700); 
+}
+
+/* Icon and Title Container */
+.feature-card h3 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size: 1.5em;
+    color: var(--color-text-primary, #fff);
+    margin: 0;
+    display: inline;
+    vertical-align: middle;
+}
+
+.feature-icon {
+    font-size: 1.8em; /* Smaller, integrated icon size */
+    color: var(--color-primary, #FFD700); 
+    margin-right: 15px;
+    vertical-align: middle;
+    display: inline-block;
+    width: 30px; /* Fixed width for better alignment */
+    text-align: center;
+}
+
+.feature-card p {
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.95em;
+    color: var(--color-text-secondary, #aaa);
+    line-height: 1.6;
+    margin-top: 10px;
+    padding-left: 45px; /* Offset text to align with description */
+}
+
+/* Adjusting the H3 and Icon in the HTML */
+/* Since you have <i> and <h3> side-by-side, we need to adjust the display: */
+.feature-card > i, .feature-card > h3 {
+    display: inline-block;
+}
+
+/* Responsive adjustments */
+@media (max-width: 900px) {
+    .features-grid {
+        /* Switch to a single column on smaller screens */
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+    .feature-card {
+        padding: 20px 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .section-title {
+        font-size: 2em;
+    }
+    .feature-card h3 {
+        font-size: 1.3em;
+    }
+    .feature-card p {
+        font-size: 0.9em;
+    }
+}
