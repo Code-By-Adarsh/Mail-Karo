@@ -45,6 +45,7 @@
   line-height: 1.3;
   color: var(--text);
   text-shadow: 0 0 12px rgba(255, 215, 0, 0.2);
+  min-height: 65px;
 }
 
 [data-theme="light"] .hero-title {
