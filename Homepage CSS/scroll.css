@@ -17,7 +17,7 @@
   position: fixed;
   bottom: 30px;
   right: 30px;
-  background: linear-gradient(90deg, #FFD700, #FFC300);
+  background: linear-gradient(90deg, var(--accent), var(--accent-hover));
   color: #000;
   font-size: 1.4rem;
   font-weight: 700;
@@ -32,9 +32,17 @@
   z-index: 999;
 }
 
+[data-theme="light"] #backToTop {
+  box-shadow: 0 2px 15px rgba(212, 175, 55, 0.4);
+}
+
 #backToTop:hover {
   transform: translateY(-6px) scale(1.1);
   box-shadow: 0 0 35px rgba(255,215,0,0.7);
+}
+
+[data-theme="light"] #backToTop:hover {
+  box-shadow: 0 4px 25px rgba(212, 175, 55, 0.6);
 }
 
 /* 🔹 Responsive */
