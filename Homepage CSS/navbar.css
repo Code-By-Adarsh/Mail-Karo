@@ -38,6 +38,7 @@
   padding: 0;
   box-sizing: border-box;
   font-family: 'Poppins', sans-serif;
+  /* Consolidate common transitions here */
   transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
 }
 
@@ -132,7 +133,7 @@ body {
   height: 24px;
 }
 
-/* Sun and Moon Icon Styles */
+/* Sun and Moon Icon Styles (No Change Needed) */
 .sun-and-moon > :is(.moon, .sun, .sun-beams) {
   transform-origin: center;
 }
@@ -195,20 +196,42 @@ body {
   gap: 30px;
 }
 
+/* === DESKTOP ENHANCED NAV LINK STYLES (Retained) === */
 .nav-links a {
   text-decoration: none;
   color: var(--text);
   font-weight: 500;
-  padding: 8px 12px;
-  border-radius: var(--radius);
-  transition: var(--transition);
+  padding: 8px 0; /* Vertical padding only for space */
+  border-radius: 0; 
+  transition: color 0.3s ease; 
   white-space: nowrap;
+  position: relative; 
 }
 
-.nav-links a:hover {
-  color: var(--accent);
-  text-shadow: 0 0 10px rgba(255, 215, 0, 0.6);
+/* Underline Pseudo-element for links NOT including the CTA */
+.nav-links a:not(.cta)::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 2px;
+  background-color: var(--accent);
+  transform: scaleX(0); 
+  transform-origin: bottom center; 
+  transition: transform 0.3s ease;
 }
+
+.nav-links a:not(.cta):hover {
+  color: var(--accent);
+  text-shadow: none;
+}
+
+.nav-links a:not(.cta):hover::after {
+  transform: scaleX(1); 
+}
+/* === END DESKTOP ENHANCED NAV LINK STYLES === */
+
 
 /* CTA Button */
 .cta {
@@ -302,13 +325,32 @@ body {
     gap: 15px;
   }
 
+  /* --- MOBILE FIXES START --- */
   .nav-links a {
+    /* Reset padding for full-width mobile button look */
     display: block;
     width: 100%;
     text-align: center;
     padding: 12px 20px;
+    
+    /* Ensure no residual styles interfere */
+    position: static; 
+    transition: background-color 0.3s ease, color 0.3s ease;
   }
 
+  /* Remove the underline on mobile */
+  .nav-links a:not(.cta)::after {
+    display: none;
+  }
+
+  /* Add a subtle background highlight for tap/hover feedback on mobile */
+  .nav-links a:not(.cta):hover {
+    color: var(--accent); 
+    background-color: rgba(255, 215, 0, 0.08); /* Subtle accent background */
+    border-radius: var(--radius); /* Add radius back for the mobile button */
+  }
+  /* --- MOBILE FIXES END --- */
+  
   .cta {
     width: 100%;
     text-align: center;
@@ -333,12 +375,12 @@ body {
     max-height: 0;
     overflow: hidden;
     opacity: 0;
-    display: block; /* Important: smooth animation ke lie display ko block rakho */
+    display: block; 
     transition: max-height 0.35s ease, opacity 0.3s ease;
   }
 
   .nav-links.active {
-    max-height: 500px; /* Enough height to open fully */
+    max-height: 500px; 
     opacity: 1;
   }
 }
