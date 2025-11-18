@@ -464,3 +464,142 @@
   }
 
 }
+
+/* ================================
+   WIZARD MODAL (Option C)
+   ================================ */
+
+.wizard-modal {
+  position: fixed;
+  inset: 0;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0,0,0,0.65);
+  z-index: 2000;
+  padding: 20px;
+}
+
+.wizard-modal[aria-hidden="false"] {
+  display: flex;
+}
+
+/* Wizard Card */
+.wizard-card {
+  width: 100%;
+  max-width: 750px;
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  box-shadow: 0 8px 40px rgba(0,0,0,0.55);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  color: var(--text);
+}
+
+/* Header */
+.wizard-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 18px;
+  border-bottom: 1px solid rgba(255,255,255,0.05);
+}
+
+.wizard-header h3 {
+  margin: 0;
+  font-family: 'Orbitron', sans-serif;
+  color: var(--accent);
+  font-size: 1.1rem;
+}
+
+#closeWizardBtn {
+  font-size: 0.9rem;
+}
+
+/* Body */
+.wizard-body {
+  padding: 18px;
+}
+
+.wizard-step-wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  min-height: 160px;
+}
+
+/* Step Form */
+.wizard-step label {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--accent);
+}
+
+.wizard-step input,
+.wizard-step textarea,
+.wizard-step select {
+  background: rgba(255,255,255,0.02);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 12px;
+  font-size: 0.95rem;
+  color: var(--text);
+  outline: none;
+}
+
+.wizard-step textarea {
+  resize: vertical;
+}
+
+/* Optional text */
+.wizard-note {
+  font-size: 0.82rem;
+  color: var(--text-muted);
+}
+
+/* Footer */
+.wizard-footer {
+  padding: 14px 18px;
+  border-top: 1px solid rgba(255,255,255,0.05);
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+}
+
+/* Progress text */
+.wizard-progress {
+  margin-top: 8px;
+  display: flex;
+  justify-content: flex-end;
+  color: var(--text-muted);
+  font-size: 0.85rem;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .wizard-card {
+    max-width: 100%;
+  }
+
+  .wizard-header,
+  .wizard-footer {
+    padding: 12px;
+  }
+
+  .wizard-body {
+    padding: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .wizard-header h3 {
+    font-size: 1rem;
+  }
+
+  .wizard-step input,
+  .wizard-step textarea {
+    font-size: 0.9rem;
+  }
+}

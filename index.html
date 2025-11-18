@@ -233,6 +233,9 @@
 
       <!-- Save Template Button -->
       <button id="saveTemplateBtn" class="ghost-btn" style="padding:8px 16px;">💾 Save Template</button>
+
+      <!-- ⭐ NEW — Autofill Wizard Button -->
+      <button id="openWizardBtn" class="ghost-btn" style="padding:8px 16px;">🧭 Autofill Wizard</button>
     </div>
 
     <div class="prompt-box">
@@ -273,6 +276,33 @@
         <button class="ghost-btn" id="resetBtn">🧹 Reset</button>
       </div>
     </div>
+
+    <!-- ⭐⭐⭐ WIZARD MODAL (Option-C) ⭐⭐⭐ -->
+    <div id="wizardModal" class="wizard-modal" aria-hidden="true">
+      <div class="wizard-card">
+
+        <div class="wizard-header">
+          <h3>Smart Autofill Wizard</h3>
+          <button id="closeWizardBtn" class="ghost-btn">✖</button>
+        </div>
+
+        <div class="wizard-body">
+          <div id="wizardStepWrap" class="wizard-step-wrap"></div>
+          <div class="wizard-progress">
+            <small id="wizardProgressText">Step 1 of 1</small>
+          </div>
+        </div>
+
+        <div class="wizard-footer">
+          <button id="wizardBackBtn" class="ghost-btn">⬅ Back</button>
+          <button id="wizardNextBtn" class="ghost-btn">Next ➜</button>
+          <button id="wizardFinishBtn" class="ghost-btn" style="display:none;">Finish ✔</button>
+        </div>
+
+      </div>
+    </div>
+    <!-- ⭐⭐⭐ Wizard End ⭐⭐⭐ -->
+
   </div>
 </section>
 <!-- ✅ Prompt & Output Section End -->
