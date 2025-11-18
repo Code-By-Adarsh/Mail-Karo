@@ -81,14 +81,16 @@ body {
 
 /* Logo */
 .logo {
-  width: 44px;
-  height: 44px;
+  width: 44px;           
+  height: 44px; 
+  flex-shrink: 0; 
+  object-fit: contain;
   filter: drop-shadow(0 0 10px rgba(255, 215, 0, 0.3));
   transition: var(--transition);
 }
 
 [data-theme="light"] .logo {
-  filter: drop-shadow(0 0 5px rgba(212, 175, 55, 0.2)); /* Light mode subtle glow */
+  filter: drop-shadow(0 0 5px rgba(212, 175, 55, 0.2));  /* Light mode subtle glow */
 }
 
 .logo:hover {
@@ -249,30 +251,57 @@ body {
 }
 
 /* Mobile Menu */
+
+/* =========================================
+   NAVBAR LAYOUT FIX (Prevents button dropping)
+   ========================================= */
+
 @media (max-width: 850px) {
   .nav-container {
-    padding: 15px 20px;
-    flex-wrap: wrap;
+    padding: 15px 15px;
+    flex-wrap: nowrap;   /* Keep everything on one line */
+    gap: 10px;
   }
 
   .logo-area {
     order: 1;
-    flex: 1;
+    flex: 0 1 auto; 
+    min-width: 0;       
+    overflow: hidden;    
   }
 
-  .menu-btn {
-    display: flex;
-    order: 3;
+  .logo {
+    width: 44px !important; 
+    height: 44px !important;
+    min-width: 44px;  /* Forces browser to NEVER go below 44px */
+    min-height: 44px;
+    flex-shrink: 0;           
   }
 
+  .brand-name {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis; /* Adds "..." if screen is too small */
+  }
+
+  .menu-btn, .theme-toggle {
+    flex-shrink: 0;
+    order: 3; /* Menu is last */
+  }
+  
   .theme-toggle {
-    order: 2;
-    margin-left: auto;
-    margin-right: 10px;
+    order: 2; /* Theme toggle before menu */
+    margin-left: 0;
+    margin-right: 5px;
     width: 40px;
     height: 40px;
   }
 
+  .menu-btn {
+    display: flex;
+  }
+
+  /* Dropdown Menu */
   .nav-links {
     display: none;
     position: absolute;
@@ -340,5 +369,15 @@ body {
   .nav-links.active {
     max-height: 500px; /* Enough height to open fully */
     opacity: 1;
+  }
+}
+
+/* Specific Fix for very small screens (< 380px) */
+@media (max-width: 380px) {
+  .brand-name {
+    font-size: 1rem !important; 
+  }
+  .nav-container {
+    padding: 10px 5px !important; 
   }
 }
