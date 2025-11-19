@@ -2,11 +2,11 @@
 
 /* Base Section Styling */
 #upcoming-features {
-    padding: 100px 0;
-    background-color: var(--color-background-primary, #000); /* Ensures true black background */
-    color: var(--color-text-primary, #fff);
+    padding: 80px 0; /* Reduced padding to fix extra space */
+    background-color: var(--bg); /* Use consistent theme variable */
+    color: var(--text);
     text-align: center;
-    overflow: hidden; 
+    overflow: hidden;
 }
 
 .features-container {
@@ -20,7 +20,7 @@
     font-family: 'Orbitron', sans-serif;
     font-weight: 700;
     font-size: 3em;
-    color: var(--color-primary, #FFD700); /* Your main yellow/gold accent color */
+    color: var(--accent); /* Use consistent theme variable */
     margin-bottom: 15px;
     letter-spacing: 2px;
     text-transform: uppercase;
@@ -30,7 +30,7 @@
 .section-subtitle {
     font-family: 'Poppins', sans-serif;
     font-size: 1.1em;
-    color: var(--color-text-secondary, #aaa);
+    color: var(--text-muted); /* Use consistent theme variable */
     margin-bottom: 60px;
 }
 
@@ -47,7 +47,7 @@
 .feature-card {
     background: transparent; /* Transparent background */
     padding: 20px 0; /* Padding for spacing */
-    border-bottom: 2px solid var(--color-border, #333); /* Separator line */
+    border-bottom: 2px solid var(--border); /* Use consistent theme variable */
     transition: background-color 0.3s ease, border-color 0.3s ease;
     cursor: default;
     
@@ -58,8 +58,8 @@
 
 .feature-card:hover {
     /* Subtle background and border change on hover */
-    background-color: var(--color-hover-bg, rgba(255, 215, 0, 0.05));
-    border-bottom: 2px solid var(--color-primary, #FFD700); 
+    background-color: var(--panel);
+    border-bottom: 2px solid var(--accent);
 }
 
 /* Icon and Title Container */
@@ -67,7 +67,7 @@
     font-family: 'Poppins', sans-serif;
     font-weight: 600;
     font-size: 1.5em;
-    color: var(--color-text-primary, #fff);
+    color: var(--text); /* Use consistent theme variable */
     margin: 0;
     display: inline;
     vertical-align: middle;
@@ -75,7 +75,7 @@
 
 .feature-icon {
     font-size: 1.8em; /* Smaller, integrated icon size */
-    color: var(--color-primary, #FFD700); 
+    color: var(--accent); /* Use consistent theme variable */
     margin-right: 15px;
     vertical-align: middle;
     display: inline-block;
@@ -86,7 +86,7 @@
 .feature-card p {
     font-family: 'Poppins', sans-serif;
     font-size: 0.95em;
-    color: var(--color-text-secondary, #aaa);
+    color: var(--text-muted); /* Use consistent theme variable */
     line-height: 1.6;
     margin-top: 10px;
     padding-left: 45px; /* Offset text to align with description */

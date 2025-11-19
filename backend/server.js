@@ -13,7 +13,27 @@ const PORT = process.env.PORT || 3000;
 app.use(cors());
 app.use(express.json());
 
+// Root route
+app.get('/', (req, res) => {
+  res.json({
+    success: true,
+    message: 'Mail Karo Backend API is running!',
+    version: '1.0.0',
+    endpoints: {
+      health: '/health',
+      generateEmail: '/api/generate-email'
+    }
+  });
+});
 
+// Health check route
+app.get('/health', (req, res) => {
+  res.json({
+    success: true,
+    status: 'healthy',
+    timestamp: new Date().toISOString()
+  });
+});
 
 // API Routes
 app.use('/api', emailRoutes);

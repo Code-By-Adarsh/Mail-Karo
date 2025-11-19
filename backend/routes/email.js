@@ -1,15 +1,7 @@
 import express from 'express';
 import { GoogleGenerativeAI } from '@google/generative-ai';
-import dotenv from 'dotenv';
-dotenv.config();
 
 const router = express.Router();
-
-// Initialize Gemini AI (will be validated before use)
-let genAI = null;
-if (process.env.GEMINI_API_KEY) {
-  genAI = new GoogleGenerativeAI(process.env.GEMINI_API_KEY);
-}
 
 /**
  * POST /api/generate-email
@@ -17,13 +9,16 @@ if (process.env.GEMINI_API_KEY) {
  */
 router.post('/generate-email', async (req, res) => {
   try {
-    // Validate API key
-    if (!process.env.GEMINI_API_KEY || !genAI) {
+    // Validate API key and initialize Gemini AI
+    if (!process.env.GEMINI_API_KEY) {
       return res.status(500).json({
         success: false,
         error: 'Gemini API key is not configured. Please set GEMINI_API_KEY in your .env file.'
       });
     }
+
+    // Initialize Gemini AI
+    const genAI = new GoogleGenerativeAI(process.env.GEMINI_API_KEY);
 
     // Validate request body
     const { prompt } = req.body;
