@@ -70,7 +70,8 @@
   color: var(--text);
   font-size: 1rem;
   resize: none;
-  overflow-y: hidden;
+  overflow-y: auto;
+  max-height: 250px;
   min-height: 50px;
   line-height: 1.5;
 }

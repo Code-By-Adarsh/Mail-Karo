@@ -254,7 +254,7 @@ document.addEventListener("DOMContentLoaded", () => {
     if (charCount) charCount.innerText = `${promptInput.value.length} chars`;
     if (wordCount) wordCount.innerText = `${promptInput.value.trim().split(/\s+/).filter(Boolean).length} words`;
     promptInput.style.height = "auto";
-    promptInput.style.height = promptInput.scrollHeight + "px";
+    promptInput.style.height = Math.min(promptInput.scrollHeight, 250) + "px";
     generateBtn.innerText = "⚡ Generate";
   });
 
@@ -263,7 +263,7 @@ document.addEventListener("DOMContentLoaded", () => {
 ============================= */
 function autoResize() {
   promptInput.style.height = "auto";
-  promptInput.style.height = promptInput.scrollHeight + "px";
+  promptInput.style.height = Math.min(promptInput.scrollHeight, 250) + "px";
 }
 
 // Normal desktop + android fix
