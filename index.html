@@ -57,6 +57,7 @@
   <link rel="stylesheet" href="Homepage CSS/footer.css">
   <link rel="stylesheet" href="Homepage CSS/scroll.css">
 <link rel="stylesheet" href="Homepage CSS/upcoming-features.css">
+<link rel="stylesheet" href="Homepage CSS/email-pdf.css">
   <!-- Mail Karo — Full SEO Schema -->
 <script type="application/ld+json">
 {
@@ -277,8 +278,6 @@
   </div>
 
 </div>
-
-
     <div class="output-box">
       <div class="output-header">
         <h3>Generated Email</h3>
@@ -323,6 +322,37 @@
   </div>
 </section>
 <!-- ✅ Prompt & Output Section End -->
+
+<!-- ===== Mail Karo — Instant Pdf converter and downloader (drop-in) ===== -->
+<section id="mk-instant-pdf" class="mk-instant-pdf">
+  <div class="mk-pdf-inner">
+
+    <div class="mk-pdf-left mk-anim">
+      <h2 class="mk-pdf-title">Instant Pdf converter and downloader</h2>
+
+      <p class="mk-pdf-desc">
+        Convert your AI-generated email into a clean, ready-to-share PDF with one tap.  
+        Mail Karo formats the content automatically so you can save, share, or archive important emails instantly.  
+        The filename is created from the email topic (first 1–2 words) for meaningful saved files.  
+        Works seamlessly on mobile and desktop — downloads directly to the device.  
+        Animations play each time you scroll to this section, keeping the experience lively and premium.  
+        No extra input needed — it converts the email already generated above.  
+        One tap, instant PDF — Mail Karo handles the rest.
+      </p>
+
+      <div class="mk-pdf-actions">
+        <button id="mkPdfDownloadBtn" class="mk-pdf-btn">⬇️ Download Email as PDF</button>
+        <button id="mkPdfPreviewBtn" class="mk-pdf-btn outline">🔍 Preview</button>
+      </div>
+    </div>
+
+    <div class="mk-pdf-right mk-anim" aria-hidden="true">
+      <div class="mk-floating-pdf">📄</div>
+    </div>
+
+  </div>
+</section>
+<!-- ===== End Instant Pdf converter section ===== -->
 
 
 <!-- ✅ Footer Section Start -->
@@ -431,5 +461,6 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
   <script src="Homepage JS/footer.js" defer></script>
   <script src="Homepage JS/scroll.js" defer></script>
   <script src="Homepage JS/light_mode.js"></script>
+  <script src="Homepage JS/email-pdf.js"></script>
 </body>
 </html>
