@@ -9,6 +9,8 @@ document.addEventListener("DOMContentLoaded", () => {
   const resetBtn = $("resetBtn");
   const regenerateBtn = $("regenerateBtn");
   const toneSelect = $("toneSelect");
+  const lengthSelect = $("lengthSelect");
+
 
   const templateSelect = $("templateSelect");
   const saveTemplateBtn = $("saveTemplateBtn");
@@ -278,12 +280,12 @@ setInterval(() => {
 
   // enable/disable
   function disableAll() {
-    const els = [generateBtn, regenerateBtn, promptInput, toneSelect, templateSelect, copyBtn, resetBtn, saveTemplateBtn, openWizardBtn];
+    const els = [generateBtn, regenerateBtn, promptInput, toneSelect, lengthSelect, templateSelect, copyBtn, resetBtn, saveTemplateBtn, openWizardBtn];
     els.forEach(el => { if (el) el.disabled = true; });
     if (generateBtn) generateBtn.style.cursor = "not-allowed";
   }
   function enableAll() {
-    const els = [generateBtn, regenerateBtn, promptInput, toneSelect, templateSelect, copyBtn, resetBtn, saveTemplateBtn, openWizardBtn];
+    const els = [generateBtn, regenerateBtn, promptInput, toneSelect, lengthSelect, templateSelect, copyBtn, resetBtn, saveTemplateBtn, openWizardBtn];
     els.forEach(el => { if (el) el.disabled = false; });
     if (generateBtn) generateBtn.style.cursor = "pointer";
   }
@@ -301,7 +303,16 @@ setInterval(() => {
       return;
     }
 
-    const finalPrompt = `${userPrompt}. Write this in a ${tone} tone.`;
+    // Length instruction
+let lengthInstruction = "";
+if (lengthSelect) {
+  if (lengthSelect.value === "small") lengthInstruction = " Keep the email around 100 to 150 words.";
+  if (lengthSelect.value === "medium") lengthInstruction = " Keep the email around 150 to 200 words.";
+  if (lengthSelect.value === "large") lengthInstruction = " Keep the email around 200 to 250 words.";
+}
+
+const finalPrompt = `${userPrompt}. Write this in a ${tone} tone.${lengthInstruction}`;
+
 
     disableAll();
     if (generateBtn) generateBtn.innerText = "🔄 Generating…";

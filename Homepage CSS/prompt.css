@@ -668,3 +668,54 @@
     font-size: 0.9rem;
   }
 }
+
+/* ==========================
+   Tone + Length Selector
+========================== */
+
+.tone-box {
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  justify-content: flex-start;
+}
+
+.tone-item,
+.length-item {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.tone-item label,
+.length-item label {
+  font-weight: 600;
+  color: var(--accent);
+}
+
+.tone-item select,
+.length-item select {
+  background-color: var(--panel);
+  color: var(--text);
+  border: 1px solid var(--border);
+  padding: 10px 14px;
+  border-radius: 10px;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+/* Mobile responsive */
+@media (max-width: 768px) {
+  .tone-box {
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+  }
+
+  .tone-item select,
+  .length-item select {
+    width: 100%;
+  }
+}

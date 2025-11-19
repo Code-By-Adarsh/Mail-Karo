@@ -1,0 +1,34 @@
+/* ---------- Mail Karo — Instant PDF section ---------- */
+#mk-instant-pdf { max-width:1100px; margin:36px auto; padding:26px; border-radius:14px; position:relative;
+  background: linear-gradient(180deg, rgba(255,255,255,0.02), transparent); box-shadow: 0 10px 30px rgba(0,0,0,0.06);
+}
+.mk-pdf-inner { display:flex; gap:22px; align-items:center; padding:6px; }
+@media (max-width:860px) { .mk-pdf-inner { flex-direction:column; } .mk-pdf-right{order:-1;} }
+
+.mk-pdf-left { flex:1; padding-right:8px; }
+.mk-pdf-right { width:160px; display:flex; align-items:center; justify-content:center; }
+
+.mk-pdf-title { margin:0 0 10px 0; font-size:20px; font-weight:700; color: inherit; }
+.mk-pdf-desc { margin:0 0 16px 0; color: #6b7280; line-height:1.6; font-size:14px; max-width:760px; }
+
+.mk-pdf-actions { display:flex; gap:10px; margin-top:6px; }
+.mk-pdf-btn {
+  padding:11px 14px; border-radius:10px; border:0; cursor:pointer; font-weight:600;
+  background: linear-gradient(90deg,#2d74ff,#6cb1ff); color:#fff;
+  box-shadow:0 8px 20px rgba(45,116,255,0.12);
+}
+.mk-pdf-btn.outline { background:transparent; border:1px solid rgba(45,116,255,0.12); color:var(--mk-accent, #2d74ff); box-shadow:none; }
+
+.mk-floating-pdf { font-size:48px; opacity:0.08; animation:mkFloat 4s ease-in-out infinite; }
+@keyframes mkFloat { 0%{transform:translateY(0)} 50%{transform:translateY(-10px)} 100%{transform:translateY(0)} }
+
+/* Animations (replay each scroll) */
+.mk-anim { opacity:0; transform: translateY(36px); transition: all 700ms cubic-bezier(.2,.9,.2,1); will-change:transform,opacity; }
+.mk-anim.mk-active { opacity:1; transform: translateY(0); }
+
+/* small responsive tweaks */
+@media (max-width:520px){
+  #mk-instant-pdf{ padding:20px; }
+  .mk-pdf-right{ width:100%; display:flex; justify-content:flex-end; }
+  .mk-pdf-desc{ font-size:14px; }
+}
