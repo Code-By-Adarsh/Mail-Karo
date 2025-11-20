@@ -1,0 +1,118 @@
+.current-features-section {
+    padding: 80px 20px;
+    text-align: center;
+    background-color: var(--bg); /* Will be white/light yellow in light mode */
+}
+
+/* --- Heading --- */
+.current-features-section h2 {
+    font-size: 3.5em; 
+    color: var(--accent); 
+    margin-bottom: 5px; 
+    font-weight: 800; 
+    text-transform: uppercase; 
+    letter-spacing: 2px; 
+    /* Dark Mode Glow */
+    text-shadow: 0 0 10px rgba(255, 215, 0, 0.3); 
+}
+
+/* Light Mode Override for Heading Glow */
+[data-theme="light"] .current-features-section h2 {
+    /* Subtle shadow/highlight matching other light mode headers */
+    text-shadow: 0 0 8px rgba(212, 175, 55, 0.15); 
+}
+
+/* --- Subtitle Style (Optional) --- */
+.current-features-section .features-subtitle {
+    font-size: 1.1em;
+    color: var(--text-muted); 
+    margin-bottom: 40px; 
+}
+
+/* --- Features List Container --- */
+.features-list {
+    display: flex;
+    justify-content: center;
+    gap: 40px; 
+    margin-top: 40px;
+    flex-wrap: wrap; 
+}
+
+/* --- Individual Feature Item (Card) --- */
+.feature-item {
+    background-color: var(--panel); /* White/light grey in light mode */
+    border: 1px solid var(--border); /* Dark/subtle border in light mode */
+    border-radius: 12px;
+    padding: 30px;
+    width: 100%;
+    max-width: 450px; 
+    text-align: left;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+    
+    /* Dark Mode Shadow (Subtle) */
+    box-shadow: 0 0 20px rgba(255, 215, 0, 0.08); 
+}
+
+/* Light Mode Override for Card Shadow */
+[data-theme="light"] .feature-item {
+    /* Neutral shadow used for light mode panels */
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08); 
+}
+
+/* --- Feature Item Hover Effect (Dark Mode) --- */
+.feature-item:hover {
+    transform: translateY(-5px); 
+    box-shadow: 0 0 25px rgba(255, 215, 0, 0.15); 
+    border-color: var(--accent); 
+}
+
+/* Feature Item Hover Effect (Light Mode Override) */
+[data-theme="light"] .feature-item:hover {
+    transform: translateY(-5px);
+    /* Lighter accent shadow for light mode hover */
+    box-shadow: 0 4px 20px rgba(212, 175, 55, 0.2); 
+    border-color: var(--accent); 
+}
+
+/* --- Feature Title (Text) --- */
+.feature-item h3 {
+    font-size: 1.4em;
+    color: var(--accent); /* Yellow in dark, slightly darker yellow/gold in light */
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+}
+
+/* --- Icon/Emoji Styling --- */
+.feature-item .icon {
+    font-size: 1.8em;
+    margin-right: 15px;
+}
+
+/* --- Feature Description --- */
+.feature-item p {
+    font-size: 1em;
+    color: var(--text); /* Black/dark grey in light mode */
+    line-height: 1.6;
+}
+
+/* --- Responsiveness for Mobile --- */
+@media (max-width: 768px) {
+    .current-features-section {
+        padding: 50px 15px;
+    }
+
+    .current-features-section h2 {
+        font-size: 2em;
+    }
+    
+    .features-list {
+        flex-direction: column; 
+        gap: 20px;
+        align-items: center;
+    }
+
+    .feature-item {
+        max-width: 90%; 
+    }
+}
