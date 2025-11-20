@@ -1,0 +1,183 @@
+/* =========================================================
+   MAIL KARO — FAQ SECTION (LIGHT + DARK MODE SUPPORTED)
+   Fully updated + badge bigger + spacing increased
+   ========================================================= */
+
+/* WRAPPER */
+.mk-faq-wrapper {
+    padding: 90px 20px; /* Increased gap */
+    max-width: 900px;
+    margin: auto;
+    color: var(--text);
+}
+
+/* HEADER */
+.mk-faq-header {
+    text-align: center;
+    margin-bottom: 60px; /* More gap */
+}
+
+/* BADGE */
+.mk-badge {
+    padding: 10px 26px;
+    font-size: 14px;
+    font-weight: 700;
+    border-radius: 50px;
+    background: rgba(255, 217, 74, 0.20);
+    border: 1px solid var(--accent);
+    color: var(--accent);
+    text-transform: uppercase;
+    letter-spacing: 1.6px;
+    backdrop-filter: blur(6px);
+    display: inline-block;
+    margin-bottom: 20px; /* Extra space before title */
+}
+
+/* TITLE */
+.mk-faq-title {
+    font-size: 42px;
+    font-weight: 800;
+    margin-top: 10px;
+    margin-bottom: 18px;
+    color: var(--text);
+}
+
+.mk-faq-title span {
+    color: var(--accent);
+    text-shadow: 0 0 10px rgba(255, 217, 74, 0.4);
+}
+
+/* SUBTITLE */
+.mk-subtitle {
+    font-size: 17px;
+    max-width: 520px;
+    margin: 14px auto 25px auto;
+    color: var(--text-muted);
+    line-height: 1.6;
+}
+
+/* ACCORDION CONTAINER */
+.mk-accordion-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px; /* More spacing between questions */
+}
+
+/* ACCORDION ITEM */
+.mk-accordion-item {
+    background: var(--panel);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    overflow: hidden;
+    transition: 0.35s ease;
+}
+
+.mk-accordion-item:hover {
+    background: var(--panel);
+    border-color: var(--accent);
+    box-shadow: 0 0 18px rgba(255, 217, 74, 0.25);
+    transform: translateY(-3px);
+}
+
+/* HEADER BUTTON */
+.mk-accordion-header {
+    width: 100%;
+    padding: 24px 28px;
+    background: transparent;
+    border: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+}
+
+/* QUESTION TEXT */
+.mk-question {
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--text);
+    transition: 0.3s;
+}
+
+/* ICON */
+.mk-icon {
+    width: 26px;
+    height: 26px;
+    position: relative;
+    flex-shrink: 0;
+}
+
+.line {
+    position: absolute;
+    background: var(--accent);
+    transition: 0.3s;
+    border-radius: 2px;
+}
+
+.line.h {
+    width: 100%;
+    height: 3px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.line.v {
+    height: 100%;
+    width: 3px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/* ACTIVE STATE */
+.mk-accordion-item.active .line.v {
+    opacity: 0;
+}
+
+.mk-accordion-item.active .line.h {
+    box-shadow: 0 0 10px var(--accent);
+}
+
+/* ANSWER CONTENT */
+.mk-accordion-content {
+    height: 0;
+    opacity: 0;
+    overflow: hidden;
+    transition: 0.35s ease;
+}
+
+.mk-content-inner {
+    padding: 0 28px 26px 28px;
+    font-size: 16px;
+    color: var(--text-muted);
+    line-height: 1.7;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    .mk-faq-title {
+        font-size: 32px;
+    }
+
+    .mk-question {
+        font-size: 16px;
+    }
+
+    .mk-content-inner {
+        font-size: 15px;
+        padding: 0 22px 22px 22px;
+    }
+}
+/* =========================================================
+   SCROLL REVEAL ANIMATION (FAQ)
+   ========================================================= */
+
+.mk-reveal {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: 0.7s ease-out;
+}
+
+.mk-reveal.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
