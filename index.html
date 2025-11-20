@@ -60,11 +60,9 @@
   <link rel="stylesheet" href="Homepage CSS/prompt.css">
   <link rel="stylesheet" href="Homepage CSS/footer.css">
   <link rel="stylesheet" href="Homepage CSS/scroll.css">
-  <link rel="stylesheet" href="Homepage CSS/upcoming-features.css">
-  <link rel="stylesheet" href="Homepage CSS/email-pdf.css">
-
-  <link rel="stylesheet" href="Homepage CSS/current-features.css">
-
+<link rel="stylesheet" href="Homepage CSS/upcoming-features.css">
+<link rel="stylesheet" href="Homepage CSS/email-pdf.css">
+<link rel="stylesheet" href="Homepage CSS/faq.css">
   <!-- Mail Karo — Full SEO Schema -->
   <script type="application/ld+json">
 {
@@ -147,7 +145,7 @@
           <li><a href="#home">Home</a></li>
           <li><a href="#how">How It Works</a></li>
           <li><a href="#about">About</a></li>
-          <li><a href="#contact" class="cta">Contact Us</a></li>
+          <li><a href="contactUs.html" class="cta">Contact Us</a></li>
         </ul>
       </nav>
 
@@ -390,40 +388,43 @@
   <!-- ===== End Instant Pdf converter section ===== -->
 
 
-  <!-- ✅ Upcoming Features Section Start -->
-  <section id="upcoming-features">
-    <div class="features-container">
-      <h2 class="section-title">Upcoming Features</h2>
-      <p class="section-subtitle">Discover what's next for Mail Karo. Innovation on the horizon!</p>
+<!-- ✅ Upcoming Features Section Start -->
+<section id="upcoming-features" class="uf-reveal">
+    <div class="features-container uf-reveal">
+        <h2 class="section-title uf-reveal">Upcoming Features</h2>
+        <p class="section-subtitle uf-reveal">Discover what's next for Mail Karo. Innovation on the horizon!</p>
 
-      <div class="features-grid">
+        <div class="features-grid">
 
-        <div class="feature-card">
-          <i class="fas fa-robot feature-icon"></i>
-          <h3>AI Email Summarizer</h3>
-          <p>Get instant, concise summaries of long email threads so you can catch up faster and save time.</p>
-        </div>
+            <div class="feature-card uf-reveal">
+                <i class="fas fa-robot feature-icon"></i> <h3>AI Email Summarizer</h3>
+                <p>Get instant, concise summaries of long email threads so you can catch up faster and save time.</p>
+            </div>
 
-        <div class="feature-card">
-          <i class="fas fa-language feature-icon"></i>
-          <h3>Multi-Language Email Writer</h3>
-          <p>Draft emails effortlessly in multiple languages using intelligent writing assistance tailored to your
-            needs.</p>
-        </div>
+            <div class="feature-card uf-reveal">
+                <i class="fas fa-language feature-icon"></i> <h3>Multi-Language Email Writer</h3>
+                <p>Draft emails effortlessly in multiple languages using intelligent writing assistance tailored to your needs.</p>
+            </div>
 
-        <div class="feature-card">
-          <i class="fas fa-clone feature-icon"></i>
-          <h3>Smart Email Templates</h3>
-          <p>Dynamically generate templates based on the context and recipient of your message for perfect emails every
-            time.</p>
-        </div>
+            <div class="feature-card uf-reveal">
+                <i class="fas fa-clone feature-icon"></i> <h3>Smart Email Templates</h3>
+                <p>Dynamically generate templates based on the context and recipient of your message for perfect emails every time.</p>
+            </div>
 
-        <div class="feature-card">
-          <i class="fas fa-moon feature-icon"></i>
-          <h3>Dark Mode</h3>
-          <p>A sleek, low-light interface for comfortable emailing at night or in low-light conditions, reducing eye
-            strain.</p>
-        </div>
+            <div class="feature-card uf-reveal">
+                <i class="fas fa-moon feature-icon"></i> <h3>Dark Mode</h3>
+                <p>A sleek, low-light interface for comfortable emailing at night or in low-light conditions.</p>
+            </div>
+
+            <div class="feature-card uf-reveal">
+                <i class="fas fa-microphone-alt feature-icon"></i> <h3>Voice-to-Email Generation</h3>
+                <p>Dictate your message and let AI instantly convert it into a structured email, hands-free.</p>
+            </div>
+
+            <div class="feature-card uf-reveal">
+                <i class="fas fa-users feature-icon"></i> <h3>Team Collaboration Tools</h3>
+                <p>Share, review, and finalize email drafts with your team within the Mail Karo app.</p>
+            </div>
 
         <div class="feature-card">
           <i class="fas fa-microphone-alt feature-icon"></i>
@@ -436,8 +437,120 @@
           <h3>Team Collaboration Tools</h3>
           <p>Share, review, and finalize email drafts with your team members directly within the Mail Karo app.</p>
         </div>
+    </div>
+</section>
+<!-- ✅ Upcoming Features Section End -->
 
+
+<!-- ================= FAQ SECTION ================= -->
+<section id="mk-faq-section" class="mk-faq-wrapper mk-reveal">
+  <div class="mk-faq-header mk-reveal">
+      <span class="mk-badge">Support & Help</span>
+      <h2 class="mk-faq-title">Frequently Asked <span>Questions</span></h2>
+      <p class="mk-subtitle">
+          Everything you need to know about Mail Karo, privacy, features, and usage.
+      </p>
+  </div>
+
+  <div class="mk-accordion-container">
+
+      <!-- FAQ 1 -->
+      <div class="mk-accordion-item mk-reveal">
+          <button class="mk-accordion-header">
+              <span class="mk-question">What is Mail Karo and how does it work?</span>
+              <div class="mk-icon"><div class="line h"></div><div class="line v"></div></div>
+          </button>
+          <div class="mk-accordion-content">
+              <div class="mk-content-inner">
+                  Mail Karo is an AI-powered email generator that helps you draft
+                  professional emails instantly. Just enter your topic and select a tone —
+                  the AI writes the complete email for you.
+              </div>
+          </div>
       </div>
+
+      <!-- FAQ 2 -->
+      <div class="mk-accordion-item mk-reveal">
+          <button class="mk-accordion-header">
+              <span class="mk-question">Is Mail Karo completely free?</span>
+              <div class="mk-icon"><div class="line h"></div><div class="line v"></div></div>
+          </button>
+          <div class="mk-accordion-content">
+              <div class="mk-content-inner">
+                  Yes! Mail Karo is 100% free — unlimited usage, PDF download, email copy,
+                  no login required.
+              </div>
+          </div>
+      </div>
+
+      <!-- FAQ 3 -->
+      <div class="mk-accordion-item mk-reveal">
+          <button class="mk-accordion-header">
+              <span class="mk-question">Is my data private?</span>
+              <div class="mk-icon"><div class="line h"></div><div class="line v"></div></div>
+          </button>
+          <div class="mk-accordion-content">
+              <div class="mk-content-inner">
+                  Absolutely — we do NOT store your emails. Everything is generated and used
+                  only on your device.
+              </div>
+          </div>
+      </div>
+
+      <!-- FAQ 4 -->
+      <div class="mk-accordion-item mk-reveal">
+          <button class="mk-accordion-header">
+              <span class="mk-question">Can I download my email as PDF?</span>
+              <div class="mk-icon"><div class="line h"></div><div class="line v"></div></div>
+          </button>
+          <div class="mk-accordion-content">
+              <div class="mk-content-inner">
+                  Yes, Mail Karo includes an instant PDF converter built-in for easy downloads.
+              </div>
+          </div>
+      </div>
+
+      <!-- FAQ 5 -->
+      <div class="mk-accordion-item mk-reveal">
+          <button class="mk-accordion-header">
+              <span class="mk-question">What features are coming next?</span>
+              <div class="mk-icon">
+                  <div class="line h"></div>
+                  <div class="line v"></div>
+              </div>
+          </button>
+          <div class="mk-accordion-content">
+              <div class="mk-content-inner">
+                  Upcoming features include:<br>
+                  - Email Templates<br>
+                  - Grammar & Tone Enhancer<br>
+                  - Saved Email History<br>
+                  - Smart Suggestions<br>
+                  - Improved PDF tools<br>
+                  - And full customization support
+              </div>
+          </div>
+      </div>
+
+  </div>
+</section>
+<!-- ================= END FAQ ================= -->
+
+
+
+<!-- ✅ Footer Section Start -->
+<footer class="footer">
+  <div class="footer-container">
+    <div class="footer-logo">
+      <img src="All Images/Logo.png" alt="Mail Karo Logo">
+      <h2>Mail Karo</h2>
+      <p class="tagline">Write Smart • Send Fast</p>
+    </div>
+
+    <div class="footer-links">
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="contactUs.html">Contact</a>
     </div>
   </section>
 
@@ -496,8 +609,10 @@
   <script src="Homepage JS/prompt.js" defer></script>
   <script src="Homepage JS/footer.js" defer></script>
   <script src="Homepage JS/scroll.js" defer></script>
-  <script src="Homepage JS/light_mode.js"></script>
-  <script src="Homepage JS/email-pdf.js"></script>
+  <script src="Homepage JS/light_mode.js" defer></script>
+  <script src="Homepage JS/email-pdf.js" defer></script>
+  <script src="Homepage JS/faq.js" defer></script>
+  <script src="Homepage JS/upcoming-features.js" defer></script>
 </body>
 
 </html>

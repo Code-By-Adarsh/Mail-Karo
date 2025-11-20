@@ -121,3 +121,81 @@
         font-size: 0.9em;
     }
 }
+/* =========================================================
+   UPCOMING FEATURES — SCROLL REVEAL + STAGGER + NEON GLOW
+   ========================================================= */
+.uf-reveal {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.uf-reveal.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.feature-card {
+    transition: 
+        background-color 0.3s ease,
+        border-color 0.3s ease,
+        box-shadow 0.4s ease;
+}
+
+/* NEON glow effect when revealed */
+.feature-card.visible {
+    box-shadow: 0 0 18px rgba(255, 217, 74, 0.22);
+    border-bottom: 2px solid var(--accent);
+}
+/* ================================================
+   FAQ-STYLE SIMPLE SCROLL REVEAL
+================================================ */
+
+.uf-reveal {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: 0.7s ease-out;
+}
+
+.uf-reveal.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+/* ================================================
+   SIMPLE FAQ-STYLE SCROLL REVEAL (NO DESIGN CHANGE)
+================================================ */
+
+.uf-reveal {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: 0.7s ease-out;
+}
+
+.uf-reveal.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+/* REMOVE UNWANTED BACKGROUND FROM FEATURE CARDS */
+.feature-card {
+    background: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+}
+
+/* Keep only the bottom yellow separator like screenshot */
+.feature-card::after {
+    content: "";
+    display: block;
+    height: 2px;
+    width: 100%;
+    margin-top: 15px;
+    background-color: var(--accent);
+    opacity: 0.8;
+}
+
+/* Remove hover background completely */
+.feature-card:hover {
+    background: transparent !important;
+    border-color: transparent !important;
+    box-shadow: none !important;
+}
