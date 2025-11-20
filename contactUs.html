@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mail Karo – Contact Us</title>
+
+    <!-- GOOGLE FONTS -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- ICONS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <!-- CONTACT CSS -->
+    <link rel="stylesheet" href="Homepage CSS/contactUs.css">
+</head>
+
+<body>
+
+    <section class="contact-wrapper">
+
+        <h1 class="mk-title">Mail Karo</h1>
+        <h2 class="mk-subtitle">Contact Us</h2>
+
+        <p class="mk-info">
+            Mail Karo does not collect your data.<br>
+            We never store or misuse your information.<br>
+            Everything stays secure and private on your device.
+        </p>
+
+        <div class="contact-box">
+
+            <form id="contactForm">
+
+                <div class="input-group">
+                    <label>Your Name</label>
+                    <input type="text" id="name" placeholder="Enter your full name">
+                </div>
+
+                <div class="input-group">
+                    <label>Your Email</label>
+                    <input type="email" id="email" placeholder="Enter your email">
+                </div>
+
+                <div class="input-group">
+                    <label>Subject</label>
+                    <input type="text" id="subject" placeholder="What is this about?">
+                </div>
+
+                <div class="input-group">
+                    <label>Your Message</label>
+                    <textarea id="message" rows="5" placeholder="Write your message..."></textarea>
+                </div>
+
+                <button id="submitBtn" disabled>Submit</button>
+
+            </form>
+
+            <button class="back-btn" onclick="window.location.href='index.html'">
+                ← Back to Homepage
+            </button>
+
+        </div>
+
+        <div class="socials">
+            <a href="https://www.instagram.com/ltx_adarsh18" class="social-icon"><i class="fab fa-instagram"></i></a>
+            <a href="https://github.com/Code-By-Adarsh/Mail-Karo" class="social-icon"><i class="fab fa-github"></i></a>
+            <a href="https://www.linkedin.com/company/mail-karo/" class="social-icon"><i class="fab fa-linkedin"></i></a>
+        </div>
+
+    </section>
+
+    <script src="Homepage JS/contactUs.js"></script>
+
+</body>
+
+</html>

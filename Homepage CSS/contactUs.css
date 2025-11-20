@@ -1,0 +1,149 @@
+:root {
+    --bg: #000;
+    --text: #fff;
+    --text-muted: #b3b3b3;
+    --accent: #ffd94a;
+    --panel: #0a0a0a;
+    --border: rgba(255,217,74,0.2);
+}
+
+/* PAGE BASE */
+body {
+    margin: 0;
+    padding: 0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: "Poppins", sans-serif;
+}
+
+.contact-wrapper {
+    max-width: 750px;
+    margin: auto;
+    padding: 70px 20px;
+    text-align: center;
+}
+
+/* TITLES */
+.mk-title {
+    font-size: 55px;
+    font-weight: 700;
+    color: var(--accent);
+    text-shadow: 0 0 22px rgba(255,217,74,0.5);
+}
+
+.mk-subtitle {
+    font-size: 28px;
+    margin-top: -5px;
+}
+
+.mk-info {
+    color: var(--text-muted);
+    margin: 20px auto 40px;
+    font-size: 16px;
+    line-height: 1.7;
+}
+
+/* FORM BOX */
+.contact-box {
+    background: var(--panel);
+    border: 1px solid var(--border);
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 0 25px rgba(255,217,74,0.15);
+}
+
+/* INPUT FIELDS */
+.input-group {
+    margin-bottom: 18px;
+    text-align: left;
+}
+
+.input-group label {
+    color: var(--accent);
+    font-size: 14px;
+    margin-bottom: 6px;
+    display: block;
+    font-weight: 600;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 12px;
+    border-radius: 8px;
+    background: #000;
+    border: 1px solid var(--border);
+    color: var(--text);
+}
+
+input:focus, textarea:focus {
+    border-color: var(--accent);
+    box-shadow: 0 0 14px rgba(255,217,74,0.45);
+    outline: none;
+}
+
+/* SUBMIT BUTTON */
+#submitBtn {
+    margin-top: 10px;
+    width: 100%;
+    padding: 14px;
+    background: var(--accent);
+    color: #000;
+    border-radius: 8px;
+    border: none;
+    font-size: 17px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#submitBtn:disabled {
+    opacity: 0.35;
+    cursor: not-allowed;
+}
+
+#submitBtn:hover:not(:disabled) {
+    transform: translateY(-3px);
+    box-shadow: 0 0 15px rgba(255,217,74,0.6);
+}
+
+/* BACK BUTTON */
+.back-btn {
+    margin-top: 20px;
+    padding: 12px 20px;
+    border: 1px solid var(--accent);
+    color: var(--accent);
+    background: transparent;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.back-btn:hover {
+    background: var(--accent);
+    color: #000;
+    transform: translateY(-3px);
+    box-shadow: 0 0 15px rgba(255,217,74,0.4);
+}
+
+/* SOCIAL ICONS */
+.socials {
+    margin-top: 40px;
+}
+
+.social-icon {
+    font-size: 26px;
+    margin: 0 10px;
+    border: 1px solid var(--border);
+    padding: 10px 12px;
+    border-radius: 10px;
+    transition: 0.4s;
+    color: var(--accent);
+}
+
+.social-icon:hover {
+    transform: rotate(360deg) scale(1.05);
+    background: var(--accent);
+    color: #000;
+    box-shadow: 0 0 18px rgba(255,217,74,0.6);
+}
