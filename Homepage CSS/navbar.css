@@ -381,3 +381,42 @@ body {
     padding: 10px 5px !important; 
   }
 }
+
+/* =========================================
+   ✨ MODERN NAVBAR HOVER EFFECTS (Mail Karo)
+   ========================================= */
+
+.nav-item {
+  position: relative;
+  display: inline-block;
+  padding: 8px 12px;
+  transition: color 0.25s ease, transform 0.25s ease;
+}
+
+/* Text color fade + slight scale */
+.nav-item:hover {
+  color: var(--accent);
+  transform: translateY(-2px);
+}
+
+/* Underline slide animation */
+.nav-item::after {
+  content: "";
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 0%;
+  height: 2px;
+  background: var(--accent);
+  transition: width 0.25s ease;
+  border-radius: 4px;
+}
+
+.nav-item:hover::after {
+  width: 100%;
+}
+
+/* Soft glow on hover */
+.nav-item:hover {
+  text-shadow: 0 0 8px rgba(255, 215, 0, 0.5);
+}
