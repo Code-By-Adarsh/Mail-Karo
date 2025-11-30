@@ -1,5 +1,5 @@
 # 💌 Mail Karo - AI Email Assistant
-![Banner](https://github.com/Code-By-Adarsh/Mail-Karo/blob/1b56c0d4457dd70dcf2a05b3b5b0a64151d780d7/All%20Images/Banner.png )
+![Banner](https://github.com/Code-By-Adarsh/Mail-Karo/blob/main/All%20Images%2FBanner.png )
 <br>
 # 🇮🇳 India’s First Community-Driven AI Email Assistant — **Mail Karo**
 
@@ -33,7 +33,7 @@ Every contribution counts. ❤️
 Below are the actual screenshots of Mail Karo platform that describe its structure and function.
 
 ### Email Generation Feature by AI
-![Email feature](https://github.com/Code-By-Adarsh/Mail-Karo/blob/1b56c0d4457dd70dcf2a05b3b5b0a64151d780d7/All%20Images/Email%20Generation%20feature.png)
+![Email feature](https://github.com/Code-By-Adarsh/Mail-Karo/blob/main/All%20Images%2FEmail%20Generation%20feature.png)
 
 ### Pdf Conveter & Downloader
 ![PDF converter and Downloader](https://github.com/Code-By-Adarsh/Mail-Karo/blob/1b56c0d4457dd70dcf2a05b3b5b0a64151d780d7/All%20Images/Pdf%20converter%20%26%20downloader.png)
@@ -46,6 +46,9 @@ Below are the actual screenshots of Mail Karo platform that describe its structu
 
 ### FAQ
 ![FAQ](https://github.com/Code-By-Adarsh/Mail-Karo/blob/1b56c0d4457dd70dcf2a05b3b5b0a64151d780d7/All%20Images/FAQ.png)
+
+### Contact Us 
+![Contact Us](https://github.com/Code-By-Adarsh/Mail-Karo/blob/main/All%20Images%2FConatct%20Us.png)
 
 ---
 
