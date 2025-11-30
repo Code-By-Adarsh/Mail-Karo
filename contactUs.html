@@ -1,78 +1,128 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mail Karo – Contact Us</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Mail Karo – Contact Us</title>
 
-    <!-- GOOGLE FONTS -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <!-- GOOGLE FONTS -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
-    <!-- ICONS -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <!-- ICONS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
-    <!-- CONTACT CSS -->
-    <link rel="stylesheet" href="Homepage CSS/contactUs.css">
+  <!-- CONTACT CSS -->
+  <link rel="stylesheet" href="Homepage CSS/contactUs.css">
 </head>
 
 <body>
+<main class="mk-page">
 
-    <section class="contact-wrapper">
+  <!-- HERO -->
+  <header class="mk-hero">
+    <div class="mk-hero-inner">
+      <h1 class="mk-title">Mail Karo</h1>
+      <p class="mk-subtitle">Contact Us — we're here to help ✉️</p>
+      <p class="mk-lead">Fast. Private. Secure. Send us a message and we'll get back to you soon.</p>
+    </div>
+  </header>
 
-        <h1 class="mk-title">Mail Karo</h1>
-        <h2 class="mk-subtitle">Contact Us</h2>
+  <!-- CONTACT -->
+  <section class="mk-section mk-form-section">
+    <div class="container">
+      <div class="panel glass" data-animate>
 
-        <p class="mk-info">
-            Mail Karo does not collect your data.<br>
-            We never store or misuse your information.<br>
-            Everything stays secure and private on your device.
-        </p>
+        <!-- LEFT -->
+        <div class="panel-left">
+          <h2 class="panel-heading">Say hello 👋</h2>
+          <p class="panel-text">Have feedback, a question or a partnership idea? Drop a message and we'll reply within 48 hours.</p>
 
-        <div class="contact-box">
+          <ul class="contact-meta">
+            <li><i class="fas fa-shield-alt"></i> No data collected • Client-side only</li>
+            <li><i class="fas fa-bolt"></i> Fast replies • Friendly team</li>
+          </ul>
 
-            <form id="contactForm">
-
-                <div class="input-group">
-                    <label>Your Name</label>
-                    <input type="text" id="name" placeholder="Enter your full name">
-                </div>
-
-                <div class="input-group">
-                    <label>Your Email</label>
-                    <input type="email" id="email" placeholder="Enter your email">
-                </div>
-
-                <div class="input-group">
-                    <label>Subject</label>
-                    <input type="text" id="subject" placeholder="What is this about?">
-                </div>
-
-                <div class="input-group">
-                    <label>Your Message</label>
-                    <textarea id="message" rows="5" placeholder="Write your message..."></textarea>
-                </div>
-
-                <button id="submitBtn" disabled>Submit</button>
-
-            </form>
-
-            <button class="back-btn" onclick="window.location.href='index.html'">
-                ← Back to Homepage
-            </button>
-
-        </div>
-
-        <div class="socials">
+          <div class="social-compact">
             <a href="https://www.instagram.com/ltx_adarsh18" class="social-icon"><i class="fab fa-instagram"></i></a>
             <a href="https://github.com/Code-By-Adarsh/Mail-Karo" class="social-icon"><i class="fab fa-github"></i></a>
             <a href="https://www.linkedin.com/company/mail-karo/" class="social-icon"><i class="fab fa-linkedin"></i></a>
+          </div>
         </div>
 
-    </section>
+        <!-- RIGHT (FORM) -->
+        <form id="contactForm" class="panel-right" novalidate data-animate>
+          <div class="field-row">
+            <div class="input-group">
+              <label for="name">Full name</label>
+              <input id="name" name="name" type="text" placeholder="Jane Doe" autocomplete="off" required>
+              <small class="input-error">This field is required</small>
+            </div>
 
-    <script src="Homepage JS/contactUs.js"></script>
+            <div class="input-group">
+              <label for="email">Email</label>
+              <input id="email" name="email" type="email" placeholder="you@example.com"
+                     autocomplete="new-password" autocapitalize="none" autocorrect="off" spellcheck="false" required>
+              <small class="input-error">Enter a valid email</small>
+            </div>
+          </div>
+
+          <div class="input-group">
+            <label for="subject">Subject</label>
+            <input id="subject" name="subject" type="text" placeholder="What is this about?" autocomplete="off" required>
+            <small class="input-error">This field is required</small>
+          </div>
+
+          <div class="input-group">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="6" placeholder="Tell us more..." required></textarea>
+            <small class="input-error">This field is required</small>
+          </div>
+
+          <div class="form-actions">
+            <button id="submitBtn" class="btn primary" disabled>
+              <span class="btn-text">Submit</span>
+              <span class="btn-spinner" aria-hidden="true"></span>
+            </button>
+
+            <button type="button" class="btn ghost back-btn" onclick="location.href='index.html'">Back</button>
+          </div>
+
+          <div id="formToast" class="toast" role="status" aria-live="polite"></div>
+        </form>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="mk-footer">
+    <div class="container footer-inner">
+      <div class="footer-left">
+        <h3>Mail Karo</h3>
+        <p class="muted">Built with privacy-first principles. © <span id="year"></span> Mail Karo</p>
+      </div>
+
+      <div class="footer-right">
+        <nav class="footer-links">
+          <a href="index.html">Home</a>
+          <a href="#">Privacy</a>
+          <a href="#">Docs</a>
+        </nav>
+      </div>
+    </div>
+  </footer>
+
+</main>
+
+<!-- SUCCESS POPUP -->
+<div id="successModal" class="success-modal" role="dialog" aria-hidden="true">
+  <h2>Message Sent ✓</h2>
+  <p>Your message has been delivered. We'll reply soon.</p>
+  <button class="modal-ok-btn" onclick="closeSuccessModal()">Okay</button>
+</div>
+
+<!-- YOUR JS (corrected path) -->
+<script src="Homepage JS/contactUs.js"></script>
 
 </body>
-
 </html>
