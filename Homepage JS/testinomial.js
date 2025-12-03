@@ -111,30 +111,32 @@ let autoTimer = null;
 
 // Calculate translateX so that the current card stays perfectly centered
 function getTranslateXForIndex(index) {
-    const card = cards[index];
-    if (!card) return 0;
+  const card = cards[index];
+  if (!card) return 0;
 
-    const containerWidth = sliderContainer.getBoundingClientRect().width;
-    const cardWidth = card.getBoundingClientRect().width;
+  // Width of visible area
+  const containerWidth = sliderContainer.clientWidth;
 
-    // Card position relative to slider
-    const cardLeft = card.offsetLeft;
+  // Use layout width 
+  const cardWidth = card.offsetWidth;
 
-    // FIX: adjust for gap so card doesn't shift right
-    const sliderStyles = window.getComputedStyle(slider);
-    const gap = parseFloat(sliderStyles.gap || 0);
+  // Position from left inside the slider 
+  const cardLeft = card.offsetLeft;
 
-    // Perfect center formula (with gap correction)
-    const target = cardLeft - (containerWidth / 2) + (cardWidth / 2) - (gap / 2);
+  // Center of the card in slider coords
+  const cardCenter = cardLeft + cardWidth / 2;
 
-    return -target;
+  // cardCenter to align with the center of the container
+  const containerCenter = containerWidth / 2;
+
+  const translateX = containerCenter - cardCenter;
+
+  return translateX;
 }
+
 
 // Update card states and positions
 function updateSlider() {
-  const translateX = getTranslateXForIndex(currentIndex);
-  slider.style.transform = `translateX(${translateX}px)`;
-
   cards.forEach((card, i) => {
     card.classList.remove("active", "side");
     if (i === currentIndex) {
@@ -143,7 +145,11 @@ function updateSlider() {
       card.classList.add("side");
     }
   });
+
+  const translateX = getTranslateXForIndex(currentIndex);
+  slider.style.transform = `translateX(${translateX}px)`;
 }
+
 
 // Auto movement with smooth forward + backward loop
 function stepAuto() {
