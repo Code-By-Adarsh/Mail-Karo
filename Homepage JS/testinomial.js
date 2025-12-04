@@ -201,3 +201,27 @@ window.addEventListener("resize", () => {
 // Initial position
 updateSlider();
 startAuto();
+
+// ===== Scroll Reveal Animation =====
+document.addEventListener("DOMContentLoaded", () => {
+  const testimonialSection = document.querySelector(".mk-testimonials-reveal");
+
+  if (testimonialSection) {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("visible");
+            observer.unobserve(entry.target); // Trigger only once
+          }
+        });
+      },
+      {
+        threshold: 0.25,
+        rootMargin: "0px 0px -100px 0px" // Offset to ensure it doesn't trigger too early at the bottom
+      }
+    );
+
+    observer.observe(testimonialSection);
+  }
+});

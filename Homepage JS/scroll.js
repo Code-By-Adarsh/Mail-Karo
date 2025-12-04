@@ -17,8 +17,11 @@ document.addEventListener("DOMContentLoaded", () => {
   );
 
   sections.forEach((sec) => {
-    sec.classList.add("fade-in");
-    observer.observe(sec);
+    // Exclude Testimonials section (handled by testinomial.js)
+    if (!sec.classList.contains("mk-testimonials")) {
+      sec.classList.add("fade-in");
+      observer.observe(sec);
+    }
   });
 
   // Back to Top Button visibility toggle

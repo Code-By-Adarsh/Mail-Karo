@@ -252,3 +252,16 @@
   border-color: #d4af37;
   color: #d4af37;
 }
+
+/* ===== Scroll Animation ===== */
+.mk-testimonials-reveal {
+  opacity: 0;
+  transform: translateY(60px);
+  transition: opacity 1s ease-out, transform 1s ease-out;
+  will-change: opacity, transform;
+}
+
+.mk-testimonials-reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}

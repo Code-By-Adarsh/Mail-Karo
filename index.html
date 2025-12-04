@@ -60,11 +60,11 @@
   <link rel="stylesheet" href="Homepage CSS/prompt.css">
   <link rel="stylesheet" href="Homepage CSS/footer.css">
   <link rel="stylesheet" href="Homepage CSS/scroll.css">
-<link rel="stylesheet" href="Homepage CSS/upcoming-features.css">
-<link rel="stylesheet" href="Homepage CSS/email-pdf.css">
-<link rel="stylesheet" href="Homepage CSS/faq.css">
-<link rel="stylesheet" href="Homepage CSS/current-features.css">
-<link rel="stylesheet" href="Homepage CSS/testinomial.css">
+  <link rel="stylesheet" href="Homepage CSS/upcoming-features.css">
+  <link rel="stylesheet" href="Homepage CSS/email-pdf.css">
+  <link rel="stylesheet" href="Homepage CSS/faq.css">
+  <link rel="stylesheet" href="Homepage CSS/current-features.css">
+  <link rel="stylesheet" href="Homepage CSS/testinomial.css">
   <!-- Mail Karo — Full SEO Schema -->
   <script type="application/ld+json">
 {
@@ -208,152 +208,152 @@
   <!-- ✅ Hero Section End -->
 
   <!-- ✅ Prompt & Output Section Start -->
-<section class="prompt-section" id="prompt">
-  <div class="prompt-container">
+  <section class="prompt-section" id="prompt">
+    <div class="prompt-container">
 
-    <h2 class="prompt-title">Generate Your Email Instantly</h2>
-    <p class="prompt-subtitle">Enter your topic or idea below and let AI craft a perfect email for you.</p>
+      <h2 class="prompt-title">Generate Your Email Instantly</h2>
+      <p class="prompt-subtitle">Enter your topic or idea below and let AI craft a perfect email for you.</p>
 
-    <!-- ⭐ Template Selector -->
-    <div class="template-box">
-      <label for="templateSelect">Template:</label>
-      <select id="templateSelect">
-        <option value="">-- Select a Template --</option>
-        <option value="job">Job Application Email</option>
-        <option value="complaint">Complaint Email</option>
-        <option value="followup">Follow-Up Email</option>
-        <option value="leave">Leave Request Email</option>
-        <option value="apology">Apology Email</option>
-        <option value="meeting">Meeting Request Email</option>
-        <option value="offer">Offer Acceptance Email</option>
-        <option value="resignation">Resignation Email</option>
-        <option value="reminder">Gentle Reminder Email</option>
-        <option value="support">Customer Support Email</option>
-        <option value="refund">Refund Request Email</option>
-        <option value="thanks">Thank-You Email</option>
-        <option value="inquiry">General Inquiry Email</option>
-        <option value="marketing">Marketing Email</option>
-        <option value="feedback">Feedback Email</option>
+      <!-- ⭐ Template Selector -->
+      <div class="template-box">
+        <label for="templateSelect">Template:</label>
+        <select id="templateSelect">
+          <option value="">-- Select a Template --</option>
+          <option value="job">Job Application Email</option>
+          <option value="complaint">Complaint Email</option>
+          <option value="followup">Follow-Up Email</option>
+          <option value="leave">Leave Request Email</option>
+          <option value="apology">Apology Email</option>
+          <option value="meeting">Meeting Request Email</option>
+          <option value="offer">Offer Acceptance Email</option>
+          <option value="resignation">Resignation Email</option>
+          <option value="reminder">Gentle Reminder Email</option>
+          <option value="support">Customer Support Email</option>
+          <option value="refund">Refund Request Email</option>
+          <option value="thanks">Thank-You Email</option>
+          <option value="inquiry">General Inquiry Email</option>
+          <option value="marketing">Marketing Email</option>
+          <option value="feedback">Feedback Email</option>
 
-        <!-- ⭐ Saved Templates appear here via JS -->
-        <optgroup label="Your Saved Templates" id="savedTemplatesGroup"></optgroup>
-      </select>
-
-      <!-- Save Template Button -->
-      <button id="saveTemplateBtn" class="ghost-btn" style="padding:8px 16px;">💾 Save Template</button>
-
-      <!-- ⭐ NEW — Autofill Wizard Button -->
-      <button id="openWizardBtn" class="ghost-btn" style="padding:8px 16px;">🧭 Autofill Wizard</button>
-    </div>
-
-    <div class="prompt-box">
-      <textarea id="promptInput" placeholder="e.g. Follow up after meeting with client..." rows="1"></textarea>
-      <button id="generateBtn">Generate</button>
-    </div>
-
-    <!-- ⭐ Live Word + Character Counter -->
-    <div class="counter-box">
-      <span id="charCount">0 chars</span> •
-      <span id="wordCount">0 words</span>
-    </div>
-
-    <!-- ⭐ Tone + Email Length + Language Selector -->
-    <div class="tone-box">
-
-      <!-- Tone -->
-      <div class="tone-item">
-        <label for="toneSelect">Tone:</label>
-        <select id="toneSelect">
-          <option value="formal">Formal</option>
-          <option value="friendly">Friendly</option>
-          <option value="polite">Polite</option>
-          <option value="confident">Confident</option>
-          <option value="casual">Casual</option>
-          <option value="apologetic">Apologetic</option>
+          <!-- ⭐ Saved Templates appear here via JS -->
+          <optgroup label="Your Saved Templates" id="savedTemplatesGroup"></optgroup>
         </select>
+
+        <!-- Save Template Button -->
+        <button id="saveTemplateBtn" class="ghost-btn" style="padding:8px 16px;">💾 Save Template</button>
+
+        <!-- ⭐ NEW — Autofill Wizard Button -->
+        <button id="openWizardBtn" class="ghost-btn" style="padding:8px 16px;">🧭 Autofill Wizard</button>
       </div>
 
-      <!-- Length -->
-      <div class="length-item">
-        <label for="lengthSelect">Length:</label>
-        <select id="lengthSelect">
-          <option value="small">Small (100–150 words)</option>
-          <option value="medium">Medium (150–200 words)</option>
-          <option value="large">Large (200–250 words)</option>
-        </select>
+      <div class="prompt-box">
+        <textarea id="promptInput" placeholder="e.g. Follow up after meeting with client..." rows="1"></textarea>
+        <button id="generateBtn">Generate</button>
       </div>
 
-      <!-- ⭐ NEW — Language Selector -->
-      <div class="length-item">
-        <label for="languageSelect">Language:</label>
-        <select id="languageSelect">
-          <option value="english" selected>English</option>
-          <option value="hindi">Hindi</option>
-          <option value="marathi">Marathi</option>
-          <option value="gujarati">Gujarati</option>
-          <option value="punjabi">Punjabi</option>
-          <option value="bengali">Bengali</option>
-          <option value="tamil">Tamil</option>
-          <option value="telugu">Telugu</option>
-          <option value="kannada">Kannada</option>
-          <option value="malayalam">Malayalam</option>
-          <option value="odia">Odia</option>
-          <option value="assamese">Assamese</option>
-          <option value="konkani">Konkani</option>
-          <option value="manipuri">Manipuri</option>
-          <option value="sanskrit">Sanskrit</option>
-          <option value="urdu">Urdu</option>
-        </select>
+      <!-- ⭐ Live Word + Character Counter -->
+      <div class="counter-box">
+        <span id="charCount">0 chars</span> •
+        <span id="wordCount">0 words</span>
       </div>
 
-    </div>
+      <!-- ⭐ Tone + Email Length + Language Selector -->
+      <div class="tone-box">
 
-    <div class="output-box">
-      <div class="output-header">
-        <h3>Generated Email</h3>
-      </div>
-
-      <p id="outputText">Your AI-generated email will appear here...</p>
-
-      <!-- ⭐ Ghost Buttons Section -->
-      <div class="action-buttons">
-        <button class="ghost-btn" id="copyBtn">📋 Copy</button>
-        <button class="ghost-btn" id="regenerateBtn">🔁 Regenerate</button>
-        <button class="ghost-btn" id="resetBtn">🧹 Reset</button>
-      </div>
-    </div>
-
-    <!-- ⭐⭐⭐ WIZARD MODAL (Option-C) ⭐⭐⭐ -->
-    <div id="wizardModal" class="wizard-modal" aria-hidden="true">
-      <div class="wizard-card">
-
-        <div class="wizard-header">
-          <h3>Smart Autofill Wizard</h3>
-          <button id="closeWizardBtn" class="ghost-btn">✖</button>
+        <!-- Tone -->
+        <div class="tone-item">
+          <label for="toneSelect">Tone:</label>
+          <select id="toneSelect">
+            <option value="formal">Formal</option>
+            <option value="friendly">Friendly</option>
+            <option value="polite">Polite</option>
+            <option value="confident">Confident</option>
+            <option value="casual">Casual</option>
+            <option value="apologetic">Apologetic</option>
+          </select>
         </div>
 
-        <div class="wizard-body">
-          <div id="wizardStepWrap" class="wizard-step-wrap"></div>
-          <div class="wizard-progress">
-            <small id="wizardProgressText">Step 1 of 1</small>
+        <!-- Length -->
+        <div class="length-item">
+          <label for="lengthSelect">Length:</label>
+          <select id="lengthSelect">
+            <option value="small">Small (100–150 words)</option>
+            <option value="medium">Medium (150–200 words)</option>
+            <option value="large">Large (200–250 words)</option>
+          </select>
+        </div>
+
+        <!-- ⭐ NEW — Language Selector -->
+        <div class="length-item">
+          <label for="languageSelect">Language:</label>
+          <select id="languageSelect">
+            <option value="english" selected>English</option>
+            <option value="hindi">Hindi</option>
+            <option value="marathi">Marathi</option>
+            <option value="gujarati">Gujarati</option>
+            <option value="punjabi">Punjabi</option>
+            <option value="bengali">Bengali</option>
+            <option value="tamil">Tamil</option>
+            <option value="telugu">Telugu</option>
+            <option value="kannada">Kannada</option>
+            <option value="malayalam">Malayalam</option>
+            <option value="odia">Odia</option>
+            <option value="assamese">Assamese</option>
+            <option value="konkani">Konkani</option>
+            <option value="manipuri">Manipuri</option>
+            <option value="sanskrit">Sanskrit</option>
+            <option value="urdu">Urdu</option>
+          </select>
+        </div>
+
+      </div>
+
+      <div class="output-box">
+        <div class="output-header">
+          <h3>Generated Email</h3>
+        </div>
+
+        <p id="outputText">Your AI-generated email will appear here...</p>
+
+        <!-- ⭐ Ghost Buttons Section -->
+        <div class="action-buttons">
+          <button class="ghost-btn" id="copyBtn">📋 Copy</button>
+          <button class="ghost-btn" id="regenerateBtn">🔁 Regenerate</button>
+          <button class="ghost-btn" id="resetBtn">🧹 Reset</button>
+        </div>
+      </div>
+
+      <!-- ⭐⭐⭐ WIZARD MODAL (Option-C) ⭐⭐⭐ -->
+      <div id="wizardModal" class="wizard-modal" aria-hidden="true">
+        <div class="wizard-card">
+
+          <div class="wizard-header">
+            <h3>Smart Autofill Wizard</h3>
+            <button id="closeWizardBtn" class="ghost-btn">✖</button>
           </div>
-        </div>
 
-        <div class="wizard-footer">
-          <button id="wizardBackBtn" class="ghost-btn">⬅ Back</button>
-          <button id="wizardNextBtn" class="ghost-btn">Next ➜</button>
-          <button id="wizardFinishBtn" class="ghost-btn" style="display:none;">Finish ✔</button>
-        </div>
+          <div class="wizard-body">
+            <div id="wizardStepWrap" class="wizard-step-wrap"></div>
+            <div class="wizard-progress">
+              <small id="wizardProgressText">Step 1 of 1</small>
+            </div>
+          </div>
 
+          <div class="wizard-footer">
+            <button id="wizardBackBtn" class="ghost-btn">⬅ Back</button>
+            <button id="wizardNextBtn" class="ghost-btn">Next ➜</button>
+            <button id="wizardFinishBtn" class="ghost-btn" style="display:none;">Finish ✔</button>
+          </div>
+
+        </div>
       </div>
+      <!-- ⭐⭐⭐ Wizard End ⭐⭐⭐ -->
+
     </div>
-    <!-- ⭐⭐⭐ Wizard End ⭐⭐⭐ -->
+  </section>
+  <!-- ✅ Prompt & Output Section End -->
 
-  </div>
-</section>
-<!-- ✅ Prompt & Output Section End -->
 
-  
   <!-- ===== Mail Karo — Instant Pdf converter and downloader (drop-in) ===== -->
   <section id="mk-instant-pdf" class="mk-instant-pdf">
     <div class="mk-pdf-inner">
@@ -414,43 +414,51 @@
     </div>
   </section>
 
-<!-- ✅ Upcoming Features Section Start -->
-<section id="upcoming-features" class="uf-reveal">
+  <!-- ✅ Upcoming Features Section Start -->
+  <section id="upcoming-features" class="uf-reveal">
     <div class="features-container uf-reveal">
-        <h2 class="section-title uf-reveal">Upcoming Features</h2>
-        <p class="section-subtitle uf-reveal">Discover what's next for Mail Karo. Innovation on the horizon!</p>
+      <h2 class="section-title uf-reveal">Upcoming Features</h2>
+      <p class="section-subtitle uf-reveal">Discover what's next for Mail Karo. Innovation on the horizon!</p>
 
-        <div class="features-grid">
+      <div class="features-grid">
 
-            <div class="feature-card uf-reveal">
-                <i class="fas fa-robot feature-icon"></i> <h3>AI Email Summarizer</h3>
-                <p>Get instant, concise summaries of long email threads so you can catch up faster and save time.</p>
-            </div>
+        <div class="feature-card uf-reveal">
+          <i class="fas fa-robot feature-icon"></i>
+          <h3>AI Email Summarizer</h3>
+          <p>Get instant, concise summaries of long email threads so you can catch up faster and save time.</p>
+        </div>
 
-            <div class="feature-card uf-reveal">
-                <i class="fas fa-language feature-icon"></i> <h3>Multi-Language Email Writer</h3>
-                <p>Draft emails effortlessly in multiple languages using intelligent writing assistance tailored to your needs.</p>
-            </div>
+        <div class="feature-card uf-reveal">
+          <i class="fas fa-language feature-icon"></i>
+          <h3>Multi-Language Email Writer</h3>
+          <p>Draft emails effortlessly in multiple languages using intelligent writing assistance tailored to your
+            needs.</p>
+        </div>
 
-            <div class="feature-card uf-reveal">
-                <i class="fas fa-clone feature-icon"></i> <h3>Smart Email Templates</h3>
-                <p>Dynamically generate templates based on the context and recipient of your message for perfect emails every time.</p>
-            </div>
+        <div class="feature-card uf-reveal">
+          <i class="fas fa-clone feature-icon"></i>
+          <h3>Smart Email Templates</h3>
+          <p>Dynamically generate templates based on the context and recipient of your message for perfect emails every
+            time.</p>
+        </div>
 
-            <div class="feature-card uf-reveal">
-                <i class="fas fa-moon feature-icon"></i> <h3>Dark Mode</h3>
-                <p>A sleek, low-light interface for comfortable emailing at night or in low-light conditions.</p>
-            </div>
+        <div class="feature-card uf-reveal">
+          <i class="fas fa-moon feature-icon"></i>
+          <h3>Dark Mode</h3>
+          <p>A sleek, low-light interface for comfortable emailing at night or in low-light conditions.</p>
+        </div>
 
-            <div class="feature-card uf-reveal">
-                <i class="fas fa-microphone-alt feature-icon"></i> <h3>Voice-to-Email Generation</h3>
-                <p>Dictate your message and let AI instantly convert it into a structured email, hands-free.</p>
-            </div>
+        <div class="feature-card uf-reveal">
+          <i class="fas fa-microphone-alt feature-icon"></i>
+          <h3>Voice-to-Email Generation</h3>
+          <p>Dictate your message and let AI instantly convert it into a structured email, hands-free.</p>
+        </div>
 
-            <div class="feature-card uf-reveal">
-                <i class="fas fa-users feature-icon"></i> <h3>Team Collaboration Tools</h3>
-                <p>Share, review, and finalize email drafts with your team within the Mail Karo app.</p>
-            </div>
+        <div class="feature-card uf-reveal">
+          <i class="fas fa-users feature-icon"></i>
+          <h3>Team Collaboration Tools</h3>
+          <p>Share, review, and finalize email drafts with your team within the Mail Karo app.</p>
+        </div>
 
         <div class="feature-card uf-reveal">
           <i class="fas fa-microphone-alt feature-icon"></i>
@@ -463,123 +471,135 @@
           <h3>Team Collaboration Tools</h3>
           <p>Share, review, and finalize email drafts with your team members directly within the Mail Karo app.</p>
         </div>
+      </div>
+  </section>
+  <!-- ✅ Upcoming Features Section End -->
+
+  <!--testinomial-->
+  <section class="mk-testimonials mk-testimonials-reveal">
+    <div class="mk-header">
+      <span class="mk-tag">Testimonials</span>
+      <h2>What People Say About Mail Karo</h2>
+      <p>Real stories from people who use Mail Karo to write better emails every day.</p>
     </div>
-</section>
-<!-- ✅ Upcoming Features Section End -->
 
-<!--testinomial-->
-<section class="mk-testimonials">
-  <div class="mk-header">
-    <span class="mk-tag">Testimonials</span>
-    <h2>What People Say About Mail Karo</h2>
-    <p>Real stories from people who use Mail Karo to write better emails every day.</p>
-  </div>
-
-  <div class="mk-slider-container">
-    <div class="mk-slider" id="mkSlider">
-      <!-- Cards will be injected by JavaScript -->
+    <div class="mk-slider-container">
+      <div class="mk-slider" id="mkSlider">
+        <!-- Cards will be injected by JavaScript -->
+      </div>
     </div>
-  </div>
 
-  <div class="mk-controls">
-    <button id="mkPrev">‹</button>
-    <button id="mkNext">›</button>
-  </div>
-</section>
+    <div class="mk-controls">
+      <button id="mkPrev">‹</button>
+      <button id="mkNext">›</button>
+    </div>
+  </section>
 
-<!-- ================= FAQ SECTION ================= -->
-<section id="mk-faq-section" class="mk-faq-wrapper mk-reveal">
-  <div class="mk-faq-header mk-reveal">
+  <!-- ================= FAQ SECTION ================= -->
+  <section id="mk-faq-section" class="mk-faq-wrapper mk-reveal">
+    <div class="mk-faq-header mk-reveal">
       <span class="mk-badge">Support & Help</span>
       <h2 class="mk-faq-title">Frequently Asked <span>Questions</span></h2>
       <p class="mk-subtitle">
-          Everything you need to know about Mail Karo, privacy, features, and usage.
+        Everything you need to know about Mail Karo, privacy, features, and usage.
       </p>
-  </div>
+    </div>
 
-  <div class="mk-accordion-container">
+    <div class="mk-accordion-container">
 
       <!-- FAQ 1 -->
       <div class="mk-accordion-item mk-reveal">
-          <button class="mk-accordion-header">
-              <span class="mk-question">What is Mail Karo and how does it work?</span>
-              <div class="mk-icon"><div class="line h"></div><div class="line v"></div></div>
-          </button>
-          <div class="mk-accordion-content">
-              <div class="mk-content-inner">
-                  Mail Karo is an AI-powered email generator that helps you draft
-                  professional emails instantly. Just enter your topic and select a tone —
-                  the AI writes the complete email for you.
-              </div>
+        <button class="mk-accordion-header">
+          <span class="mk-question">What is Mail Karo and how does it work?</span>
+          <div class="mk-icon">
+            <div class="line h"></div>
+            <div class="line v"></div>
           </div>
+        </button>
+        <div class="mk-accordion-content">
+          <div class="mk-content-inner">
+            Mail Karo is an AI-powered email generator that helps you draft
+            professional emails instantly. Just enter your topic and select a tone —
+            the AI writes the complete email for you.
+          </div>
+        </div>
       </div>
 
       <!-- FAQ 2 -->
       <div class="mk-accordion-item mk-reveal">
-          <button class="mk-accordion-header">
-              <span class="mk-question">Is Mail Karo completely free?</span>
-              <div class="mk-icon"><div class="line h"></div><div class="line v"></div></div>
-          </button>
-          <div class="mk-accordion-content">
-              <div class="mk-content-inner">
-                  Yes! Mail Karo is 100% free — unlimited usage, PDF download, email copy,
-                  no login required.
-              </div>
+        <button class="mk-accordion-header">
+          <span class="mk-question">Is Mail Karo completely free?</span>
+          <div class="mk-icon">
+            <div class="line h"></div>
+            <div class="line v"></div>
           </div>
+        </button>
+        <div class="mk-accordion-content">
+          <div class="mk-content-inner">
+            Yes! Mail Karo is 100% free — unlimited usage, PDF download, email copy,
+            no login required.
+          </div>
+        </div>
       </div>
 
       <!-- FAQ 3 -->
       <div class="mk-accordion-item mk-reveal">
-          <button class="mk-accordion-header">
-              <span class="mk-question">Is my data private?</span>
-              <div class="mk-icon"><div class="line h"></div><div class="line v"></div></div>
-          </button>
-          <div class="mk-accordion-content">
-              <div class="mk-content-inner">
-                  Absolutely — we do NOT store your emails. Everything is generated and used
-                  only on your device.
-              </div>
+        <button class="mk-accordion-header">
+          <span class="mk-question">Is my data private?</span>
+          <div class="mk-icon">
+            <div class="line h"></div>
+            <div class="line v"></div>
           </div>
+        </button>
+        <div class="mk-accordion-content">
+          <div class="mk-content-inner">
+            Absolutely — we do NOT store your emails. Everything is generated and used
+            only on your device.
+          </div>
+        </div>
       </div>
 
       <!-- FAQ 4 -->
       <div class="mk-accordion-item mk-reveal">
-          <button class="mk-accordion-header">
-              <span class="mk-question">Can I download my email as PDF?</span>
-              <div class="mk-icon"><div class="line h"></div><div class="line v"></div></div>
-          </button>
-          <div class="mk-accordion-content">
-              <div class="mk-content-inner">
-                  Yes, Mail Karo includes an instant PDF converter built-in for easy downloads.
-              </div>
+        <button class="mk-accordion-header">
+          <span class="mk-question">Can I download my email as PDF?</span>
+          <div class="mk-icon">
+            <div class="line h"></div>
+            <div class="line v"></div>
           </div>
+        </button>
+        <div class="mk-accordion-content">
+          <div class="mk-content-inner">
+            Yes, Mail Karo includes an instant PDF converter built-in for easy downloads.
+          </div>
+        </div>
       </div>
 
       <!-- FAQ 5 -->
       <div class="mk-accordion-item mk-reveal">
-          <button class="mk-accordion-header">
-              <span class="mk-question">What features are coming next?</span>
-              <div class="mk-icon">
-                  <div class="line h"></div>
-                  <div class="line v"></div>
-              </div>
-          </button>
-          <div class="mk-accordion-content">
-              <div class="mk-content-inner">
-                  Upcoming features include:<br>
-                  - Email Templates<br>
-                  - Grammar & Tone Enhancer<br>
-                  - Saved Email History<br>
-                  - Smart Suggestions<br>
-                  - Improved PDF tools<br>
-                  - And full customization support
-              </div>
+        <button class="mk-accordion-header">
+          <span class="mk-question">What features are coming next?</span>
+          <div class="mk-icon">
+            <div class="line h"></div>
+            <div class="line v"></div>
           </div>
+        </button>
+        <div class="mk-accordion-content">
+          <div class="mk-content-inner">
+            Upcoming features include:<br>
+            - Email Templates<br>
+            - Grammar & Tone Enhancer<br>
+            - Saved Email History<br>
+            - Smart Suggestions<br>
+            - Improved PDF tools<br>
+            - And full customization support
+          </div>
+        </div>
       </div>
 
-  </div>
-</section>
-<!-- ================= END FAQ ================= -->
+    </div>
+  </section>
+  <!-- ================= END FAQ ================= -->
 
   <!-- ✅ Footer Section Start -->
   <footer class="footer">
@@ -612,7 +632,8 @@
     <!-- ⭐ Updated Footer Bottom -->
     <div class="footer-bottom">
       <p class="footer-info">
-        <span class="founder">Built & Tested By: <strong>Adarsh Jayprakash Mishra</strong></span> <span class="pipe-separator"> |
+        <span class="founder">Built & Tested By: <strong>Adarsh Jayprakash Mishra</strong></span> <span
+          class="pipe-separator"> |
         </span>
         <span class="made-in-india">Made with ❤️ in India 🇮🇳</span> <span class="pipe-separator"> | </span>
         <span class="copyright">Mail Karo © 2025. All Rights Reserved.</span>
