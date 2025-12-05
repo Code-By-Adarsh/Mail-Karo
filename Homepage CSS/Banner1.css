@@ -64,21 +64,21 @@
 
 /* CTA BUTTON (matches hero-btn) */
 .mk-btn {
-    padding: 0.9rem 2rem;
-    background: linear-gradient(90deg, var(--accent), var(--accent-hover));
-    border: none;
-    border-radius: 12px;
-    font-size: 1.1rem;
-    font-weight: 700;
-    cursor: pointer;
-    color: #000;
-    box-shadow: 0 0 20px rgba(255, 215, 0, 0.4);
-    transition: all 0.3s ease;
+  display: inline-block;
+  margin-top: 30px;
+  background: linear-gradient(90deg, var(--accent), var(--accent-hover));
+  color: #000;
+  font-weight: 700;
+  padding: 12px 26px;
+  border-radius: 10px;
+  text-decoration: none;
+  box-shadow: 0 0 20px rgba(255, 215, 0, 0.4);
+  transition: all 0.3s ease;
 }
 
 .mk-btn:hover {
-    box-shadow: 0 0 30px rgba(255, 215, 0, 0.7);
-    transform: translateY(-4px);
+  box-shadow: 0 0 30px rgba(255, 215, 0, 0.7);
+  transform: translateY(-4px);
 }
 
 /* RESPONSIVE */
