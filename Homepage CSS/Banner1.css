@@ -41,10 +41,6 @@
     transition: transform 1s ease;
 }
 
-.mk-hero-image img:hover {
-    transform: scale(1.05);
-}
-
 /* TEXT CONTENT */
 .mk-hero-text h1 {
     font-size: 2.7rem;
