@@ -11,7 +11,7 @@
   border: 1px solid var(--border);
   color: var(--text);
 
-  box-shadow: 0 0 22px rgba(0,0,0,0.08);
+  box-shadow: 0 0 22px rgba(0, 0, 0, 0.08);
   transition: background 0.3s ease, color 0.3s ease;
 }
 
@@ -26,6 +26,7 @@
     flex-direction: column;
     text-align: center;
   }
+
   .mk-pdf-right {
     order: -1;
   }
@@ -105,10 +106,35 @@
 }
 
 /* Disable old animation */
+/* Animation State: Hidden */
 .mk-anim {
-  opacity: 1 !important;
-  transform: none !important;
-  transition: none !important;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+  will-change: opacity, transform;
+}
+
+/* Animation State: Visible */
+.mk-in-view {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Stagger delays */
+.mk-pdf-desc.mk-anim {
+  transition-delay: 0.1s;
+}
+
+#mkPdfDownloadBtn.mk-anim {
+  transition-delay: 0.2s;
+}
+
+#mkPdfPreviewBtn.mk-anim {
+  transition-delay: 0.3s;
+}
+
+.mk-pdf-right.mk-anim {
+  transition-delay: 0.4s;
 }
 
 /* responsive */
@@ -116,19 +142,21 @@
   #mk-instant-pdf {
     padding: 22px;
   }
+
   .mk-pdf-desc {
     font-size: 14px;
   }
 }
+
 .mk-floating-pdf {
-    opacity: 0.22;
-    color: var(--accent); 
-    animation: mkFloat 4s ease-in-out infinite;
+  opacity: 0.22;
+  color: var(--accent);
+  animation: mkFloat 4s ease-in-out infinite;
 }
 
 /* Light mode — make it grey (visible on white) */
 .light .mk-floating-pdf {
-    color: #000 !important;
-    opacity: 0.75 !important;
-    filter: drop-shadow(0 0 4px rgba(0,0,0,0.2));
+  color: #000 !important;
+  opacity: 0.75 !important;
+  filter: drop-shadow(0 0 4px rgba(0, 0, 0, 0.2));
 }

@@ -15,6 +15,27 @@
       return;
     }
 
+    /* ---------------- SCROLL ANIMATION (IntersectionObserver) ---------------- */
+    // Approach: Use IntersectionObserver to toggle 'mk-in-view' class when elements enter viewport.
+    // Fallback: If IO is not supported, show elements immediately.
+    const animElements = document.querySelectorAll('.mk-anim');
+
+    if ('IntersectionObserver' in window) {
+      const animObserver = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('mk-in-view');
+            observer.unobserve(entry.target); // Trigger only once
+          }
+        });
+      }, { threshold: 0.2 }); // Trigger when 20% of the element is visible
+
+      animElements.forEach(el => animObserver.observe(el));
+    } else {
+      // Fallback for older browsers
+      animElements.forEach(el => el.classList.add('mk-in-view'));
+    }
+
     /* ---------------- BUTTON CONTROL ---------------- */
     function disableBtns() {
       downloadBtn.disabled = true;
