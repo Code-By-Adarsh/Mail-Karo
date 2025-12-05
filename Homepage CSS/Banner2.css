@@ -69,10 +69,6 @@
     transition: transform 1s ease;
 }
 
-.mk-pdf-image img:hover {
-    transform: scale(1.05);
-}
-
 /* -------------------------------------------------- */
 /* 🔥 RESPONSIVE FIX — IMAGE ALWAYS TOP, CLEAN STACK */
 /* -------------------------------------------------- */
