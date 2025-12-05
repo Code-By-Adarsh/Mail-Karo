@@ -1,0 +1,120 @@
+/* 🔥 Banner Section Matching Hero Theme */
+.mk-hero {
+    width: 100%;
+    padding: 5rem 1rem;
+    background: radial-gradient(circle at 15% 25%, rgba(255, 215, 0, 0.06), transparent 60%),
+                radial-gradient(circle at 85% 80%, rgba(255, 215, 0, 0.08), transparent 65%);
+    position: relative;
+    overflow: hidden;
+}
+
+/* Fade animation */
+.mk-hero-content {
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    gap: 3.5rem;
+    animation: fadeInUp 1s ease;
+}
+
+/* Image Glow */
+.mk-hero-image img {
+    width: 100%;
+    max-width: 430px;
+    filter: drop-shadow(0 0 18px rgba(255, 215, 0, 0.35));
+    transition: transform 1s ease;
+}
+
+.mk-hero-image img:hover {
+    transform: scale(1.05);
+}
+
+/* TEXT */
+.mk-hero-text h1 {
+    font-size: 2.7rem;
+    font-weight: 700;
+    color: var(--text);
+    text-shadow: 0 0 12px rgba(255, 215, 0, 0.25);
+}
+
+.mk-hero-text p {
+    color: var(--text-muted);
+    font-size: 1.1rem;
+    line-height: 1.65;
+    margin: 1rem 0;
+}
+
+/* BADGES */
+.mk-badges {
+    display: flex;
+    gap: 1rem;
+    margin: 1.8rem 0;
+}
+
+.mk-badges span {
+    background: rgba(255, 215, 0, 0.12);
+    padding: 0.55rem 1.2rem;
+    border-radius: 50px;
+    color: #FFD700;
+    font-weight: 600;
+    border: 1px solid rgba(255, 215, 0, 0.2);
+    text-shadow: 0 0 6px rgba(255, 215, 0, 0.4);
+}
+
+/* CTA BUTTON (matches hero-btn) */
+.mk-btn {
+    padding: 0.9rem 2rem;
+    background: linear-gradient(90deg, var(--accent), var(--accent-hover));
+    border: none;
+    border-radius: 12px;
+    font-size: 1.1rem;
+    font-weight: 700;
+    cursor: pointer;
+    color: #000;
+    box-shadow: 0 0 20px rgba(255, 215, 0, 0.4);
+    transition: all 0.3s ease;
+}
+
+.mk-btn:hover {
+    box-shadow: 0 0 30px rgba(255, 215, 0, 0.7);
+    transform: translateY(-4px);
+}
+
+/* RESPONSIVE */
+@media (max-width: 850px) {
+    .mk-hero-content {
+        flex-direction: column-reverse;
+        text-align: center;
+        gap: 2.5rem;
+    }
+
+    .mk-hero-text h1 {
+        font-size: 2.2rem;
+    }
+
+    .mk-hero-image img {
+        max-width: 300px;
+        margin: auto;
+    }
+
+    .mk-badges {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+}
+
+/* Light Mode Fix */
+[data-theme="light"] .mk-hero-text h1 {
+    color: #000;
+    text-shadow: none;
+}
+
+[data-theme="light"] .mk-hero-text p {
+    color: #333;
+}
+
+[data-theme="light"] .mk-badges span {
+    color: #B8941F;
+    background: rgba(212, 175, 55, 0.18);
+}

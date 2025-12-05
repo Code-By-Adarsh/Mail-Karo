@@ -1,0 +1,130 @@
+/* 🔥 PDF Banner with Neon Glow Matching Hero + Banner1 */
+
+.mk-pdf-hero {
+    width: 100%;
+    padding: 5rem 1rem;
+    background: radial-gradient(circle at 15% 25%, rgba(255, 215, 0, 0.06), transparent 60%),
+                radial-gradient(circle at 85% 80%, rgba(255, 215, 0, 0.08), transparent 65%);
+    position: relative;
+    overflow: hidden;
+}
+
+.mk-pdf-wrapper {
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 3.5rem;
+    animation: fadeInUp 1s ease;
+}
+
+/* TEXT */
+.mk-pdf-text h1 {
+    font-size: 2.8rem;
+    font-weight: 700;
+    color: var(--text);
+    line-height: 1.2;
+    text-shadow: 0 0 12px rgba(255, 215, 0, 0.25);
+    margin-bottom: 1.4rem;
+}
+
+.mk-pdf-text p {
+    color: var(--text-muted);
+    font-size: 1.1rem;
+    line-height: 1.7;
+    max-width: 450px;
+    margin-bottom: 1.8rem;
+}
+
+.mk-pdf-text strong {
+    color: var(--accent);
+}
+
+/* CTA BUTTON (same as HERO) */
+.mk-btn.mk-pdf-btn {
+    padding: 0.95rem 2.2rem;
+    background: linear-gradient(90deg, var(--accent), var(--accent-hover));
+    border: none;
+    border-radius: 12px;
+    font-size: 1.1rem;
+    font-weight: 700;
+    cursor: pointer;
+    color: #000;
+    box-shadow: 0 0 20px rgba(255, 215, 0, 0.4);
+    transition: all 0.3s ease;
+}
+
+.mk-btn.mk-pdf-btn:hover {
+    box-shadow: 0 0 30px rgba(255, 215, 0, 0.7);
+    transform: translateY(-4px);
+}
+
+/* IMAGE WITH GLOW */
+.mk-pdf-image img {
+    width: 100%;
+    max-width: 430px;
+    filter: drop-shadow(0 0 18px rgba(255, 215, 0, 0.35));
+    transition: transform 1s ease;
+}
+
+.mk-pdf-image img:hover {
+    transform: scale(1.05);
+}
+
+/* SPARK DOTS SPECIFIC TO BANNER2 */
+.mk-pdf-spark {
+    position: absolute;
+    width: 4px;
+    height: 4px;
+    background: #FFD700;
+    border-radius: 50%;
+    opacity: 0.85;
+    box-shadow: 0 0 10px #FFD700;
+    animation: pdfSparkMove linear infinite;
+    z-index: 1;
+}
+
+@keyframes pdfSparkMove {
+    0% { transform: translate(0, 0) scale(1); opacity: 1; }
+    50% { transform: translate(20px, -20px) scale(1.3); opacity: 0.55; }
+    100% { transform: translate(0, 0) scale(1); opacity: 1; }
+}
+
+/* RESPONSIVE */
+@media (max-width: 850px) {
+    .mk-pdf-wrapper {
+        flex-direction: column;
+        text-align: center;
+        gap: 2.5rem;
+    }
+
+    .mk-pdf-image {
+        order: -1;
+    }
+
+    .mk-pdf-image img {
+        max-width: 320px;
+        margin: auto;
+    }
+
+    .mk-btn.mk-pdf-btn {
+        width: 100%;
+        max-width: 320px;
+        margin: auto;
+    }
+}
+
+/* Light Mode Fix */
+[data-theme="light"] .mk-pdf-text h1 {
+    color: #000;
+    text-shadow: none;
+}
+
+[data-theme="light"] .mk-pdf-text p {
+    color: #333;
+}
+
+[data-theme="light"] .mk-pdf-spark {
+    box-shadow: 0 0 6px rgba(212, 175, 55, 0.6);
+}
