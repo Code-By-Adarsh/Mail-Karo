@@ -265,9 +265,8 @@ document.addEventListener("DOMContentLoaded", () => {
     if (charCount)
       charCount.innerText = `${promptInput.value.length} chars`;
     if (wordCount)
-      wordCount.innerText = `${
-        promptInput.value.trim().split(/\s+/).filter(Boolean).length
-      } words`;
+      wordCount.innerText = `${promptInput.value.trim().split(/\s+/).filter(Boolean).length
+        } words`;
     promptInput.style.height = "auto";
     promptInput.style.height =
       Math.min(promptInput.scrollHeight, 250) + "px";
@@ -470,9 +469,8 @@ document.addEventListener("DOMContentLoaded", () => {
     const stepFields = steps[idx];
 
     if (wizardProgressText)
-      wizardProgressText.innerText = `Step ${idx + 1} of ${
-        steps.length
-      }`;
+      wizardProgressText.innerText = `Step ${idx + 1} of ${steps.length
+        }`;
 
     const grid = document.createElement("div");
     grid.className = "wizard-grid";

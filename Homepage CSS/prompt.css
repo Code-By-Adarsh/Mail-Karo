@@ -22,7 +22,7 @@
   font-size: 2.2rem;
   font-weight: 700;
   color: var(--accent);
-  text-shadow: 0 0 10px rgba(255,215,0,0.3);
+  text-shadow: 0 0 10px rgba(255, 215, 0, 0.3);
 }
 
 [data-theme="light"] .prompt-title {
@@ -44,16 +44,16 @@
   border: 1px solid var(--border);
   border-radius: 14px;
   overflow: hidden;
-  box-shadow: 0 0 20px rgba(255,215,0,0.08);
+  box-shadow: 0 0 20px rgba(255, 215, 0, 0.08);
   transition: 0.3s;
 }
 
 [data-theme="light"] .prompt-box {
-  box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
 }
 
 .prompt-box:hover {
-  box-shadow: 0 0 25px rgba(255,215,0,0.15);
+  box-shadow: 0 0 25px rgba(255, 215, 0, 0.15);
 }
 
 [data-theme="light"] .prompt-box:hover {
@@ -98,7 +98,7 @@
 }
 
 .prompt-box button:hover {
-  box-shadow: 0 0 25px rgba(255,215,0,0.5);
+  box-shadow: 0 0 25px rgba(255, 215, 0, 0.5);
   transform: translateY(-2px);
 }
 
@@ -111,16 +111,16 @@
   padding: 20px;
   text-align: left;
   color: var(--text);
-  box-shadow: 0 0 20px rgba(255,215,0,0.05);
+  box-shadow: 0 0 20px rgba(255, 215, 0, 0.05);
   transition: 0.3s;
 }
 
 [data-theme="light"] .output-box {
-  box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
 }
 
 .output-box:hover {
-  box-shadow: 0 0 25px rgba(255,215,0,0.15);
+  box-shadow: 0 0 25px rgba(255, 215, 0, 0.15);
 }
 
 [data-theme="light"] .output-box:hover {
@@ -159,7 +159,7 @@
 }
 
 .output-header button:hover {
-  box-shadow: 0 0 20px rgba(255,215,0,0.6);
+  box-shadow: 0 0 20px rgba(255, 215, 0, 0.6);
   transform: translateY(-2px);
 }
 
@@ -187,7 +187,7 @@
 }
 
 [data-theme="light"] .ghost-btn {
-  border-color: rgba(0,0,0,0.35);
+  border-color: rgba(0, 0, 0, 0.35);
   color: #000;
 }
 
@@ -338,7 +338,8 @@
 /* Extra small screens below 480px */
 @media screen and (max-width: 480px) {
   .prompt-section {
-    padding: 40px 20px !important; /* Consistent with Hero/Footer */
+    padding: 40px 20px !important;
+    /* Consistent with Hero/Footer */
   }
 
   .prompt-container {
@@ -347,18 +348,21 @@
   }
 
   .prompt-title {
-    font-size: 1.6rem !important; /* Prevent header from being too huge */
+    font-size: 1.6rem !important;
+    /* Prevent header from being too huge */
     line-height: 1.3;
     margin-bottom: 10px;
   }
 
   .prompt-subtitle {
     font-size: 0.9rem !important;
-    padding: 0 10px; /* Prevent text touching edges */
+    padding: 0 10px;
+    /* Prevent text touching edges */
   }
 
   .prompt-box textarea {
-    font-size: 16px; /* Prevents iOS zoom on focus */
+    font-size: 16px;
+    /* Prevents iOS zoom on focus */
     padding: 15px;
   }
 
@@ -371,16 +375,21 @@
     padding: 20px 15px;
   }
 
-  .template-box, .tone-box {
+  .template-box,
+  .tone-box {
     display: flex;
-    flex-direction: column; /* Stack Label, Select, and Buttons vertically */
-    align-items: stretch; /* Make them full width */
+    flex-direction: column;
+    /* Stack Label, Select, and Buttons vertically */
+    align-items: stretch;
+    /* Make them full width */
     gap: 10px;
     margin-bottom: 20px;
   }
 
-  .template-box select, .tone-box select {
-    width: 100%; /* Full width dropdowns are easier to tap */
+  .template-box select,
+  .tone-box select {
+    width: 100%;
+    /* Full width dropdowns are easier to tap */
     margin-right: 0;
   }
 
@@ -390,37 +399,45 @@
   }
 
   #generateBtn {
-    width: 100%; /* Full width "Generate" button */
+    width: 100%;
+    /* Full width "Generate" button */
     padding: 14px;
     font-size: 1.1rem;
   }
 
   .action-buttons {
     display: flex;
-    flex-wrap: wrap; /* Allow buttons to wrap to next line */
+    flex-wrap: wrap;
+    /* Allow buttons to wrap to next line */
     gap: 10px;
     justify-content: center;
   }
 
   .action-buttons .ghost-btn {
-    flex: 1 1 auto; /* Buttons grow to fill space */
-    min-width: 100px; /* Minimum touch target size */
+    flex: 1 1 auto;
+    /* Buttons grow to fill space */
+    min-width: 100px;
+    /* Minimum touch target size */
     font-size: 0.9rem;
   }
 
   .wizard-card {
-    width: 95% !important; /* Fit within screen */
-    max-height: 90vh; /* Prevent being taller than screen */
-    overflow-y: auto; /* Scroll inside modal if content is long */
+    width: 95% !important;
+    /* Fit within screen */
+    max-height: 90vh;
+    /* Prevent being taller than screen */
+    overflow-y: auto;
+    /* Scroll inside modal if content is long */
     padding: 20px;
     margin: 10px auto;
   }
-  
+
   .wizard-footer {
-    flex-direction: column-reverse; /* Stack buttons, "Back" on bottom */
+    flex-direction: column-reverse;
+    /* Stack buttons, "Back" on bottom */
     gap: 10px;
   }
-  
+
   .wizard-footer button {
     width: 100%;
   }
@@ -442,7 +459,8 @@
 
 .template-box {
   margin-top: 25px;
-  margin-bottom: 18px; /* ⭐ Add this gap */
+  margin-bottom: 18px;
+  /* ⭐ Add this gap */
   display: flex;
   align-items: center;
   gap: 12px;
@@ -472,7 +490,7 @@
 
 .template-box select:hover {
   border-color: var(--accent);
-  box-shadow: 0 0 12px rgba(255,215,0,0.25);
+  box-shadow: 0 0 12px rgba(255, 215, 0, 0.25);
 }
 
 /* Save Template Button style match with ghost-btn */
@@ -495,11 +513,11 @@
   border-color: var(--accent);
   color: var(--accent);
   transform: translateY(-2px);
-  box-shadow: 0 0 12px rgba(255,215,0,0.25);
+  box-shadow: 0 0 12px rgba(255, 215, 0, 0.25);
 }
 
 [data-theme="light"] #saveTemplateBtn {
-  border-color: rgba(0,0,0,0.35);
+  border-color: rgba(0, 0, 0, 0.35);
   color: #000;
 }
 
@@ -526,7 +544,8 @@
     flex-direction: column;
     align-items: flex-start;
     width: 100%;
-    margin-bottom: 15px; /* ⭐ Mobile gap */
+    margin-bottom: 15px;
+    /* ⭐ Mobile gap */
   }
 
 }
@@ -541,7 +560,7 @@
   display: none;
   align-items: center;
   justify-content: center;
-  background: rgba(0,0,0,0.65);
+  background: rgba(0, 0, 0, 0.65);
   z-index: 2000;
   padding: 20px;
 }
@@ -557,7 +576,7 @@
   background: var(--panel);
   border: 1px solid var(--border);
   border-radius: 14px;
-  box-shadow: 0 8px 40px rgba(0,0,0,0.55);
+  box-shadow: 0 8px 40px rgba(0, 0, 0, 0.55);
   display: flex;
   flex-direction: column;
   overflow: hidden;
@@ -570,7 +589,7 @@
   align-items: center;
   justify-content: space-between;
   padding: 14px 18px;
-  border-bottom: 1px solid rgba(255,255,255,0.05);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
 }
 
 .wizard-header h3 {
@@ -606,7 +625,7 @@
 .wizard-step input,
 .wizard-step textarea,
 .wizard-step select {
-  background: rgba(255,255,255,0.02);
+  background: rgba(255, 255, 255, 0.02);
   border: 1px solid var(--border);
   border-radius: 10px;
   padding: 12px;
@@ -628,7 +647,7 @@
 /* Footer */
 .wizard-footer {
   padding: 14px 18px;
-  border-top: 1px solid rgba(255,255,255,0.05);
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
   display: flex;
   justify-content: flex-end;
   gap: 10px;
@@ -683,14 +702,16 @@
 }
 
 .tone-item,
-.length-item {
+.length-item,
+.language-item {
   display: flex;
   flex-direction: column;
   gap: 6px;
 }
 
 .tone-item label,
-.length-item label {
+.length-item label,
+.language-item label {
   font-weight: 600;
   color: var(--accent);
 }
@@ -709,15 +730,28 @@
 
 /* Mobile responsive */
 @media (max-width: 768px) {
+
+  /* Tone selector — stack */
   .tone-box {
     flex-direction: column;
     align-items: flex-start;
+    gap: 12px;
+  }
+
+  /* Make each item (Label + Select) a row */
+  .tone-item,
+  .length-item,
+  .language-item {
     width: 100%;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
   }
 
   .tone-item select,
-  .length-item select {
-    width: 100%;
+  .length-item select,
+  .language-item select {
+    width: 60%;
   }
 }
 
@@ -735,12 +769,5 @@
 
 #languageSelect:hover {
   border-color: var(--accent);
-  box-shadow: 0 0 12px rgba(255,215,0,0.25);
-}
-
-/* Mobile full-width support */
-@media (max-width: 768px) {
-  #languageSelect {
-    width: 100%;
-  }
+  box-shadow: 0 0 12px rgba(255, 215, 0, 0.25);
 }
