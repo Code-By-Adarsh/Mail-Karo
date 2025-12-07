@@ -20,13 +20,16 @@
 
 /* === LIGHT MODE VARIABLES === */
 [data-theme="light"] {
-  --bg: #FFFFFF;         /* Full white light mode */
+  --bg: #FFFFFF;
+  /* Full white light mode */
   --panel: #F6F6F6;
 
-  --text: #000000;       /* Pure black text for clarity */
+  --text: #000000;
+  /* Pure black text for clarity */
   --text-muted: #555555;
 
-  --accent: #D4AF37;     /* Softer gold */
+  --accent: #D4AF37;
+  /* Softer gold */
   --accent-hover: #B8941F;
 
   --border: #E0E0E0;
@@ -81,16 +84,17 @@ body {
 
 /* Logo */
 .logo {
-  width: 44px;           
-  height: 44px; 
-  flex-shrink: 0; 
+  width: 44px;
+  height: 44px;
+  flex-shrink: 0;
   object-fit: contain;
   filter: drop-shadow(0 0 10px rgba(255, 215, 0, 0.3));
   transition: var(--transition);
 }
 
 [data-theme="light"] .logo {
-  filter: drop-shadow(0 0 5px rgba(212, 175, 55, 0.2));  /* Light mode subtle glow */
+  filter: drop-shadow(0 0 5px rgba(212, 175, 55, 0.2));
+  /* Light mode subtle glow */
 }
 
 .logo:hover {
@@ -135,61 +139,66 @@ body {
 }
 
 /* Sun and Moon Icon Styles */
-.sun-and-moon > :is(.moon, .sun, .sun-beams) {
+.sun-and-moon> :is(.moon, .sun, .sun-beams) {
   transform-origin: center;
 }
 
-.sun-and-moon > :is(.moon, .sun) {
+.sun-and-moon> :is(.moon, .sun) {
   fill: var(--accent);
 }
 
-.theme-toggle:hover .sun-and-moon > :is(.moon, .sun) {
+.theme-toggle:hover .sun-and-moon> :is(.moon, .sun) {
   fill: var(--accent-hover);
 }
 
-.sun-and-moon > .sun-beams {
+.sun-and-moon>.sun-beams {
   stroke: var(--accent);
   stroke-width: 2px;
   transition: transform 0.5s ease, opacity 0.5s ease;
 }
 
-.theme-toggle:hover .sun-and-moon > .sun-beams {
+.theme-toggle:hover .sun-and-moon>.sun-beams {
   stroke: var(--accent-hover);
 }
 
-.sun-and-moon > .sun {
+.sun-and-moon>.sun {
   transition: transform 0.5s ease, opacity 0.3s ease;
 }
 
-[data-theme="dark"] .sun-and-moon > .sun {
+[data-theme="dark"] .sun-and-moon>.sun {
   transform: scale(1.75);
   opacity: 0;
 }
 
-[data-theme="dark"] .sun-and-moon > .sun-beams {
+[data-theme="dark"] .sun-and-moon>.sun-beams {
   opacity: 0;
   transform: rotateZ(-25deg);
 }
 
-.sun-and-moon > .moon {
+.sun-and-moon>.moon {
   opacity: 0;
   transition: opacity 0.3s ease;
 }
 
-[data-theme="dark"] .sun-and-moon > .moon {
+[data-theme="dark"] .sun-and-moon>.moon {
   opacity: 1;
 }
 
-#moon-mask > circle {
+#moon-mask>circle {
   transform: translateX(0);
   transition: transform 0.25s ease;
 }
 
-[data-theme="dark"] #moon-mask > circle {
+[data-theme="dark"] #moon-mask>circle {
   transform: translateX(-10px);
 }
 
-/* Nav Links */
+/* Nav Links Container */
+.nav-links {
+  margin-left: auto;
+}
+
+/* Nav Links List */
 .nav-links ul {
   list-style: none;
   display: flex;
@@ -259,38 +268,44 @@ body {
 @media (max-width: 850px) {
   .nav-container {
     padding: 15px 15px;
-    flex-wrap: nowrap;   /* Keep everything on one line */
+    flex-wrap: nowrap;
+    /* Keep everything on one line */
     gap: 10px;
   }
 
   .logo-area {
     order: 1;
-    flex: 0 1 auto; 
-    min-width: 0;       
-    overflow: hidden;    
+    flex: 0 1 auto;
+    min-width: 0;
+    overflow: hidden;
   }
 
   .logo {
-    width: 44px !important; 
+    width: 44px !important;
     height: 44px !important;
-    min-width: 44px;  /* Forces browser to NEVER go below 44px */
+    min-width: 44px;
+    /* Forces browser to NEVER go below 44px */
     min-height: 44px;
-    flex-shrink: 0;           
+    flex-shrink: 0;
   }
 
   .brand-name {
     white-space: nowrap;
     overflow: hidden;
-    text-overflow: ellipsis; /* Adds "..." if screen is too small */
+    text-overflow: ellipsis;
+    /* Adds "..." if screen is too small */
   }
 
-  .menu-btn, .theme-toggle {
-    flex-shrink: 0;
-    order: 3; /* Menu is last */
-  }
-  
+  .menu-btn,
   .theme-toggle {
-    order: 2; /* Theme toggle before menu */
+    flex-shrink: 0;
+    order: 3;
+    /* Menu is last */
+  }
+
+  .theme-toggle {
+    order: 2;
+    /* Theme toggle before menu */
     margin-left: 0;
     margin-right: 5px;
     width: 40px;
@@ -305,6 +320,7 @@ body {
   .nav-links {
     display: none;
     position: absolute;
+    margin-left: 0;
     top: 70px;
     left: 50%;
     transform: translateX(-50%);
@@ -350,6 +366,7 @@ body {
     opacity: 0;
     transform: translateY(-10px);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);
@@ -362,12 +379,14 @@ body {
     max-height: 0;
     overflow: hidden;
     opacity: 0;
-    display: block; /* Important: smooth animation ke lie display ko block rakho */
+    display: block;
+    /* Important: smooth animation ke lie display ko block rakho */
     transition: max-height 0.35s ease, opacity 0.3s ease;
   }
 
   .nav-links.active {
-    max-height: 500px; /* Enough height to open fully */
+    max-height: 500px;
+    /* Enough height to open fully */
     opacity: 1;
   }
 }
@@ -375,10 +394,11 @@ body {
 /* Specific Fix for very small screens (< 380px) */
 @media (max-width: 380px) {
   .brand-name {
-    font-size: 1rem !important; 
+    font-size: 1rem !important;
   }
+
   .nav-container {
-    padding: 10px 5px !important; 
+    padding: 10px 5px !important;
   }
 }
 
