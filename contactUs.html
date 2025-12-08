@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -16,91 +17,95 @@
 </head>
 
 <body>
-<main class="mk-page">
+  <main class="mk-page">
 
-  <!-- HERO -->
-  <header class="mk-hero">
-    <div class="mk-hero-inner">
-      <h1 class="mk-title">Mail Karo</h1>
-      <p class="mk-subtitle">Contact Us — we're here to help ✉️</p>
-      <p class="mk-lead">Fast. Private. Secure. Send us a message and we'll get back to you soon.</p>
-    </div>
-  </header>
+    <!-- HERO -->
+    <header class="mk-hero">
+      <div class="mk-hero-inner">
+        <h1 class="mk-title">Mail Karo</h1>
+        <p class="mk-subtitle">Contact Us — we're here to help ✉️</p>
+        <p class="mk-lead">Fast. Private. Secure. Send us a message and we'll get back to you soon.</p>
+      </div>
+    </header>
 
-  <!-- CONTACT -->
-  <section class="mk-section mk-form-section">
-    <div class="container">
-      <div class="panel glass" data-animate>
+    <!-- CONTACT -->
+    <section class="mk-section mk-form-section">
+      <div class="container">
+        <div class="panel glass" data-animate>
 
-        <!-- LEFT -->
-        <div class="panel-left">
-          <h2 class="panel-heading">Say hello 👋</h2>
-          <p class="panel-text">Have feedback, a question or a partnership idea? Drop a message and we'll reply within 48 hours.</p>
+          <!-- LEFT -->
+          <div class="panel-left">
+            <h2 class="panel-heading">Say hello 👋</h2>
+            <p class="panel-text">Have feedback, a question or a partnership idea? Drop a message and we'll reply within
+              48 hours.</p>
 
-          <ul class="contact-meta">
-            <li><i class="fas fa-shield-alt"></i> No data collected • Client-side only</li>
-            <li><i class="fas fa-bolt"></i> Fast replies • Friendly team</li>
-          </ul>
+            <ul class="contact-meta">
+              <li><i class="fas fa-shield-alt"></i> No data collected • Client-side only</li>
+              <li><i class="fas fa-bolt"></i> Fast replies • Friendly team</li>
+            </ul>
 
-          <div class="social-compact">
-            <a href="https://www.instagram.com/ltx_adarsh18" class="social-icon"><i class="fab fa-instagram"></i></a>
-            <a href="https://github.com/Code-By-Adarsh/Mail-Karo" class="social-icon"><i class="fab fa-github"></i></a>
-            <a href="https://www.linkedin.com/company/mail-karo/" class="social-icon"><i class="fab fa-linkedin"></i></a>
+            <div class="social-compact">
+              <a href="https://www.instagram.com/ltx_adarsh18" class="social-icon"><i class="fab fa-instagram"></i></a>
+              <a href="https://github.com/Code-By-Adarsh/Mail-Karo" class="social-icon"><i
+                  class="fab fa-github"></i></a>
+              <a href="https://www.linkedin.com/company/mail-karo/" class="social-icon"><i
+                  class="fab fa-linkedin"></i></a>
+            </div>
           </div>
-        </div>
 
-        <!-- RIGHT (FORM) -->
-        <form id="contactForm" class="panel-right" novalidate data-animate>
-          <div class="field-row">
+          <!-- RIGHT (FORM) -->
+          <form id="contactForm" class="panel-right" novalidate data-animate>
+            <div class="field-row">
+              <div class="input-group">
+                <label for="name">Full name</label>
+                <input id="name" name="name" type="text" placeholder="Jane Doe" autocomplete="off" required>
+                <small class="input-error">This field is required</small>
+              </div>
+
+              <div class="input-group">
+                <label for="email">Email</label>
+                <input id="email" name="email" type="email" placeholder="you@example.com" autocomplete="new-password"
+                  autocapitalize="none" autocorrect="off" spellcheck="false" required>
+                <small class="input-error">Enter a valid email</small>
+              </div>
+            </div>
+
             <div class="input-group">
-              <label for="name">Full name</label>
-              <input id="name" name="name" type="text" placeholder="Jane Doe" autocomplete="off" required>
+              <label for="subject">Subject</label>
+              <input id="subject" name="subject" type="text" placeholder="What is this about?" autocomplete="off"
+                required>
               <small class="input-error">This field is required</small>
             </div>
 
             <div class="input-group">
-              <label for="email">Email</label>
-              <input id="email" name="email" type="email" placeholder="you@example.com"
-                     autocomplete="new-password" autocapitalize="none" autocorrect="off" spellcheck="false" required>
-              <small class="input-error">Enter a valid email</small>
+              <label for="message">Message</label>
+              <textarea id="message" name="message" rows="6" placeholder="Tell us more..." required></textarea>
+              <small class="input-error">This field is required</small>
             </div>
-          </div>
 
-          <div class="input-group">
-            <label for="subject">Subject</label>
-            <input id="subject" name="subject" type="text" placeholder="What is this about?" autocomplete="off" required>
-            <small class="input-error">This field is required</small>
-          </div>
+            <div class="form-actions">
+              <button id="submitBtn" class="btn primary" disabled>
+                <span class="btn-text">Submit</span>
+                <span class="btn-spinner" aria-hidden="true"></span>
+              </button>
 
-          <div class="input-group">
-            <label for="message">Message</label>
-            <textarea id="message" name="message" rows="6" placeholder="Tell us more..." required></textarea>
-            <small class="input-error">This field is required</small>
-          </div>
+              <button type="button" class="btn ghost back-btn" onclick="location.href='index.html'">Back</button>
+            </div>
 
-          <div class="form-actions">
-            <button id="submitBtn" class="btn primary" disabled>
-              <span class="btn-text">Submit</span>
-              <span class="btn-spinner" aria-hidden="true"></span>
-            </button>
+            <div id="formToast" class="toast" role="status" aria-live="polite"></div>
+          </form>
 
-            <button type="button" class="btn ghost back-btn" onclick="location.href='index.html'">Back</button>
-          </div>
-
-          <div id="formToast" class="toast" role="status" aria-live="polite"></div>
-        </form>
-
+        </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- FOOTER -->
-  <footer class="mk-footer">
-    <div class="container footer-inner">
-      <div class="footer-left">
-        <h3>Mail Karo</h3>
-        <p class="muted">Built with privacy-first principles. © <span id="year"></span> Mail Karo</p>
-      </div>
+    <!-- FOOTER -->
+    <footer class="mk-footer">
+      <div class="container footer-inner">
+        <div class="footer-left">
+          <h3>Mail Karo</h3>
+          <p class="muted">Built with privacy-first principles. © <span id="year"></span> Mail Karo</p>
+        </div>
 
       <div class="footer-right">
         <nav class="footer-links">
@@ -108,21 +113,28 @@
           <a href="All-pages-html/privacyPolicy.html">Privacy Policy</a>
           <a href="All-pages-html/terms-of-service.html">Terms Of Service</a>
         </nav>
+        <div class="footer-right">
+          <nav class="footer-links">
+            <a href="index.html">Home</a>
+            <a href="All-pages-html/pivacyPolicy.html">Privacy Policy</a>
+            <a href="All-pages-html/terms-of-service.html">Terms Of Service</a>
+          </nav>
+        </div>
       </div>
-    </div>
-  </footer>
+    </footer>
 
-</main>
+  </main>
 
-<!-- SUCCESS POPUP -->
-<div id="successModal" class="success-modal" role="dialog" aria-hidden="true">
-  <h2>Message Sent ✓</h2>
-  <p>Your message has been delivered. We'll reply soon.</p>
-  <button class="modal-ok-btn" onclick="closeSuccessModal()">Okay</button>
-</div>
+  <!-- SUCCESS POPUP -->
+  <div id="successModal" class="success-modal" role="dialog" aria-hidden="true">
+    <h2>Message Sent ✓</h2>
+    <p>Your message has been delivered. We'll reply soon.</p>
+    <button class="modal-ok-btn" onclick="closeSuccessModal()">Okay</button>
+  </div>
 
-<!-- YOUR JS (corrected path) -->
-<script src="Homepage JS/contactUs.js"></script>
+  <!-- YOUR JS (corrected path) -->
+  <script src="Homepage JS/contactUs.js"></script>
 
 </body>
+
 </html>

@@ -70,9 +70,9 @@ function validateField(id, showErrors = false) {
 function updateSubmit() {
   // Check if all fields are valid (but don't show errors)
   const ok = validateField("name", false) &&
-             validateField("email", false) &&
-             validateField("subject", false) &&
-             validateField("message", false);
+    validateField("email", false) &&
+    validateField("subject", false) &&
+    validateField("message", false);
   submitBtn.disabled = !ok;
 }
 
@@ -88,7 +88,7 @@ Object.keys(fields).forEach(id => {
     }
     updateSubmit();
   });
-  
+
   // Special handling for email - show format errors on blur
   if (id === "email") {
     fields[id].addEventListener("blur", () => {
@@ -119,13 +119,13 @@ function closeSuccessModal() {
 form.addEventListener("submit", async (e) => {
   e.preventDefault();
   hasAttemptedSubmit = true; // Mark that user tried to submit
-  
+
   // Validate all fields and show errors
   const nameValid = validateField("name", true);
   const emailValid = validateField("email", true);
   const subjectValid = validateField("subject", true);
   const messageValid = validateField("message", true);
-  
+
   // If any field is invalid, stop submission
   if (!nameValid || !emailValid || !subjectValid || !messageValid) {
     console.log("Validation failed - errors should be visible now");
