@@ -20,228 +20,299 @@
   left: 0;
   width: 100%;
   height: 2px;
-  background: linear-gradient(90deg, rgba(255,215,0,0.7), transparent, rgba(255,215,0,0.7));
-  box-shadow: 0 0 15px rgba(255,215,0,0.4);
+  background: linear-gradient(90deg, rgba(255, 215, 0, 0.7), transparent, rgba(255, 215, 0, 0.7));
+  box-shadow: 0 0 15px rgba(255, 215, 0, 0.4);
 }
 
+/* Main Footer Grid Layout */
 .footer-container {
-  max-width: 1000px;
-  margin: auto;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1.5fr 1fr 1fr 1fr;
+  gap: 30px;
+  align-items: start;
+  text-align: left;
+  padding-bottom: 20px;
+}
+
+/* Brand Section */
+.footer-brand {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  gap: 25px;
+  gap: 15px;
 }
 
-/* Logo */
-.footer-logo img {
-  width: 60px;
-  height: 60px;
-  border-radius: 12px;
-  filter: drop-shadow(0 0 12px rgba(255,215,0,0.3));
-}
-
-[data-theme="light"] .footer-logo img {
-  filter: drop-shadow(0 0 6px rgba(212, 175, 55, 0.25));
-}
-
-.footer-logo h2 {
-  color: var(--accent);
-  font-family: 'Orbitron', sans-serif;
-  font-size: 1.6rem;
-  margin-top: 8px;
-}
-
-/* Tagline */
-.footer-logo .tagline {
-  font-size: 0.95rem;
-  color: var(--text-muted);
-  margin-top: 4px;
-}
-
-/* Footer Links */
-.footer-links {
+.brand-header {
   display: flex;
-  gap: 30px;
-  flex-wrap: wrap;
+  align-items: center;
+  gap: 12px;
 }
 
-.footer-links a {
-  text-decoration: none;
-  color: var(--text);
-  transition: 0.3s;
-  font-weight: 500;
+.footer-brand img {
+  width: 50px;
+  height: 50px;
+  object-fit: contain;
+  filter: drop-shadow(0 0 8px rgba(255, 215, 0, 0.3));
 }
 
-.footer-links a:hover {
+.footer-brand h2 {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 1.5rem;
   color: var(--accent);
-  text-shadow: 0 0 8px rgba(255,215,0,0.5);
+  margin: 0;
+  font-weight: 700;
+  text-shadow: 0 0 5px rgba(255, 215, 0, 0.2);
 }
 
-[data-theme="light"] .footer-links a:hover {
-  text-shadow: 0 0 6px rgba(212, 175, 55, 0.4);
+.tagline {
+  color: var(--text-muted);
+  font-size: 0.9rem;
+  margin: 0;
+  line-height: 1.5;
 }
 
-/* Social Icons */
+/* Column Headers */
+.footer-column h3 {
+  font-size: 1.1rem;
+  color: var(--text);
+  margin-bottom: 20px;
+  font-weight: 600;
+  position: relative;
+  display: inline-block;
+}
+
+/* Lists (Common) */
+.footer-links-list,
+.contact-info-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+/* Links Styling */
+.footer-links-list a {
+  color: var(--text-muted);
+  text-decoration: none;
+  font-size: 0.95rem;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.footer-links-list a:hover {
+  color: var(--accent);
+  padding-left: 5px;
+  text-shadow: 0 0 8px rgba(255, 215, 0, 0.4);
+}
+
+/* Contact Info Styling */
+.contact-info-list li {
+  color: var(--text-muted);
+  font-size: 0.95rem;
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  line-height: 1.5;
+}
+
+.contact-info-list i {
+  color: var(--accent);
+  font-size: 1rem;
+  margin-top: 3px;
+  /* Align icon with text top */
+}
+
+.contact-info-list a {
+  color: var(--text-muted);
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.contact-info-list a:hover {
+  color: var(--accent);
+}
+
+/* Social Icons Section */
+.social-column h3 {
+  margin-bottom: 20px;
+}
+
 .social-icons {
   display: flex;
-  gap: 20px;
-  justify-content: center;
-  margin-top: 10px;
+  gap: 18px;
+  flex-wrap: wrap;
 }
 
 .social-icons a {
   color: var(--text);
-  font-size: 1.8rem;
-  transition: 0.3s;
+  font-size: 1.5rem;
+  transition: transform 0.3s, color 0.3s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.05);
+  /* Subtle bg for icons */
 }
 
 .social-icons a:hover {
   color: var(--accent);
-  transform: translateY(-4px) scale(1.1);
-  text-shadow: 0 0 12px rgba(255, 215, 0, 0.7);
+  background: rgba(255, 215, 0, 0.1);
+  transform: translateY(-4px);
+  box-shadow: 0 4px 12px rgba(255, 215, 0, 0.2);
 }
 
-[data-theme="light"] .social-icons a:hover {
-  text-shadow: 0 0 10px rgba(212, 175, 55, 0.5);
-}
-
-/* Footer Bottom */
+/* Footer Bottom (Copyright) */
 .footer-bottom {
-  margin-top: 35px;
+  margin-top: 50px;
   border-top: 1px solid rgba(255, 215, 0, 0.15);
-  padding-top: 22px;
+  padding-top: 25px;
   text-align: center;
 }
 
 .footer-info {
-  font-size: 0.95rem;
+  font-size: 0.9rem;
   color: var(--text-muted);
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 14px;
+  gap: 10px;
   flex-wrap: wrap;
   line-height: 1.6;
-  letter-spacing: 0.3px;
 }
 
-/* Founder Highlight */
-.footer-info .founder {
-  color: var(--accent);
-  font-weight: 600;
-}
-
-/* "Made with ❤️ in India 🇮🇳" */
+.footer-info .founder,
 .footer-info .made-in-india {
   color: var(--accent);
   font-weight: 600;
-  text-shadow: 0 0 8px rgba(255, 215, 0, 0.4);
 }
 
-/* Copyright */
-.footer-info .copyright {
-  color: var(--text-muted);
-  font-weight: 500;
-}
+/* ================= RESPONSIVE ================= */
 
-/* Responsive */
-@media (max-width: 600px) {
-  .footer-info {
-    font-size: 0.88rem;
-    gap: 8px;
-    flex-direction: column;
-  }
-
-  .footer-links { gap: 15px; }
-  .footer-info .pipe-separator {
-    display: none !important; /* Hides the pipe separator entirely */
-  }
-
-  .footer-info {
-    /* ... (rest of the footer-info styling) ... */
-    /* Ensure there is a gap between the stacked items */
-    gap: 15px !important; 
+/* Tablet (max 1024px) */
+@media (max-width: 1024px) {
+  .footer-container {
+    gap: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
   }
 }
 
+/* Tablet Portrait / Small Laptop (max 768px) */
+@media (max-width: 768px) {
+  .footer-container {
+    grid-template-columns: 1fr 1fr;
+    /* 2 Column layout */
+    gap: 40px 20px;
+  }
 
-@media screen and (max-width: 480px) {
+  .footer-brand {
+    grid-column: 1 / -1;
+    /* Brand takes full width */
+    align-items: center;
+    text-align: center;
+  }
+
+  .brand-header {
+    justify-content: center;
+  }
+
+  /* Center alignment for tablets structurally if preferred, 
+     but keeping cols left aligned looks neater. */
+  /* Center alignment for tablets structurally if preferred, 
+     but keeping cols left aligned looks neater. */
+}
+
+/* Mobile (max 480px) */
+@media (max-width: 480px) {
   .footer {
-    /* Reduce top/bottom padding for a compact look */
-    padding: 40px 20px 30px !important; 
-    height: auto;
+    padding: 40px 25px 30px;
+    /* Slightly more side padding for breathing room */
+    text-align: left;
   }
 
   .footer-container {
-    gap: 30px; /* Consistent vertical spacing between sections */
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    /* Increased gap for better separation like reference */
+    text-align: left;
+    align-items: flex-start;
+  }
+
+  /* Brand Section - Left Align */
+  .footer-brand {
+    align-items: flex-start;
+    text-align: left;
+  }
+
+  .brand-header {
+    justify-content: flex-start;
+  }
+
+  .footer-brand h2 {
+    font-size: 1.6rem;
+  }
+
+  .tagline {
+    max-width: 90%;
+    /* Prevent too wide text on small screens */
+  }
+
+  /* Lists - Left Align */
+  .footer-links-list,
+  .contact-info-list {
+    align-items: flex-start;
     width: 100%;
   }
 
-  .footer-logo img {
-    width: 50px; /* Scale down slightly */
-    height: 50px;
+  .footer-links-list a:hover {
+    padding-left: 5px;
+    /* Restore hover shift since we are left aligned now */
   }
 
-  .footer-logo h2 {
-    font-size: 1.4rem; /* Prevent heading from feeling too heavy */
-  }
-
-  .footer-logo .tagline {
-    font-size: 0.85rem;
-  }
-
-  /* Stacking links vertically is better for mobile tapping */
-  .footer-links {
-    flex-direction: row !important; 
-    flex-wrap: wrap;  
-    justify-content: center; 
-    gap: 20px !important;   
-    width: 100%;
-  }
-
-  .footer-links a {
-    display: inline-block;
-    padding: 5px 5px; 
-    font-size: 0.95rem;
-  }
-
+  /* Social Icons - Left Align */
   .social-icons {
-    gap: 25px; /* More breathing room between icons */
-    margin-top: 10px;
+    justify-content: flex-start;
+    width: 100%;
   }
 
-  .social-icons a {
-    font-size: 1.6rem; /* Slightly smaller icons */
+  .footer-column {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
   }
 
+  .footer-column h3 {
+    margin-bottom: 15px;
+    font-size: 1.2rem;
+    /* Slightly larger headings for mobile legibility */
+  }
+
+  /* Footer Bottom - Keep centered or left? 
+     Reference usually has bottom copyright centered, but user said "exactly like this" 
+     referring to the main content. The provided image cuts off before copyright.
+     Standard practice is small copyright text can be centered. 
+     I will keep it centered as it usually looks better separate from the columns. */
   .footer-bottom {
-    margin-top: 30px !important;
-    padding-top: 20px !important;
+    margin-top: 30px;
+    padding-top: 20px;
+    text-align: center;
   }
 
   .footer-info {
-    /* Ensure text stacks neatly without squishing */
-    flex-direction: column !important; 
-    gap: 15px !important;
-    font-size: 0.85rem !important;
-    width: 100%;
+    flex-direction: column;
+    gap: 10px;
+    text-align: center;
   }
 
-  /* Ensures the "Founder", "Made in India", etc. take full width */
-  .footer-info span {
-    display: block; 
-    width: 100%;
-    line-height: 1.5;
-  }
-
-  .footer-info .pipe-separator {
-    display: none !important; /* Hides the pipe separator entirely */
-  }
-
-  .footer-info {
-    /* ... (rest of the footer-info styling) ... */
-    /* Ensure there is a gap between the stacked items */
-    gap: 15px !important; 
+  .pipe-separator {
+    display: none;
   }
 }
