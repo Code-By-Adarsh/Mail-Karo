@@ -30,7 +30,8 @@
   margin: 0 auto;
   display: grid;
   grid-template-columns: 1.5fr 1fr 1fr 1fr;
-  gap: 30px;
+  column-gap: 70px;
+  row-gap: 40px;
   align-items: start;
   text-align: left;
   padding-bottom: 20px;
