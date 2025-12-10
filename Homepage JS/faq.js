@@ -1,8 +1,6 @@
 document.addEventListener("DOMContentLoaded", () => {
 
-    /* =======================================================
-       ACCORDION FUNCTIONALITY
-    ======================================================= */
+    // Accordion functionality
 
     const items = document.querySelectorAll(".mk-accordion-item");
 
@@ -12,7 +10,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
         header.addEventListener("click", () => {
 
-            // Close all other accordions
+            // Close other accordions
             items.forEach(i => {
                 if (i !== item) {
                     i.classList.remove("active");
@@ -22,7 +20,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 }
             });
 
-            // Toggle current item
+            // Toggle current accordion
             const isActive = item.classList.contains("active");
 
             if (isActive) {

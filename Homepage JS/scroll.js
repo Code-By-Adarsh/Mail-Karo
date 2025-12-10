@@ -1,10 +1,9 @@
-// scroll.js
-
+// Scroll-based animations and back-to-top button
 document.addEventListener("DOMContentLoaded", () => {
   const sections = document.querySelectorAll("section, footer");
   const backToTop = document.getElementById("backToTop");
 
-  // Intersection Observer for fade-in animation
+  // Fade-in animation for sections
   const observer = new IntersectionObserver(
     (entries) => {
       entries.forEach((entry) => {
@@ -16,15 +15,14 @@ document.addEventListener("DOMContentLoaded", () => {
     { threshold: 0.1 }
   );
 
-  sections.forEach((sec) => {
-    // Exclude Testimonials section (handled by testinomial.js)
+  sections.forEach((sec) => {    // Skip testimonials section (handled separately)
     if (!sec.classList.contains("mk-testimonials")) {
       sec.classList.add("fade-in");
       observer.observe(sec);
     }
   });
 
-  // Back to Top Button visibility toggle
+  // Toggle back-to-top button visibility
   window.addEventListener("scroll", () => {
     if (window.scrollY > 400) {
       backToTop.style.display = "block";

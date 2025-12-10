@@ -1,4 +1,4 @@
-// Clean Contact Us JS - no loading animation, proper error display
+// Contact form handling and validation
 
 const fields = {
   name: document.getElementById("name"),
@@ -11,9 +11,9 @@ const form = document.getElementById("contactForm");
 const submitBtn = document.getElementById("submitBtn");
 const successModal = document.getElementById("successModal");
 
-let hasAttemptedSubmit = false; // Track if user has tried to submit
+let hasAttemptedSubmit = false; // Track form submission attempts
 
-// ANIMATION TRIGGER
+// Animation handling
 function triggerAnimations() {
   const animatedElements = document.querySelectorAll("[data-animate]");
   animatedElements.forEach((el, i) => {
@@ -23,7 +23,7 @@ function triggerAnimations() {
   });
 }
 
-// Trigger animations when page loads
+// Initialize animations on page load
 window.addEventListener("DOMContentLoaded", () => {
   triggerAnimations();
   document.getElementById("year").textContent = new Date().getFullYear();
@@ -76,10 +76,10 @@ function updateSubmit() {
   submitBtn.disabled = !ok;
 }
 
-// Only clear errors and check validity while typing
+// Input validation on typing
 Object.keys(fields).forEach(id => {
   fields[id].addEventListener("input", () => {
-    // Only validate and show errors if user has already tried to submit
+    // Validate only after first submission attempt
     if (hasAttemptedSubmit) {
       validateField(id, true);
     } else {
@@ -100,7 +100,7 @@ Object.keys(fields).forEach(id => {
   }
 });
 
-// Simulated send
+// Simulate form submission
 function simulateSend() {
   return new Promise(res => setTimeout(() => res({ ok: true }), 500));
 }

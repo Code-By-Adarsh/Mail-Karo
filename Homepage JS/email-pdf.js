@@ -1,4 +1,4 @@
-/* Mail Karo — FINAL PUBLIC URL PDF ENGINE (Watermark Behind Text) */
+// PDF generation with watermark functionality
 (function () {
   function ready(fn) {
     if (document.readyState !== "loading") fn();
@@ -15,9 +15,7 @@
       return;
     }
 
-    /* ---------------- SCROLL ANIMATION (IntersectionObserver) ---------------- */
-    // Approach: Use IntersectionObserver to toggle 'mk-in-view' class when elements enter viewport.
-    // Fallback: If IO is not supported, show elements immediately.
+    // Scroll animation using IntersectionObserver
     const animElements = document.querySelectorAll('.mk-anim');
 
     if ('IntersectionObserver' in window) {
@@ -36,7 +34,7 @@
       animElements.forEach(el => el.classList.add('mk-in-view'));
     }
 
-    /* ---------------- BUTTON CONTROL ---------------- */
+    // Button state management
     function disableBtns() {
       downloadBtn.disabled = true;
       previewBtn.disabled = true;
@@ -53,7 +51,7 @@
 
     disableBtns();
 
-    /* ---------------- OUTPUT WATCHER ---------------- */
+    // Watch for output changes
     const observer = new MutationObserver(() => {
       const t = outEl.innerText.trim();
 
@@ -71,7 +69,7 @@
 
     observer.observe(outEl, { childList: true, subtree: true });
 
-    /* ---------------- LOAD jsPDF ---------------- */
+    // Load jsPDF library
     function loadJsPDF() {
       return new Promise((resolve, reject) => {
         if (window.jspdf) return resolve(window.jspdf.jsPDF);
@@ -85,7 +83,7 @@
       });
     }
 
-    /* ---------------- PUBLIC URL WATERMARK ---------------- */
+    // Watermark configuration
     const watermarkURL =
       "https://mail-karo.netlify.app/All%20Images/Logo.png";
 
@@ -99,7 +97,7 @@
       });
     }
 
-    /* ---------------- PDF CREATOR ---------------- */
+    // PDF generation logic
     async function createPdf({ preview = false }) {
       const text = outEl.innerText.trim();
       if (!text || text.includes("Generating")) {
@@ -176,7 +174,7 @@
       }
     }
 
-    /* ---------------- BUTTON EVENTS ---------------- */
+    // Button event handlers
     downloadBtn.onclick = () => createPdf({ preview: false });
     previewBtn.onclick = () => createPdf({ preview: true });
   });

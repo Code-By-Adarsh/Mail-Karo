@@ -16,7 +16,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Theme toggle button handler
   const themeToggle = document.getElementById('theme-toggle');
-  
+
   if (themeToggle) {
     themeToggle.addEventListener('click', () => {
       const currentTheme = getTheme();

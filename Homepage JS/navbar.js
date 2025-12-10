@@ -1,11 +1,10 @@
-// navbar.js
-
+// Navbar functionality
 document.addEventListener("DOMContentLoaded", () => {
   const menuBtn = document.getElementById("menu-btn");
   const navLinks = document.getElementById("nav-links");
   const navbar = document.querySelector(".navbar");
 
-  // Mobile menu toggle
+  // Toggle mobile menu
   menuBtn.addEventListener("click", () => {
     navLinks.classList.toggle("active");
 
@@ -15,7 +14,7 @@ document.addEventListener("DOMContentLoaded", () => {
     bars[2].classList.toggle("rotate2");
   });
 
-  // Navbar shrink on scroll
+  // Handle scroll effects
   window.addEventListener("scroll", () => {
     if (window.scrollY > 30) {
       navbar.style.background = "var(--bg)";

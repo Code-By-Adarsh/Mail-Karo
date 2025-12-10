@@ -19,7 +19,8 @@
 
 .mk-privacy-page {
   min-height: 100vh;
-  padding: 4rem 1.5rem 4rem; /* reduced top padding */
+  padding: 4rem 1.5rem 4rem;
+  /* reduced top padding */
   max-width: 1100px;
   margin: 0 auto;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Poppins", sans-serif;
@@ -29,8 +30,10 @@
 
 .mk-privacy-header {
   text-align: center;
-  margin-bottom: 2.5rem; /* reduced spacing */
-  padding-top: 1rem; /* reduced top gap */
+  margin-bottom: 2.5rem;
+  /* reduced spacing */
+  padding-top: 1rem;
+  /* reduced top gap */
 }
 
 .mk-privacy-pill {
@@ -43,7 +46,8 @@
   text-transform: uppercase;
   color: #ffd600;
   background: rgba(255, 214, 0, 0.08);
-  margin-bottom: 0.5rem; /* reduced */
+  margin-bottom: 0.5rem;
+  /* reduced */
 }
 
 .mk-privacy-title {
@@ -102,7 +106,7 @@
   margin: 0;
 }
 
-.mk-privacy-sidebar li + li {
+.mk-privacy-sidebar li+li {
   margin-top: 0.35rem;
 }
 
@@ -149,7 +153,7 @@
   backdrop-filter: blur(24px);
 }
 
-.mk-privacy-block + .mk-privacy-block {
+.mk-privacy-block+.mk-privacy-block {
   margin-top: 1.75rem;
   padding-top: 1.5rem;
   border-top: 1px solid rgba(255, 255, 255, 0.04);
@@ -238,7 +242,7 @@
     gap: 0.8rem;
   }
 
-  .mk-privacy-sidebar li + li {
+  .mk-privacy-sidebar li+li {
     margin-top: 0;
   }
 
@@ -249,7 +253,8 @@
 
 @media (max-width: 600px) {
   .mk-privacy-page {
-    padding-top: 3.5rem; /* smaller top space */
+    padding-top: 3.5rem;
+    /* smaller top space */
   }
 
   .mk-privacy-title {
@@ -261,7 +266,7 @@
 .mk-footer {
   margin-top: auto;
   padding: 24px 0;
-  border-top: 1px solid rgba(255,217,74,0.08);
+  border-top: 1px solid rgba(255, 217, 74, 0.08);
 }
 
 .mk-footer,
@@ -294,16 +299,16 @@
   color: var(--muted);
 }
 
-.footer-links { 
-  display: flex; 
-  gap: 12px; 
+.footer-links {
+  display: flex;
+  gap: 12px;
 }
 
 .footer-links a {
   padding: 8px 16px;
   border-radius: 8px;
   border: 1px solid var(--border);
-  background: rgba(255,255,255,0.03);
+  background: rgba(255, 255, 255, 0.03);
   color: var(--muted);
   text-decoration: none;
   backdrop-filter: blur(6px);
@@ -312,10 +317,10 @@
 }
 
 .footer-links a:hover {
-  background: var(--accent); 
+  background: var(--accent);
   color: #000;
   transform: translateY(-2px);
-  box-shadow: 0 4px 15px rgba(255,217,74,0.3);
+  box-shadow: 0 4px 15px rgba(255, 217, 74, 0.3);
 }
 
 /* RESPONSIVE */
@@ -325,5 +330,5 @@
     gap: 16px;
     text-align: center;
   }
-  
+
 }

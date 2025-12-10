@@ -1,24 +1,26 @@
-/* hero.css */
+/* Hero section styles */
 
-/* 🔥 GLOBAL BACKGROUND WRAPPER */
+/* Global background wrapper */
 .hero-wrapper {
   width: 100%;
   position: relative;
   background: radial-gradient(circle at 20% 20%, rgba(255, 215, 0, 0.05), transparent 60%),
-              radial-gradient(circle at 80% 80%, rgba(255, 215, 0, 0.07), transparent 60%);
+    radial-gradient(circle at 80% 80%, rgba(255, 215, 0, 0.07), transparent 60%);
 }
 
 [data-theme="light"] .hero-wrapper {
   background: radial-gradient(circle at 20% 20%, rgba(212, 175, 55, 0.08), transparent 60%),
-              radial-gradient(circle at 80% 80%, rgba(212, 175, 55, 0.1), transparent 60%);
+    radial-gradient(circle at 80% 80%, rgba(212, 175, 55, 0.1), transparent 60%);
 }
 
-/* 🔥 HERO SECTION CLEANED */
+/* Hero section */
 .hero {
   width: 100%;
-  padding: 80px 20px 60px;  /* balanced spacing */
+  padding: 80px 20px 60px;
+  /* balanced spacing */
   display: flex;
-  align-items: flex-start; /* content upar rahe */
+  align-items: flex-start;
+  /* content upar rahe */
   justify-content: center;
   position: relative;
   overflow: hidden;
@@ -34,7 +36,7 @@
   gap: 50px;
 }
 
-/* Left Content */
+/* Left content */
 .hero-content {
   flex: 1;
   color: var(--text);
@@ -107,6 +109,7 @@
     transform: translateY(20px);
     opacity: 0;
   }
+
   to {
     transform: translateY(0);
     opacity: 1;
@@ -114,10 +117,13 @@
 }
 
 @keyframes logoFloat {
-  0%, 100% {
+
+  0%,
+  100% {
     transform: scale(0.95);
     filter: drop-shadow(0 0 10px rgba(255, 215, 0, 0.35));
   }
+
   50% {
     transform: scale(1.05);
     filter: drop-shadow(0 0 20px rgba(255, 215, 0, 0.55));

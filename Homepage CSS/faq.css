@@ -1,23 +1,22 @@
-/* =========================================================
-   MAIL KARO — FAQ SECTION (LIGHT + DARK MODE SUPPORTED)
-   Fully updated + badge bigger + spacing increased
-   ========================================================= */
+/* FAQ section with light and dark mode support */
 
-/* WRAPPER */
+/* Wrapper */
 .mk-faq-wrapper {
-    padding: 90px 20px; /* Increased gap */
+    padding: 90px 20px;
+    /* Increased gap */
     max-width: 900px;
     margin: auto;
     color: var(--text);
 }
 
-/* HEADER */
+/* Header */
 .mk-faq-header {
     text-align: center;
-    margin-bottom: 60px; /* More gap */
+    margin-bottom: 60px;
+    /* More gap */
 }
 
-/* BADGE */
+/* Badge */
 .mk-badge {
     padding: 10px 26px;
     font-size: 14px;
@@ -30,7 +29,8 @@
     letter-spacing: 1.6px;
     backdrop-filter: blur(6px);
     display: inline-block;
-    margin-bottom: 20px; /* Extra space before title */
+    margin-bottom: 20px;
+    /* Extra space before title */
 }
 
 /* TITLE */
@@ -60,7 +60,8 @@
 .mk-accordion-container {
     display: flex;
     flex-direction: column;
-    gap: 20px; /* More spacing between questions */
+    gap: 20px;
+    /* More spacing between questions */
 }
 
 /* ACCORDION ITEM */
@@ -167,6 +168,7 @@
         padding: 0 22px 22px 22px;
     }
 }
+
 /* =========================================================
    SCROLL REVEAL ANIMATION (FAQ)
    ========================================================= */

@@ -1,17 +1,16 @@
-// hero.js
-
+// Hero section animations and interactions
 document.addEventListener("DOMContentLoaded", () => {
   const hero = document.querySelector(".hero");
   const subtitle = document.querySelector(".hero-subtitle");
   const button = document.querySelector(".hero-btn");
 
-  // Fade-in effects for subtitle and button
+  // Fade in subtitle and button
   setTimeout(() => {
     subtitle.style.opacity = "1";
     button.style.opacity = "1";
   }, 300);
 
-  // Typewriter Animation
+  // Typewriter text effect
   const typeText = document.getElementById("typewriter-text");
   const phrases = [
     "Write Smarter.",
@@ -49,7 +48,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   typeLoop();
 
-  // Logo Fade-in
+  // Animate logo
   const logo = document.querySelector(".mailkaro-logo");
   setTimeout(() => {
     logo.style.opacity = "1";
