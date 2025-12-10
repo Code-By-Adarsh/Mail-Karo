@@ -1,4 +1,4 @@
-/* 🔥 HERO SECTION */
+/* Hero section */
 .mk-hero {
     width: 100%;
     padding: 5rem 1rem;
@@ -7,7 +7,7 @@
     overflow: hidden;
 }
 
-/* MAIN CONTAINER */
+/* Main container */
 .mk-hero-content {
     max-width: 1200px;
     margin: auto;
@@ -24,7 +24,7 @@
     flex: 1;
 }
 
-/* Default order (desktop) */
+/* Default order for desktop */
 .mk-hero-image {
     order: 1;
 }

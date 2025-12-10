@@ -1,9 +1,8 @@
-// footer.js
-
+// Footer social icons interaction
 document.addEventListener("DOMContentLoaded", () => {
   const icons = document.querySelectorAll(".social-icons img");
 
-  // Soft glowing pulse animation for icons
+  // Hover animations for icons
   icons.forEach(icon => {
     icon.addEventListener("mouseenter", () => {
       icon.style.transition = "transform 0.3s ease, filter 0.3s ease";

@@ -1,6 +1,6 @@
-// final prompt.js (Ultra-Pro Wizard — 15 templates)
+// Prompt handler for email generation with template support
 document.addEventListener("DOMContentLoaded", () => {
-  // ---------- DOM refs (guarded) ----------
+  // DOM element references
   const $ = id => document.getElementById(id);
   const generateBtn = $("generateBtn");
   const promptInput = $("promptInput");
@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const toneSelect = $("toneSelect");
   const lengthSelect = $("lengthSelect");
 
-  // ⭐ NEW: Language Selector added
+  // Language Selector
   const languageSelect = $("languageSelect");
 
   const templateSelect = $("templateSelect");
@@ -37,7 +37,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   generateBtn.innerText = "⚡ Generate";
 
-  // ---------- template skeletons ----------
+  // Template skeletons
   const templateSkeletons = {
     job:
       "Hello {{recipientName}},\n\nI am writing to apply for the {{position}} position at {{company}}. My key highlights: {{resumeHighlights}}.\nWhy I'm a fit: {{whyFit}}.\n\nSincerely,\n{{senderName}}",
@@ -71,7 +71,7 @@ document.addEventListener("DOMContentLoaded", () => {
       "Hello {{recipientName}},\n\nFeedback on {{topic}}:\nWhat worked: {{positives}}\nCould improve: {{improvements}}\nSeverity: {{severity}}\n\nThanks,\n{{senderName}}"
   };
 
-  // fields per template
+  // Fields per template
   const templateFields = {
     job: [
       { key: "recipientName", label: "Recipient name" },
@@ -328,9 +328,7 @@ document.addEventListener("DOMContentLoaded", () => {
     if (generateBtn) generateBtn.style.cursor = "pointer";
   }
 
-  // -----------------------------------------------------------------
-  // ⭐⭐⭐ FINAL UPDATED GENERATE FUNCTION WITH LANGUAGE SUPPORT ⭐⭐⭐
-  // -----------------------------------------------------------------
+  // Generate email with language support
 
   async function generateEmail(customPrompt = null, customTone = null) {
     const userPrompt =

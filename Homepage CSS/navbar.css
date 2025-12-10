@@ -1,6 +1,6 @@
-/* navbar.css */
+/* Navbar styles */
 
-/* === THEME VARIABLES (FIXED) === */
+/* Theme variables */
 :root {
   /* DARK MODE DEFAULTS */
   --bg: #0D0D0D;
@@ -18,7 +18,7 @@
   --radius: 12px;
 }
 
-/* === LIGHT MODE VARIABLES === */
+/* Light mode variables */
 [data-theme="light"] {
   --bg: #FFFFFF;
   /* Full white light mode */
@@ -35,7 +35,7 @@
   --border: #E0E0E0;
 }
 
-/* === GLOBAL RESET === */
+/* Global reset */
 * {
   margin: 0;
   padding: 0;
@@ -49,7 +49,7 @@ body {
   color: var(--text);
 }
 
-/* === NAVBAR === */
+/* Navbar */
 .navbar {
   width: 100%;
   position: sticky;
@@ -75,7 +75,7 @@ body {
   gap: 20px;
 }
 
-/* Logo Area */
+/* Logo area */
 .logo-area {
   display: flex;
   align-items: center;

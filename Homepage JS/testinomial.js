@@ -1,4 +1,4 @@
-// ===== Testimonials Data (base entries) =====
+// Testimonials data
 const testimonialsData = [
   {
     name: "Aarav Shah",
@@ -73,13 +73,13 @@ const prevBtn = document.getElementById("mkPrev");
 const nextBtn = document.getElementById("mkNext");
 const sliderContainer = document.querySelector(".mk-slider-container");
 
-// Random star rating between 3 and 5
+// Generate random star rating
 function getStars() {
   const count = Math.floor(Math.random() * 3) + 3; // 3, 4, or 5
   return "★".repeat(count) + "☆".repeat(5 - count);
 }
 
-// Inject cards into DOM
+// Create and inject testimonial cards
 testimonials.forEach((t, idx) => {
   const card = document.createElement("article");
   card.className = "mk-card";
@@ -109,7 +109,7 @@ let currentIndex = Math.floor((cards.length - 1) / 2); // start from middle
 let direction = 1; // 1 = forward, -1 = backward
 let autoTimer = null;
 
-// Calculate translateX so that the current card stays perfectly centered
+// Calculate card position
 function getTranslateXForIndex(index) {
   const card = cards[index];
   if (!card) return 0;
@@ -135,7 +135,7 @@ function getTranslateXForIndex(index) {
 }
 
 
-// Update card states and positions
+// Update slider state
 function updateSlider() {
   cards.forEach((card, i) => {
     card.classList.remove("active", "side");
@@ -151,7 +151,7 @@ function updateSlider() {
 }
 
 
-// Auto movement with smooth forward + backward loop
+// Auto-advance slider
 function stepAuto() {
   const lastIndex = cards.length - 1;
 
@@ -174,7 +174,7 @@ function resetAuto() {
   startAuto();
 }
 
-// Manual controls
+// Navigation controls
 prevBtn.addEventListener("click", () => {
   const lastIndex = cards.length - 1;
   currentIndex = Math.max(0, currentIndex - 1);

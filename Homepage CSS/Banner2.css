@@ -1,4 +1,4 @@
-/* 🔥 PDF Banner */
+/* PDF Banner */
 .mk-pdf-hero {
     width: 100%;
     padding: 5rem 1rem;
@@ -15,8 +15,7 @@
     justify-content: space-between;
     gap: 3.5rem;
     animation: fadeInUp 1s ease;
-    padding: 0 15px;
-    /* 👈 mobile fix */
+    padding: 0 15px; /* Mobile fix */
 }
 
 /* Flex equal width for both sides */
@@ -25,7 +24,7 @@
     flex: 1;
 }
 
-/* TEXT */
+/* Text styles */
 .mk-pdf-text h1 {
     font-size: 2.8rem;
     font-weight: 700;

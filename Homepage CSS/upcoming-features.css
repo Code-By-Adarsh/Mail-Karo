@@ -1,36 +1,42 @@
-/* --- New Advanced Upcoming Features Section Styling --- */
+/* Upcoming features section */
 
-/* Base Section Styling */
+/* Base section styling */
 #upcoming-features {
-    padding: 80px 0; /* Reduced padding to fix extra space */
-    background-color: var(--bg); /* Use consistent theme variable */
+    padding: 80px 0;
+    /* Adjusted padding */
+    background-color: var(--bg);
+    /* Using theme variable */
     color: var(--text);
     text-align: center;
     overflow: hidden;
 }
 
 .features-container {
-    max-width: 1000px; /* Slightly narrower container for focus */
+    max-width: 1000px;
+    /* Slightly narrower container for focus */
     margin: 0 auto;
     padding: 0 20px;
 }
 
-/* Titles */
+/* Section titles */
 .section-title {
     font-family: 'Orbitron', sans-serif;
     font-weight: 700;
     font-size: 3em;
-    color: var(--accent); /* Use consistent theme variable */
+    color: var(--accent);
+    /* Using theme variable */
     margin-bottom: 15px;
     letter-spacing: 2px;
     text-transform: uppercase;
-    text-shadow: 0 0 10px rgba(255, 215, 0, 0.5); /* Subtle glow effect */
+    text-shadow: 0 0 10px rgba(255, 215, 0, 0.5);
+    /* Subtle glow effect */
 }
 
 .section-subtitle {
     font-family: 'Poppins', sans-serif;
     font-size: 1.1em;
-    color: var(--text-muted); /* Use consistent theme variable */
+    color: var(--text-muted);
+    /* Using theme variable */
     margin-bottom: 60px;
 }
 
@@ -39,18 +45,22 @@
     display: grid;
     /* Use a simple two-column layout */
     grid-template-columns: 1fr 1fr;
-    gap: 25px 50px; /* Vertical and horizontal gap */
+    gap: 25px 50px;
+    /* Vertical and horizontal gap */
     text-align: left;
 }
 
 /* Individual Feature Card (Now a Feature Box) */
 .feature-card {
-    background: transparent; /* Transparent background */
-    padding: 20px 0; /* Padding for spacing */
-    border-bottom: 2px solid var(--border); /* Use consistent theme variable */
+    background: transparent;
+    /* Transparent background */
+    padding: 20px 0;
+    /* Padding for spacing */
+    border-bottom: 2px solid var(--border);
+    /* Using theme variable */
     transition: background-color 0.3s ease, border-color 0.3s ease;
     cursor: default;
-    
+
     /* Flexbox for icon/title alignment */
     display: flex;
     flex-direction: column;
@@ -67,34 +77,41 @@
     font-family: 'Poppins', sans-serif;
     font-weight: 600;
     font-size: 1.5em;
-    color: var(--text); /* Use consistent theme variable */
+    color: var(--text);
+    /* Using theme variable */
     margin: 0;
     display: inline;
     vertical-align: middle;
 }
 
 .feature-icon {
-    font-size: 1.8em; /* Smaller, integrated icon size */
-    color: var(--accent); /* Use consistent theme variable */
+    font-size: 1.8em;
+    /* Smaller, integrated icon size */
+    color: var(--accent);
+    /* Using theme variable */
     margin-right: 15px;
     vertical-align: middle;
     display: inline-block;
-    width: 30px; /* Fixed width for better alignment */
+    width: 30px;
+    /* Fixed width for better alignment */
     text-align: center;
 }
 
 .feature-card p {
     font-family: 'Poppins', sans-serif;
     font-size: 0.95em;
-    color: var(--text-muted); /* Use consistent theme variable */
+    color: var(--text-muted);
+    /* Using theme variable */
     line-height: 1.6;
     margin-top: 10px;
-    padding-left: 45px; /* Offset text to align with description */
+    padding-left: 45px;
+    /* Offset text to align with description */
 }
 
 /* Adjusting the H3 and Icon in the HTML */
 /* Since you have <i> and <h3> side-by-side, we need to adjust the display: */
-.feature-card > i, .feature-card > h3 {
+.feature-card>i,
+.feature-card>h3 {
     display: inline-block;
 }
 
@@ -105,6 +122,7 @@
         grid-template-columns: 1fr;
         gap: 30px;
     }
+
     .feature-card {
         padding: 20px 10px;
     }
@@ -114,13 +132,16 @@
     .section-title {
         font-size: 2em;
     }
+
     .feature-card h3 {
         font-size: 1.3em;
     }
+
     .feature-card p {
         font-size: 0.9em;
     }
 }
+
 /* =========================================================
    UPCOMING FEATURES — SCROLL REVEAL + STAGGER + NEON GLOW
    ========================================================= */
@@ -136,7 +157,7 @@
 }
 
 .feature-card {
-    transition: 
+    transition:
         background-color 0.3s ease,
         border-color 0.3s ease,
         box-shadow 0.4s ease;
@@ -147,6 +168,7 @@
     box-shadow: 0 0 18px rgba(255, 217, 74, 0.22);
     border-bottom: 2px solid var(--accent);
 }
+
 /* ================================================
    FAQ-STYLE SIMPLE SCROLL REVEAL
 ================================================ */
@@ -161,6 +183,7 @@
     opacity: 1;
     transform: translateY(0);
 }
+
 /* ================================================
    SIMPLE FAQ-STYLE SCROLL REVEAL (NO DESIGN CHANGE)
 ================================================ */
@@ -175,6 +198,7 @@
     opacity: 1;
     transform: translateY(0);
 }
+
 /* REMOVE UNWANTED BACKGROUND FROM FEATURE CARDS */
 .feature-card {
     background: transparent !important;

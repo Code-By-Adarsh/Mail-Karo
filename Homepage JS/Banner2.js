@@ -1,10 +1,10 @@
-// Banner2.js
+// Banner 2 functionality
 
 document.addEventListener("DOMContentLoaded", () => {
   const pdfBanner = document.querySelector(".mk-pdf-hero");
   if (!pdfBanner) return;
 
-  // Generate spark dots
+  // Generate spark effects
   for (let i = 0; i < 10; i++) {
     const spark = document.createElement("div");
     spark.classList.add("mk-pdf-spark");

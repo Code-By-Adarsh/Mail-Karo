@@ -1,10 +1,10 @@
-// Banner1.js
+// Banner 1 functionality
 
 document.addEventListener("DOMContentLoaded", () => {
   const banner = document.querySelector(".mk-hero");
   if (!banner) return;
 
-  // Create glowing particles like hero.js
+  // Create glowing particles
   for (let i = 0; i < 10; i++) {
     const spark = document.createElement("div");
     spark.classList.add("mk-spark");
@@ -15,7 +15,7 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 });
 
-// Inject spark CSS (same style as hero but renamed)
+// Inject spark CSS
 const bannerSparkStyle = document.createElement("style");
 bannerSparkStyle.innerHTML = `
 .mk-spark {

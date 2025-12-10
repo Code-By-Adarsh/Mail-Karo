@@ -1,6 +1,6 @@
-/* scroll.css */
+/* Scroll animations and back-to-top button */
 
-/* 🔹 Fade-in Animation for All Sections */
+/* Fade-in animation for all sections */
 .fade-in {
   opacity: 0;
   transform: translateY(30px);
@@ -12,7 +12,7 @@
   transform: translateY(0);
 }
 
-/* 🔹 Back to Top Button */
+/* Back to top button */
 #backToTop {
   position: fixed;
   bottom: 30px;

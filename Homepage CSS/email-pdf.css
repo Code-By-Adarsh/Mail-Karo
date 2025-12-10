@@ -1,4 +1,4 @@
-/* ---------- Mail Karo — Instant PDF section (Unified Theme Version) ---------- */
+/* Mail Karo - Instant PDF section */
 
 #mk-instant-pdf {
   max-width: 1100px;
@@ -6,7 +6,7 @@
   padding: 32px;
   border-radius: 20px;
 
-  /* Use global theme variables */
+  /* Using global theme variables */
   background: var(--panel);
   border: 1px solid var(--border);
   color: var(--text);

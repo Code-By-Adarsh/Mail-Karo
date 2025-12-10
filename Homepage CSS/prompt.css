@@ -1,6 +1,4 @@
-/* prompt.css */
-
-/* SECTION BACKGROUND FIXED */
+/* Prompt section styles */
 .prompt-section {
   background-color: var(--bg);
   padding: 80px 20px;
@@ -29,7 +27,7 @@
   text-shadow: 0 0 8px rgba(212, 175, 55, 0.15);
 }
 
-/* SUBTITLE FIX */
+/* Subtitle */
 .prompt-subtitle {
   color: var(--text-muted);
   margin-top: 10px;
@@ -37,7 +35,7 @@
   font-size: 1.1rem;
 }
 
-/* PROMPT INPUT BOX */
+/* Prompt input box */
 .prompt-box {
   display: flex;
   background-color: var(--panel);
@@ -521,9 +519,7 @@
   color: #000;
 }
 
-/* ================================
-   MOBILE RESPONSIVE — TEMPLATE BOX
-   ================================ */
+/* Mobile responsive - Template box */
 @media (max-width: 768px) {
   .template-box {
     flex-direction: column;
