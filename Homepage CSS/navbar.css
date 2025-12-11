@@ -265,7 +265,7 @@ body {
    NAVBAR LAYOUT FIX (Prevents button dropping)
    ========================================= */
 
-@media (max-width: 850px) {
+@media (max-width: 1150px) {
   .nav-container {
     padding: 15px 15px;
     flex-wrap: nowrap;
@@ -278,6 +278,7 @@ body {
     flex: 0 1 auto;
     min-width: 0;
     overflow: hidden;
+    margin-right: auto;
   }
 
   .logo {
@@ -374,7 +375,7 @@ body {
 }
 
 /* ==== Smooth Mobile Menu Slide Fix ==== */
-@media (max-width: 850px) {
+@media (max-width: 1150px) {
   .nav-links {
     max-height: 0;
     overflow: hidden;
