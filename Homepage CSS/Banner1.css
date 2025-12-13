@@ -9,13 +9,15 @@
 
 /* Main container */
 .mk-hero-content {
-    max-width: 1200px;
+    max-width: 1100px;
     margin: auto;
     display: flex;
     align-items: center;
     justify-content: space-between;
     gap: 3.5rem;
     animation: fadeInUp 1s ease;
+    position: relative;
+    left: -50px;
 }
 
 /* Flex items equal width */
@@ -103,6 +105,7 @@
         /* normal column */
         text-align: center;
         gap: 2.5rem;
+        left: 0;
     }
 
     /* FORCE ORDER — image always top */
