@@ -7,15 +7,21 @@
 
 /* Section heading */
 .current-features-section h2 {
-    font-size: 3.5em;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 3.2em;
     color: var(--accent);
-    margin-bottom: 5px;
+    margin-bottom: 15px;
     font-weight: 800;
     text-transform: uppercase;
-    letter-spacing: 2px;
-    /* Dark Mode Glow */
-    text-shadow: 0 0 10px rgba(255, 215, 0, 0.3);
+    letter-spacing: 3px;
+    text-shadow: 0 0 10px rgba(255, 215, 0, 0.5);
 }
+.uf-reveal { 
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
 
 /* Light mode heading glow */
 [data-theme="light"] .current-features-section h2 {

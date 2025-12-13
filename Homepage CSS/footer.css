@@ -50,6 +50,15 @@
   gap: 12px;
 }
 
+.accent-icon{
+    width: 50px;
+    height: 50px;   
+    flex-shrink: 0; 
+    position: relative;
+    transform: translateY(5px);
+    margin-left: 10px;
+}
+
 .footer-brand img {
   width: 50px;
   height: 50px;
