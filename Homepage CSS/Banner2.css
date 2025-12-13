@@ -8,14 +8,15 @@
 }
 
 .mk-pdf-wrapper {
-    max-width: 1200px;
+    max-width: 1100px;
     margin: auto;
     display: flex;
     align-items: center;
     justify-content: space-between;
     gap: 3.5rem;
     animation: fadeInUp 1s ease;
-    padding: 0 15px; /* Mobile fix */
+    padding: 0 15px;
+    /* Mobile fix */
 }
 
 /* Flex equal width for both sides */
