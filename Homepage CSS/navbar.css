@@ -412,6 +412,10 @@ body {
     transform: none;
     box-shadow: none !important;
   }
+
+  .nav-item::after {
+    bottom: 8px !important;                    /* INSIDE link */
+  }
 }
 
 /* Specific Fix for very small screens (< 380px) */
