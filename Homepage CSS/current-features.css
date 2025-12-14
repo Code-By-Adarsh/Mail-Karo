@@ -1,129 +1,227 @@
+/* --- Current Features Section Container --- */
 .current-features-section {
-    padding: 80px 20px;
+    padding: 100px 20px;
+    background: var(--bg);
+    /* Fallback */
+    background: radial-gradient(circle at center, rgba(255, 215, 0, 0.03) 0%, var(--bg) 70%);
     text-align: center;
-    background-color: var(--bg);
-    /* Background color adapts to theme */
+    overflow: hidden;
+    /* Prevent spillover from animations */
 }
 
-/* Section heading */
+/* Section Title */
 .current-features-section h2 {
     font-family: 'Orbitron', sans-serif;
-    font-size: 3.2em;
+    font-size: 3rem;
     color: var(--accent);
-    margin-bottom: 15px;
-    font-weight: 800;
     text-transform: uppercase;
-    letter-spacing: 3px;
-    text-shadow: 0 0 10px rgba(255, 215, 0, 0.5);
-}
-.uf-reveal { 
-    opacity: 0;
-    transform: translateY(40px);
-    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+    letter-spacing: 2px;
+    margin-bottom: 60px;
+    text-shadow: 0 0 20px rgba(255, 215, 0, 0.3);
+    position: relative;
+    display: inline-block;
 }
 
-
-/* Light mode heading glow */
-[data-theme="light"] .current-features-section h2 {
-    /* Subtle shadow/highlight matching other light mode headers */
-    text-shadow: 0 0 8px rgba(212, 175, 55, 0.15);
+/* Title Decoration */
+.current-features-section h2::after {
+    content: '';
+    position: absolute;
+    width: 60%;
+    height: 3px;
+    background: var(--accent);
+    bottom: -15px;
+    left: 20%;
+    border-radius: 2px;
+    box-shadow: 0 0 10px var(--accent);
 }
 
-/* Subtitle */
-.current-features-section .features-subtitle {
-    font-size: 1.1em;
-    color: var(--text-muted);
-    margin-bottom: 40px;
+/* Grid Layout */
+.cf-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
 }
 
-/* --- Features List Container --- */
-.features-list {
-    display: flex;
-    justify-content: center;
-    gap: 40px;
-    margin-top: 40px;
-    flex-wrap: wrap;
-}
-
-/* --- Individual Feature Item (Card) --- */
-.feature-item {
-    background-color: var(--panel);
-    /* White/light grey in light mode */
-    border: 1px solid var(--border);
-    /* Dark/subtle border in light mode */
-    border-radius: 12px;
+/* --- Card Design (Glassy Yellow) --- */
+.cf-card {
+    background: rgba(20, 20, 20, 0.6);
+    /* Dark semi-transparent */
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 215, 0, 0.1);
+    border-radius: 20px;
     padding: 30px;
-    width: 100%;
-    max-width: 450px;
     text-align: left;
-    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
-
-    /* Dark Mode Shadow (Subtle) */
-    box-shadow: 0 0 20px rgba(255, 215, 0, 0.08);
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    opacity: 0;
+    /* For animation */
+    transform: translateY(50px);
 }
 
-/* Light Mode Override for Card Shadow */
-[data-theme="light"] .feature-item {
-    /* Neutral shadow used for light mode panels */
-    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+/* Light Mode Overrides for Cards */
+[data-theme="light"] .cf-card {
+    background: rgba(255, 255, 255, 0.7);
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.1);
 }
 
-/* --- Feature Item Hover Effect (Dark Mode) --- */
-.feature-item:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 0 25px rgba(255, 215, 0, 0.15);
+.cf-card.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Hover Effects */
+.cf-card:hover {
+    transform: translateY(-10px) scale(1.02);
+    border-color: rgba(255, 215, 0, 0.5);
+    box-shadow: 0 15px 40px rgba(255, 215, 0, 0.15);
+}
+
+[data-theme="light"] .cf-card:hover {
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
     border-color: var(--accent);
 }
 
-/* Feature Item Hover Effect (Light Mode Override) */
-[data-theme="light"] .feature-item:hover {
-    transform: translateY(-5px);
-    /* Lighter accent shadow for light mode hover */
-    box-shadow: 0 4px 20px rgba(212, 175, 55, 0.2);
-    border-color: var(--accent);
-}
-
-/* --- Feature Title (Text) --- */
-.feature-item h3 {
-    font-size: 1.4em;
+/* Card Icon */
+.cf-icon {
+    font-size: 2.5rem;
     color: var(--accent);
-    /* Yellow in dark, slightly darker yellow/gold in light */
-    margin-bottom: 10px;
+    margin-bottom: 20px;
+    background: rgba(255, 215, 0, 0.1);
+    width: 60px;
+    height: 60px;
     display: flex;
     align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    transition: transform 0.4s ease;
 }
 
-/* --- Icon/Emoji Styling --- */
-.feature-item .icon {
-    font-size: 1.8em;
-    margin-right: 15px;
+.cf-card:hover .cf-icon {
+    transform: rotateY(180deg);
+    background: var(--accent);
+    color: #000;
 }
 
-/* --- Feature Description --- */
-.feature-item p {
-    font-size: 1em;
+/* Card Content */
+.cf-card h3 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.5rem;
     color: var(--text);
-    /* Black/dark grey in light mode */
-    line-height: 1.6;
+    margin-bottom: 12px;
+    font-weight: 600;
 }
 
-/* --- Responsiveness for Mobile --- */
+[data-theme="light"] .cf-card h3 {
+    color: #333;
+}
+
+.cf-card p {
+    font-size: 0.95rem;
+    color: var(--text-muted);
+    line-height: 1.6;
+    margin-bottom: 20px;
+    flex-grow: 1;
+}
+
+/* --- Interactive Elements inside Cards --- */
+
+/* Buttons */
+.cf-btn {
+    padding: 10px 20px;
+    background: transparent;
+    border: 1px solid var(--accent);
+    color: var(--accent);
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    width: 100%;
+}
+
+.cf-btn:hover {
+    background: var(--accent);
+    color: #000;
+}
+
+/* Select/Dropdowns */
+.cf-select {
+    width: 100%;
+    padding: 10px;
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 215, 0, 0.2);
+    color: var(--text);
+    outline: none;
+    cursor: pointer;
+}
+
+[data-theme="light"] .cf-select {
+    background: rgba(0, 0, 0, 0.05);
+    border-color: rgba(0, 0, 0, 0.1);
+    color: #333;
+}
+
+/* Length Selector Buttons */
+.cf-length-options {
+    display: flex;
+    gap: 8px;
+    margin-top: auto;
+}
+
+.cf-length-btn {
+    flex: 1;
+    padding: 8px 0;
+    font-size: 0.8rem;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: var(--text-muted);
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.cf-length-btn:hover,
+.cf-length-btn.active {
+    background: var(--accent);
+    color: #000;
+    border-color: var(--accent);
+}
+
+/* Dark Mode Toggle Area */
+.cf-toggle-area {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    cursor: pointer;
+}
+
+/* --- Responsive Design --- */
+@media (max-width: 1024px) {
+    .cf-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
 @media (max-width: 768px) {
+    .cf-grid {
+        grid-template-columns: 1fr;
+    }
+
     .current-features-section {
-        padding: 50px 15px;
+        padding: 60px 15px;
     }
 
     .current-features-section h2 {
-        font-size: 2em;
-    }
-
-    .features-list {
-        flex-direction: column;
-        gap: 20px;
-        align-items: center;
-    }
-
-    .feature-item {
-        max-width: 90%;
+        font-size: 2.2rem;
     }
 }

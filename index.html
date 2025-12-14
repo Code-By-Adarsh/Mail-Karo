@@ -471,23 +471,71 @@
   </section>
   <!-- ===== End Instant Pdf converter section ===== -->
 
-  <section class="current-features-section">
-<h2 class="section-title uf-reveal">Current Features<img src="All Images/talk.png" class="accent-icon" alt="accent icon">
- </h2>
-    <div class="features-list">
+  <section class="current-features-section" id="current-features">
+    <h2>Current Features</h2>
 
-      <div class="feature-item">
-        <h3>
-          <span class="icon">🤖</span>
-          AI Email Generation
-        </h3>
-        <p>
-          Write professional, context-aware, and perfectly formatted emails instantly using the power of Artificial
-          Intelligence. **Mail Karo eliminates writer's block**—simply input a brief topic and the desired tone (e.g.,
-          formal, friendly, urgent), and let our AI draft a complete, polished message for you in seconds.
-        </p>
+    <div class="cf-grid">
+      <!-- Card 1: AI Email Generation -->
+      <div class="cf-card">
+        <div class="cf-icon"><i class="fas fa-robot"></i></div>
+        <h3>AI Email Generator</h3>
+        <p>Generate professional emails instantly with smart AI. Context-aware and perfectly formatted.</p>
+        <button class="cf-btn" id="cf-gen-btn">Try It Now</button>
       </div>
 
+      <!-- Card 2: PDF Converter -->
+      <div class="cf-card">
+        <div class="cf-icon"><i class="fas fa-file-pdf"></i></div>
+        <h3>PDF Converter</h3>
+        <p>Convert your emails into clean, shareable PDFs in one click. Download directly to your device.</p>
+        <button class="cf-btn" id="cf-pdf-btn">Convert to PDF</button>
+      </div>
+
+      <!-- Card 3: Tone Selector -->
+      <div class="cf-card">
+        <div class="cf-icon"><i class="fas fa-sliders-h"></i></div>
+        <h3>Tone Selector</h3>
+        <p>Choose the perfect tone: Formal, Friendly, Urgent, or Polite. Customize how you sound.</p>
+        <select class="cf-select" id="cf-tone-select">
+          <option value="formal">Formal</option>
+          <option value="friendly">Friendly</option>
+          <option value="polite">Polite</option>
+          <option value="confident">Confident</option>
+        </select>
+      </div>
+
+      <!-- Card 4: Length Optimization -->
+      <div class="cf-card">
+        <div class="cf-icon"><i class="fas fa-ruler-combined"></i></div>
+        <h3>Length Optimizer</h3>
+        <p>Adjust email length to fit your needs. Short, Medium, or Long formats available.</p>
+        <div class="cf-length-options" id="cf-length-scroll">
+          <button class="cf-length-btn active" data-value="small">Short</button>
+          <button class="cf-length-btn" data-value="medium">Medium</button>
+          <button class="cf-length-btn" data-value="large">Long</button>
+        </div>
+      </div>
+
+      <!-- Card 5: Templates Selector -->
+      <div class="cf-card">
+        <div class="cf-icon"><i class="fas fa-layer-group"></i></div>
+        <h3>Smart Templates</h3>
+        <p>Access pre-designed templates for Job Apps, Leaves, Complaints, and more.</p>
+        <select class="cf-select" id="cf-template-select">
+          <option value="">Select Template</option>
+          <option value="job">Job Application</option>
+          <option value="leave">Leave Request</option>
+          <option value="followup">Follow Up</option>
+        </select>
+      </div>
+
+      <!-- Card 6: Dark/Light Mode -->
+      <div class="cf-card" id="cf-theme-toggle" style="cursor: pointer;">
+        <div class="cf-icon"><i class="fas fa-moon"></i></div>
+        <h3>Dark Mode</h3>
+        <p>Switch between Dark and Light themes for a comfortable reading experience.</p>
+        <button class="cf-btn">Toggle Theme</button>
+      </div>
     </div>
   </section>
 
@@ -755,6 +803,7 @@
   <script src="Homepage JS/testinomial.js" defer></script>
   <script src="Homepage JS/Banner1.js" defer></script>
   <script src="Homepage JS/Banner2.js" defer></script>
+  <script src="Homepage JS/current-features.js" defer></script>
 </body>
 
 </html>
