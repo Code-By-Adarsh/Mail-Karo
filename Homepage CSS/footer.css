@@ -202,6 +202,15 @@
   font-weight: 600;
 }
 
+/* About Founder */
+.footer-founder p {
+  font-size: 0.9rem;
+  line-height: 1.6;
+  color: var(--text-muted);
+  max-width: 260px;
+}
+
+
 /* ================= RESPONSIVE ================= */
 
 /* Tablet (max 1024px) */
@@ -326,3 +335,24 @@
     display: none;
   }
 }
+
+/* Order control for mobile */
+  .footer-brand {
+    order: 1;
+  }
+
+  .footer-column:nth-child(2) {
+    order: 2; /* Quick Links */
+  }
+
+  .footer-column:nth-child(3) {
+    order: 3; /* Contact Us */
+  }
+
+  .footer-founder {
+    order: 4; /* About Founder BETWEEN contact & follow */
+  }
+
+  .social-column {
+    order: 5; /* Follow Us */
+  }
