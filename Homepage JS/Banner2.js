@@ -14,3 +14,26 @@ document.addEventListener("DOMContentLoaded", () => {
     pdfBanner.appendChild(spark);
   }
 });
+
+// Inject spark CSS
+const banner2SparkStyle = document.createElement("style");
+banner2SparkStyle.innerHTML = `
+.mk-pdf-spark {
+  position: absolute;
+  width: 4px;
+  height: 4px;
+  background: #FFD700;
+  border-radius: 50%;
+  opacity: 0.85;
+  box-shadow: 0 0 10px #FFD700;
+  animation: mkMoveSparkPdf linear infinite;
+  z-index: 1;
+}
+
+@keyframes mkMoveSparkPdf {
+  0% { transform: translate(0, 0) scale(1); opacity: 1; }
+  50% { transform: translate(22px, -22px) scale(1.3); opacity: 0.55; }
+  100% { transform: translate(0, 0) scale(1); opacity: 1; }
+}
+`;
+document.head.appendChild(banner2SparkStyle);

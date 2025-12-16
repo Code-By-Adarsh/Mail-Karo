@@ -17,6 +17,7 @@
     animation: fadeInUp 1s ease;
     padding: 0 15px;
     /* Mobile fix */
+    position: relative;
 }
 
 /* Flex equal width for both sides */
