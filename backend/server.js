@@ -2,6 +2,7 @@ import express from 'express';
 import cors from 'cors';
 import dotenv from 'dotenv';
 import emailRoutes from './routes/email.js';
+import qualityCheckerRoutes from './routes/qualityChecker.js';
 
 // Load environment variables
 dotenv.config();
@@ -21,7 +22,8 @@ app.get('/', (req, res) => {
     version: '1.0.0',
     endpoints: {
       health: '/health',
-      generateEmail: '/api/generate-email'
+      generateEmail: '/api/generate-email',
+      qualityCheck: '/api/quality-check'
     }
   });
 });
@@ -37,6 +39,7 @@ app.get('/health', (req, res) => {
 
 // API Routes
 app.use('/api', emailRoutes);
+app.use('/api', qualityCheckerRoutes);
 
 // Error handling middleware
 app.use((err, req, res, next) => {

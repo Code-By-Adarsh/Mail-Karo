@@ -1,0 +1,106 @@
+/* ===============================
+   HARD ISOLATION LAYER
+================================ */
+
+.quality-isolated {
+  width: 100%;
+  position: relative;      /* 🔒 isolate stacking context */
+  isolation: isolate;      /* 🔥 MOST IMPORTANT */
+  margin: 80px 0;          /* controlled spacing */
+}
+
+/* ===============================
+   CENTERING WRAPPER
+================================ */
+
+.quality-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 0 16px;
+}
+
+/* ===============================
+   MAIN CONTAINER
+================================ */
+
+.quality-checker {
+  width: 100%;
+  max-width: 1200px;
+  background: #0b0b0b;
+  border: 1px solid #222;
+  border-radius: 16px;
+  padding: 32px;
+  box-sizing: border-box;
+
+  /* 🔒 internal layout control */
+  overflow: hidden;
+}
+
+/* Box sizing safety */
+.quality-checker *,
+.quality-checker *::before,
+.quality-checker *::after {
+  box-sizing: border-box;
+}
+
+/* ===============================
+   CONTENT STYLES
+================================ */
+
+.qc-title {
+  color: #ffd700;
+  margin-bottom: 8px;
+}
+
+.qc-subtitle {
+  color: #aaa;
+  margin-bottom: 24px;
+}
+
+.qc-label {
+  display: block;
+  margin-bottom: 6px;
+  color: #ccc;
+}
+
+.qc-select,
+.qc-textarea {
+  width: 100%;
+  max-width: 100%;
+  background: #111;
+  border: 1px solid #333;
+  color: #eee;
+  padding: 12px;
+  border-radius: 10px;
+  margin-bottom: 12px;
+}
+
+.qc-textarea {
+  min-height: 180px;
+  resize: vertical;
+}
+
+.qc-meta {
+  font-size: 12px;
+  color: #888;
+  margin-bottom: 20px;
+}
+
+.qc-btn {
+  background: #ffd700;
+  color: #000;
+  padding: 12px 28px;
+  border-radius: 12px;
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.qc-result {
+  margin-top: 32px;
+}
+
+.hidden {
+  display: none;
+}

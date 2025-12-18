@@ -80,6 +80,8 @@
   <link rel="stylesheet" href="Homepage CSS/testinomial.css">
   <link rel="stylesheet" href="Homepage CSS/Banner1.css">
   <link rel="stylesheet" href="Homepage CSS/Banner2.css">
+  <link rel="stylesheet" href="Homepage CSS/quality-checker.css">
+
   <!-- Mail Karo — Full SEO Schema -->
   <script type="application/ld+json">
 {
@@ -429,6 +431,42 @@
     </div>
   </section>
   <!-- ✅ Prompt & Output Section End -->
+
+ <section class="quality-isolated">
+  <div class="quality-wrapper">
+    <div class="quality-checker">
+
+      <h2 class="qc-title">🛡️ AI Email Quality Checker</h2>
+      <p class="qc-subtitle">
+        QA-grade analysis of grammar, clarity, tone, and risk — before you send.
+      </p>
+
+      <label class="qc-label">Check Email From</label>
+      <select id="emailSource" class="qc-select">
+        <option value="generated">Use Generated Email</option>
+        <option value="manual">Paste My Own Email</option>
+      </select>
+
+      <textarea
+        id="qualityInput"
+        class="qc-textarea"
+        placeholder="Paste the email you want to review..."
+      ></textarea>
+
+      <div class="qc-meta">
+        <span id="charCount">0 chars</span> •
+        <span id="wordCount">0 words</span>
+      </div>
+
+      <button id="runQualityCheck" class="qc-btn">
+        ⚡ Run Quality Check
+      </button>
+
+      <div id="qualityResult" class="qc-result hidden"></div>
+
+    </div>
+  </div>
+</section>
 
 
   <!-- PDF converter section -->
@@ -841,6 +879,7 @@
   <script src="Homepage JS/Banner1.js" defer></script>
   <script src="Homepage JS/Banner2.js" defer></script>
   <script src="Homepage JS/current-features.js" defer></script>
+  <script src="Homepage JS/quality-checker.js" defer></script>
 </body>
 
 </html>
