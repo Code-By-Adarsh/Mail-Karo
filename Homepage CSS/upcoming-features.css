@@ -104,6 +104,7 @@
     /* Using theme variable */
     line-height: 1.6;
     margin-top: 10px;
+    margin-bottom: 20px; /* Ensure minimum separation before the bottom bar */
     padding-left: 45px;
     /* Offset text to align with description */
 }
@@ -212,7 +213,7 @@
     display: block;
     height: 2px;
     width: 100%;
-    margin-top: 15px;
+    margin-top: auto; /* Push to the bottom of the card to align with others */
     background-color: var(--accent);
     opacity: 0.8;
 }
