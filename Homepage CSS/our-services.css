@@ -1,0 +1,124 @@
+:root {
+  --bg: #0a0a0a;
+  --card-bg: rgba(255, 255, 255, 0.05);
+  --text: #ffffff;
+  --muted: #cfcfcf;
+  --gold: #f5c542;
+}
+
+[data-theme="light"] {
+  --bg: #f8f8f8;
+  --card-bg: rgba(0, 0, 0, 0.04);
+  --text: #111;
+  --muted: #555;
+}
+
+.mk-services {
+  background: var(--bg);
+  padding: 90px 20px;
+}
+
+.mk-services-wrapper {
+  max-width: 1200px;
+  margin: auto;
+  text-align: center;
+}
+
+.mk-title {
+  font-size: 42px;
+  color: var(--gold);
+  margin-bottom: 10px;
+}
+
+.mk-subtitle {
+  color: var(--muted);
+  max-width: 700px;
+  margin: 0 auto 60px;
+}
+
+/* Cards */
+.mk-card-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 35px;
+}
+
+.mk-card {
+  position: relative;
+  background: var(--card-bg);
+  backdrop-filter: blur(18px);
+  border-radius: 22px;
+  padding: 40px 30px;
+  border: 1px solid rgba(245, 197, 66, 0.25);
+  box-shadow: 0 0 40px rgba(245, 197, 66, 0.12);
+  transition: all 0.4s ease;
+  overflow: hidden;
+}
+
+.mk-card:hover {
+  transform: translateY(-10px);
+}
+
+/* Glow Layer */
+.mk-glow {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+    circle at top,
+    rgba(245, 197, 66, 0.35),
+    transparent 60%
+  );
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.mk-card:hover .mk-glow {
+  opacity: 1;
+}
+
+/* Icon */
+.mk-icon-box {
+  width: 54px;
+  height: 54px;
+  border-radius: 14px;
+  background: rgba(245, 197, 66, 0.15);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 18px;
+}
+
+.mk-icon-box img {
+  width: 28px;
+}
+
+/* Text */
+.mk-card h3 {
+  color: var(--text);
+  font-size: 22px;
+  margin-bottom: 8px;
+}
+
+.mk-card p {
+  color: var(--muted);
+  font-size: 15px;
+  line-height: 1.6;
+  margin-bottom: 26px;
+}
+
+/* Button */
+.mk-btn {
+  display: inline-block;
+  padding: 12px 24px;
+  border-radius: 14px;
+  background: linear-gradient(135deg, #f5c542, #ffb800);
+  color: #000;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.mk-btn:hover {
+  box-shadow: 0 0 25px rgba(245, 197, 66, 0.6);
+  transform: translateX(4px);
+}
