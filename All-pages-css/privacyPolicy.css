@@ -85,59 +85,8 @@
 
 .mk-privacy-layout {
   display: grid;
-  grid-template-columns: minmax(0, 260px) minmax(0, 1fr);
   gap: 2.5rem;
   align-items: flex-start;
-}
-
-/* ===== SIDEBAR ===== */
-
-.mk-privacy-sidebar {
-  position: sticky;
-  top: 5.2rem;
-  align-self: flex-start;
-  padding-right: 1.5rem;
-  border-right: 1px solid rgba(255, 255, 255, 0.06);
-}
-
-.mk-privacy-sidebar ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-.mk-privacy-sidebar li+li {
-  margin-top: 0.35rem;
-}
-
-.mk-privacy-sidebar a {
-  font-size: 0.9rem;
-  text-decoration: none;
-  color: rgba(245, 245, 245, 0.8);
-  display: inline-flex;
-  align-items: center;
-  gap: 0.4rem;
-  transition: color 0.2s ease, transform 0.2s ease;
-}
-
-.mk-privacy-sidebar a::before {
-  content: "";
-  width: 6px;
-  height: 6px;
-  border-radius: 999px;
-  background: rgba(255, 214, 0, 0.35);
-  transform: scale(0.7);
-  transition: transform 0.2s ease, background 0.2s ease;
-}
-
-.mk-privacy-sidebar a:hover {
-  color: #ffd600;
-  transform: translateX(2px);
-}
-
-.mk-privacy-sidebar a:hover::before {
-  transform: scale(1);
-  background: #ffd600;
 }
 
 /* ===== CONTENT BLOCKS ===== */
@@ -227,25 +176,6 @@
     grid-template-columns: minmax(0, 1fr);
   }
 
-  .mk-privacy-sidebar {
-    position: static;
-    border-right: none;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.06);
-    padding: 0 0 1rem;
-    margin-bottom: 1.5rem;
-    overflow-x: auto;
-  }
-
-  .mk-privacy-sidebar ul {
-    display: flex;
-    flex-wrap: nowrap;
-    gap: 0.8rem;
-  }
-
-  .mk-privacy-sidebar li+li {
-    margin-top: 0;
-  }
-
   .mk-privacy-content {
     padding: 1.6rem 1.4rem;
   }
@@ -331,4 +261,41 @@
     text-align: center;
   }
 
+}
+
+/* ================= HERO YELLOW BACKGROUND (REUSED) ================= */
+.yellow-glow-bg {
+  position: relative;
+  overflow: hidden;
+  background:
+    radial-gradient(circle at 20% 20%, rgba(255, 215, 0, 0.05), transparent 60%),
+    radial-gradient(circle at 80% 80%, rgba(255, 215, 0, 0.07), transparent 60%);
+}
+
+/* ================= FLOATING YELLOW PARTICLES ================= */
+.spark {
+  position: absolute;
+  width: 4px;
+  height: 4px;
+  background: #FFD700;
+  border-radius: 50%;
+  opacity: 0.8;
+  box-shadow: 0 0 8px #FFD700;
+  animation: moveSpark linear infinite;
+  pointer-events: none;
+}
+
+@keyframes moveSpark {
+  0% {
+    transform: translate(0, 0) scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: translate(20px, -20px) scale(1.4);
+    opacity: 0.6;
+  }
+  100% {
+    transform: translate(0, 0) scale(1);
+    opacity: 1;
+  }
 }
