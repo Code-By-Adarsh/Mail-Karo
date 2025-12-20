@@ -22,6 +22,29 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 });
 
+// ================= YELLOW PARTICLES (FROM HERO) =================
+function addYellowParticles(targetSelector, count = 30) {
+  const target = document.querySelector(targetSelector);
+  if (!target) return;
+
+  target.style.position = "relative";
+
+  for (let i = 0; i < count; i++) {
+    const spark = document.createElement("div");
+    spark.className = "spark";
+
+    spark.style.left = Math.random() * 100 + "%";
+    spark.style.top = Math.random() * target.scrollHeight + "px";
+    spark.style.animationDuration = 3 + Math.random() * 5 + "s";
+
+    target.appendChild(spark);
+  }
+}
+
+window.addEventListener("DOMContentLoaded", () => {
+  addYellowParticles("#contact-particle-area", 30);
+});
+
 // Set dynamic year in footer
 document.addEventListener("DOMContentLoaded", () => {
   const yearSpan = document.getElementById("year");
