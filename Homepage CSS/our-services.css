@@ -1,124 +1,315 @@
 :root {
-  --bg: #0a0a0a;
-  --card-bg: rgba(255, 255, 255, 0.05);
-  --text: #ffffff;
-  --muted: #cfcfcf;
-  --gold: #f5c542;
+  --deep-black: var(--bg);
+  --gold-primary: var(--accent);
+  --gold-secondary: var(--accent-hover);
+  --gold-glow: rgba(255, 215, 0, 0.4);
+  --card-bg: var(--panel);
+  --text-primary: var(--text);
+  --text-secondary: var(--text-muted);
+  --transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
 }
 
+/* Light Mode Overrides (Inherited from global but kept for clarity) */
 [data-theme="light"] {
-  --bg: #f8f8f8;
-  --card-bg: rgba(0, 0, 0, 0.04);
-  --text: #111;
-  --muted: #555;
+  --deep-black: var(--bg);
+  --card-bg: var(--panel);
+  --text-primary: var(--text);
+  --text-secondary: var(--text-muted);
+  --gold-glow: rgba(212, 175, 55, 0.2);
 }
 
-.mk-services {
-  background: var(--bg);
-  padding: 90px 20px;
+.premium-services {
+  background: var(--deep-black);
+  padding: 100px 20px;
+  position: relative;
+  overflow: hidden;
+  font-family: 'Poppins', sans-serif;
 }
 
-.mk-services-wrapper {
+.services-container {
   max-width: 1200px;
-  margin: auto;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+
+.header-content {
   text-align: center;
+  margin-bottom: 70px;
 }
 
-.mk-title {
-  font-size: 42px;
-  color: var(--gold);
-  margin-bottom: 10px;
+.gold-title {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 15px;
+  color: #ffd700;
+  text-shadow: 0 0 30px rgba(255, 215, 0, 0.4);
 }
 
-.mk-subtitle {
-  color: var(--muted);
-  max-width: 700px;
-  margin: 0 auto 60px;
+.silver-subtitle {
+  color: var(--text-secondary);
+  font-size: 1.1rem;
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.6;
 }
 
-/* Cards */
-.mk-card-container {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 35px;
-}
-
-.mk-card {
+/* Main Glowing Box */
+.services-glow-box {
   position: relative;
   background: var(--card-bg);
-  backdrop-filter: blur(18px);
-  border-radius: 22px;
-  padding: 40px 30px;
-  border: 1px solid rgba(245, 197, 66, 0.25);
-  box-shadow: 0 0 40px rgba(245, 197, 66, 0.12);
-  transition: all 0.4s ease;
-  overflow: hidden;
+  border: 1px solid rgba(255, 215, 0, 0.15);
+  border-radius: 40px;
+  padding: 80px 50px;
+  backdrop-filter: blur(20px);
+  box-shadow: 0 40px 100px rgba(0, 0, 0, 0.2);
 }
 
-.mk-card:hover {
-  transform: translateY(-10px);
-}
-
-/* Glow Layer */
-.mk-glow {
+/* Edge Light Streaks - Interactive */
+.services-glow-box::before,
+.services-glow-box::after {
+  content: "";
   position: absolute;
-  inset: 0;
-  background: radial-gradient(
-    circle at top,
-    rgba(245, 197, 66, 0.35),
-    transparent 60%
-  );
-  opacity: 0;
-  transition: opacity 0.4s ease;
+  width: 40%;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, var(--gold-primary), transparent);
+  box-shadow: 0 0 25px var(--gold-glow);
+  z-index: 2;
+  transition: left 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 
-.mk-card:hover .mk-glow {
+.services-glow-box::before {
+  top: -1px;
+  left: 20%;
+}
+
+.services-glow-box::after {
+  bottom: -1px;
+  right: 20%;
+  left: auto;
+  /* Required to use right */
+}
+
+/* Interaction: Streaks move on hover */
+.services-glow-box:hover::before {
+  left: 60%;
+}
+
+.services-glow-box:hover::after {
+  right: 60%;
+}
+
+/* Grid Layout */
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+/* Service Card Styles */
+.service-card {
+  position: relative;
+  background: var(--card-bg);
+  border: 1px solid rgba(255, 215, 0, 0.15);
+  border-radius: 30px;
+  padding: 45px 35px;
+  transition: var(--transition);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 20px;
+  overflow: hidden;
+  box-shadow:
+    inset 0 0 20px rgba(0, 0, 0, 0.05),
+    0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.service-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(circle at top left, rgba(255, 215, 0, 0.08), transparent 70%);
   opacity: 1;
+  transition: var(--transition);
 }
 
-/* Icon */
-.mk-icon-box {
-  width: 54px;
-  height: 54px;
-  border-radius: 14px;
-  background: rgba(245, 197, 66, 0.15);
+.service-card:hover {
+  transform: translateY(-10px) scale(1.02);
+  border-color: var(--gold-primary);
+  box-shadow:
+    0 20px 50px rgba(255, 215, 0, 0.15),
+    inset 0 0 30px rgba(255, 215, 0, 0.1);
+}
+
+.service-card:hover::before {
+  background: radial-gradient(circle at top left, rgba(255, 215, 0, 0.15), transparent 70%);
+}
+
+/* Glow Effect Corner */
+.card-glow {
+  position: absolute;
+  bottom: -40px;
+  right: -40px;
+  width: 120px;
+  height: 120px;
+  background: radial-gradient(circle, var(--gold-glow), transparent 70%);
+  filter: blur(20px);
+  opacity: 0.4;
+  transition: var(--transition);
+}
+
+.service-card:hover .card-glow {
+  opacity: 0.8;
+  width: 160px;
+  height: 160px;
+}
+
+/* Icon Container */
+.icon-container {
+  width: 60px;
+  height: 60px;
+  background: linear-gradient(135deg, rgba(255, 215, 0, 0.2), rgba(255, 215, 0, 0.05));
+  border: 1px solid rgba(255, 215, 0, 0.4);
+  border-radius: 15px;
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-bottom: 18px;
+  position: relative;
+  z-index: 2;
+  box-shadow: 0 0 20px rgba(255, 215, 0, 0.1);
 }
 
-.mk-icon-box img {
-  width: 28px;
+.icon-container svg {
+  width: 32px;
+  height: 32px;
+  color: var(--gold-primary);
+  filter: drop-shadow(0 0 8px var(--gold-primary));
 }
 
-/* Text */
-.mk-card h3 {
-  color: var(--text);
-  font-size: 22px;
-  margin-bottom: 8px;
-}
-
-.mk-card p {
-  color: var(--muted);
-  font-size: 15px;
-  line-height: 1.6;
-  margin-bottom: 26px;
-}
-
-/* Button */
-.mk-btn {
-  display: inline-block;
-  padding: 12px 24px;
-  border-radius: 14px;
-  background: linear-gradient(135deg, #f5c542, #ffb800);
-  color: #000;
+/* Typography */
+.service-card h3 {
+  color: var(--text-primary);
+  font-size: 1.5rem;
   font-weight: 600;
-  text-decoration: none;
-  transition: all 0.3s ease;
+  margin: 0;
+  position: relative;
+  z-index: 2;
+  line-height: 1.2;
 }
 
-.mk-btn:hover {
-  box-shadow: 0 0 25px rgba(245, 197, 66, 0.6);
-  transform: translateX(4px);
+.service-card p {
+  color: var(--text-secondary);
+  font-size: 1rem;
+  line-height: 1.5;
+  margin: 0;
+  position: relative;
+  z-index: 2;
+}
+
+/* CTA Button */
+.cta-button {
+  margin-top: auto;
+  padding: 14px 28px;
+  background: linear-gradient(to right, var(--gold-primary), var(--gold-secondary));
+  color: #000;
+  text-decoration: none;
+  font-weight: 700;
+  border-radius: 12px;
+  font-size: 0.95rem;
+  transition: var(--transition);
+  position: relative;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.cta-button:hover {
+  box-shadow: 0 10px 25px rgba(255, 204, 51, 0.4);
+  transform: translateY(-2px);
+  filter: brightness(1.1);
+}
+
+/* Responsiveness */
+@media (max-width: 1024px) {
+  .services-grid {
+    gap: 20px;
+  }
+
+  .services-glow-box {
+    padding: 60px 30px;
+  }
+}
+
+@media (max-width: 768px) {
+  .premium-services {
+    padding: 60px 15px;
+  }
+
+  .gold-title {
+    font-size: 2.5rem;
+  }
+
+  .services-grid {
+    grid-template-columns: 1fr;
+    gap: 25px;
+  }
+
+  .services-glow-box {
+    padding: 40px 20px;
+    border-radius: 30px;
+  }
+
+  .services-glow-box::before,
+  .services-glow-box::after {
+    width: 60%;
+  }
+}
+
+/* Animation for the streaks */
+@keyframes pulseGlow {
+  0% {
+    opacity: 0.6;
+    box-shadow: 0 0 15px var(--gold-primary);
+  }
+
+  50% {
+    opacity: 1;
+    box-shadow: 0 0 30px var(--gold-primary);
+  }
+
+  100% {
+    opacity: 0.6;
+    box-shadow: 0 0 15px var(--gold-primary);
+  }
+}
+
+.services-glow-box::before,
+.services-glow-box::after {
+  animation: pulseGlow 3s infinite ease-in-out;
+  /* Add right to the transition list */
+  transition: left 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94), right 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+@media (max-width: 768px) {
+  .services-glow-box::before {
+    left: 10%;
+  }
+
+  .services-glow-box::after {
+    right: 10%;
+  }
+
+  .services-glow-box:hover::before {
+    left: 40%;
+  }
+
+  .services-glow-box:hover::after {
+    right: 40%;
+  }
 }

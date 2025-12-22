@@ -285,63 +285,68 @@
   </div>
   <!-- ✅ Global Unified Background Wrapper End -->
 
-  <section class="mk-services" id="our-services">
-  <div class="mk-services-wrapper">
-
-    <h2 class="mk-title">Our Services</h2>
-    <p class="mk-subtitle">
-      Unlock powerful tools designed to boost your productivity — all free to use.
-    </p>
-
-    <div class="mk-card-container">
-
-      <!-- CARD 1 -->
-      <div class="mk-card free">
-        <span class="mk-glow"></span>
-
-        <div class="mk-icon-box">
-          <img src="/icons/email.svg" alt="AI Email" />
-        </div>
-
-        <h3>AI Email Generation</h3>
-        <p>Create personalized emails in seconds with AI.</p>
-
-        <a href="/generate-email" class="mk-btn">Generate Email →</a>
+  <section class="premium-services" id="our-services">
+    <div class="services-container">
+      <div class="header-content">
+        <h2 class="gold-title">Our Services</h2>
+        <p class="silver-subtitle">Unlock powerful tools designed to boost your productivity—all free to use.</p>
       </div>
 
-      <!-- CARD 2 -->
-      <div class="mk-card free">
-        <span class="mk-glow"></span>
+      <!-- The Glow Box Container -->
+      <div class="services-glow-box">
+        <div class="services-grid">
+          <!-- Card 1: AI Email Generation -->
+          <div class="service-card">
+            <div class="card-glow"></div>
+            <div class="icon-container">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect width="20" height="16" x="2" y="4" rx="2" />
+                <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
+                <path d="M19 2v4" />
+                <path d="M17 4h4" />
+              </svg>
+            </div>
+            <h3>AI Email Generation</h3>
+            <p>Create personalized emails in seconds with AI.</p>
+            <a href="#prompt" class="cta-button">Generate Email &rarr;</a>
+          </div>
 
-        <div class="mk-icon-box">
-          <img src="/icons/check.svg" alt="Quality Checker" />
+          <!-- Card 2: AI Email Quality Checker -->
+          <div class="service-card">
+            <div class="card-glow"></div>
+            <div class="icon-container">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10" />
+                <path d="m9 12 2 2 4-4" />
+              </svg>
+            </div>
+            <h3>AI Email Quality Checker</h3>
+            <p>Enhance your emails with AI-driven quality checks.</p>
+            <a href="#quality-checker" class="cta-button">Check Email Quality &rarr;</a>
+          </div>
+
+          <!-- Card 3: PDF Converter & Downloader -->
+          <div class="service-card">
+            <div class="card-glow"></div>
+            <div class="icon-container">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z" />
+                <polyline points="14 2 14 8 20 8" />
+                <path d="M12 18v-6" />
+                <path d="m9 15 3 3 3-3" />
+              </svg>
+            </div>
+            <h3>PDF Converter & Downloader</h3>
+            <p>Convert and download PDFs to and from various formats.</p>
+            <a href="#mk-instant-pdf" class="cta-button">Convert PDF &rarr;</a>
+          </div>
         </div>
-
-        <h3>AI Email Quality Checker</h3>
-        <p>Enhance your emails with AI-driven quality checks.</p>
-
-        <a href="/email-quality-checker" class="mk-btn">
-          Check Email Quality →
-        </a>
       </div>
-
-      <!-- CARD 3 -->
-      <div class="mk-card free">
-        <span class="mk-glow"></span>
-
-        <div class="mk-icon-box">
-          <img src="/icons/pdf.svg" alt="PDF Converter" />
-        </div>
-
-        <h3>PDF Converter & Downloader</h3>
-        <p>Convert and download PDFs with one click.</p>
-
-        <a href="/pdf-converter" class="mk-btn">Convert PDF →</a>
-      </div>
-
     </div>
-  </div>
-</section>
+  </section>
 
 
   <!-- Prompt section -->
@@ -491,67 +496,63 @@
   </section>
   <!-- ✅ Prompt & Output Section End -->
 
-<section class="quality-section" id="quality-checker">
-  <div class="quality-container">
+  <section class="quality-section" id="quality-checker">
+    <div class="quality-container">
 
-    <h2 class="quality-title">AI Email Quality Checker</h2>
-    <p class="quality-subtitle">
-      Analyze your email for grammar, clarity, tone, and risk before sending.
-    </p>
-
-    <!-- Checking Type -->
-    <div class="quality-options">
-      <div class="quality-option">
-        <label for="checkTypeSelect">Select Mode:</label>
-        <select id="checkTypeSelect">
-          <option value="normal">Normal</option>
-          <option value="medium">Medium</option>
-          <option value="advanced">Advanced</option>
-        </select>
-      </div>
-    </div>
-
-    <!-- Input -->
-    <div class="quality-input-box">
-      <textarea
-        id="qualityInput"
-        placeholder="Paste the email you want to review here..."
-        rows="3"
-      ></textarea>
-      <button id="checkBtn">🛡️ Check</button>
-    </div>
-
-    <!-- Total Time -->
-    <div class="quality-timer">
-      <span id="totalTime">Total Time: 0s</span>
-    </div>
-
-    <!-- Output -->
-    <div class="quality-output-box">
-      <div class="quality-output-header">
-        <h3>Email Quality Report</h3>
-      </div>
-
-      <p id="qualityOutput">
-        Your AI Email Quality Check Report will appear here...
+      <h2 class="quality-title">AI Email Quality Checker</h2>
+      <p class="quality-subtitle">
+        Analyze your email for grammar, clarity, tone, and risk before sending.
       </p>
 
-      <div class="quality-actions">
-        <div class="quality-mode-inline">
-  <label for="checkTypeSelectMirror">Select Mode:</label>
-  <select id="checkTypeSelectMirror">
-    <option value="normal">Normal</option>
-    <option value="medium">Medium</option>
-    <option value="advanced">Advanced</option>
-  </select>
-</div>
-        <button class="quality-ghost-btn" id="recheckBtn">🔁 Rechecking</button>
-        <button class="quality-ghost-btn" id="resetQualityBtn">🧹 Reset</button>
+      <!-- Checking Type -->
+      <div class="quality-options">
+        <div class="quality-option">
+          <label for="checkTypeSelect">Select Mode:</label>
+          <select id="checkTypeSelect">
+            <option value="normal">Normal</option>
+            <option value="medium">Medium</option>
+            <option value="advanced">Advanced</option>
+          </select>
+        </div>
       </div>
-    </div>
 
-  </div>
-</section>
+      <!-- Input -->
+      <div class="quality-input-box">
+        <textarea id="qualityInput" placeholder="Paste the email you want to review here..." rows="3"></textarea>
+        <button id="checkBtn">🛡️ Check</button>
+      </div>
+
+      <!-- Total Time -->
+      <div class="quality-timer">
+        <span id="totalTime">Total Time: 0s</span>
+      </div>
+
+      <!-- Output -->
+      <div class="quality-output-box">
+        <div class="quality-output-header">
+          <h3>Email Quality Report</h3>
+        </div>
+
+        <p id="qualityOutput">
+          Your AI Email Quality Check Report will appear here...
+        </p>
+
+        <div class="quality-actions">
+          <div class="quality-mode-inline">
+            <label for="checkTypeSelectMirror">Select Mode:</label>
+            <select id="checkTypeSelectMirror">
+              <option value="normal">Normal</option>
+              <option value="medium">Medium</option>
+              <option value="advanced">Advanced</option>
+            </select>
+          </div>
+          <button class="quality-ghost-btn" id="recheckBtn">🔁 Rechecking</button>
+          <button class="quality-ghost-btn" id="resetQualityBtn">🧹 Reset</button>
+        </div>
+      </div>
+
+    </div>
+  </section>
 
   <!-- PDF converter section -->
   <section id="mk-instant-pdf" class="mk-instant-pdf">
@@ -672,37 +673,43 @@
         <div class="feature-card uf-reveal">
           <span class="feature-icon">🤖</span>
           <h3>AI Email Summarizer</h3>
-          <p>Converts long or complex emails into short, clear, and actionable summaries. Designed for busy users who want instant understanding and daily productivity.</p>
+          <p>Converts long or complex emails into short, clear, and actionable summaries. Designed for busy users who
+            want instant understanding and daily productivity.</p>
         </div>
 
         <div class="feature-card uf-reveal">
           <span class="feature-icon">💬</span>
           <h3>AI Reply Generator</h3>
-          <p>Suggests professional replies based on the context of received emails. Eliminates the effort of thinking through responses and improves retention.</p>
+          <p>Suggests professional replies based on the context of received emails. Eliminates the effort of thinking
+            through responses and improves retention.</p>
         </div>
 
         <div class="feature-card uf-reveal">
           <span class="feature-icon">✍️</span>
           <h3>AI Email Improver / Rewriter</h3>
-          <p>Transforms poorly written emails into clear, confident, and impactful messages. A powerful feature for students and job seekers.</p>
+          <p>Transforms poorly written emails into clear, confident, and impactful messages. A powerful feature for
+            students and job seekers.</p>
         </div>
 
         <div class="feature-card uf-reveal">
           <span class="feature-icon">🛡️</span>
           <h3>AI Email Quality Checker</h3>
-          <p>Detects grammar issues, clarity problems, unprofessional tone, and risky wording. A QA-driven feature that builds trust and communication confidence.</p>
+          <p>Detects grammar issues, clarity problems, unprofessional tone, and risky wording. A QA-driven feature that
+            builds trust and communication confidence.</p>
         </div>
 
         <div class="feature-card uf-reveal">
           <span class="feature-icon">🌍</span>
           <h3>AI Email Translator (Professional Mode)</h3>
-          <p>Converts Hindi or Hinglish emails into clean, corporate-ready English. A strong India-focused USP for mass user adoption.</p>
+          <p>Converts Hindi or Hinglish emails into clean, corporate-ready English. A strong India-focused USP for mass
+            user adoption.</p>
         </div>
 
         <div class="feature-card uf-reveal">
           <span class="feature-icon">🎯</span>
           <h3>AI Tone Optimizer</h3>
-          <p>Adjusts the same email into Formal, Friendly, Polite, or Assertive tones. Helps users avoid communication mistakes in professional scenarios.</p>
+          <p>Adjusts the same email into Formal, Friendly, Polite, or Assertive tones. Helps users avoid communication
+            mistakes in professional scenarios.</p>
         </div>
       </div>
   </section>
