@@ -3,8 +3,11 @@
 #mk-instant-pdf {
   max-width: 1100px;
   margin: 50px auto;
-  padding: 32px;
+  padding: 60px 40px;
+  /* Increased padding for better header spacing */
   border-radius: 20px;
+  text-align: center;
+  /* Center the header content */
 
   /* Using global theme variables */
   background: var(--panel);
@@ -51,9 +54,27 @@
 
 /* Title */
 .mk-pdf-title {
-  font-size: 24px;
-  font-weight: 700;
-  color: var(--text);
+  font-family: 'Orbitron', sans-serif;
+  font-size: 3rem;
+  color: var(--accent);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 60px;
+  text-shadow: 0 0 20px rgba(255, 215, 0, 0.3);
+  position: relative;
+  display: inline-block;
+}
+
+.mk-pdf-title::after {
+  content: '';
+  position: absolute;
+  width: 60%;
+  height: 3px;
+  background: var(--accent);
+  bottom: -15px;
+  left: 20%;
+  border-radius: 2px;
+  box-shadow: 0 0 10px var(--accent);
 }
 
 /* Description */
@@ -141,6 +162,10 @@
 @media (max-width: 520px) {
   #mk-instant-pdf {
     padding: 22px;
+  }
+
+  .mk-pdf-title {
+    font-size: 2.2rem;
   }
 
   .mk-pdf-desc {

@@ -21,15 +21,26 @@
 /* Section titles */
 .section-title {
     font-family: 'Orbitron', sans-serif;
-    font-weight: 700;
-    font-size: 3em;
+    font-size: 3rem;
     color: var(--accent);
-    /* Using theme variable */
-    margin-bottom: 15px;
-    letter-spacing: 2px;
     text-transform: uppercase;
-    text-shadow: 0 0 10px rgba(255, 215, 0, 0.5);
-    /* Subtle glow effect */
+    letter-spacing: 2px;
+    margin-bottom: 60px;
+    text-shadow: 0 0 20px rgba(255, 215, 0, 0.3);
+    position: relative;
+    display: inline-block;
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    width: 60%;
+    height: 3px;
+    background: var(--accent);
+    bottom: -15px;
+    left: 20%;
+    border-radius: 2px;
+    box-shadow: 0 0 10px var(--accent);
 }
 
 .section-subtitle {
@@ -104,7 +115,8 @@
     /* Using theme variable */
     line-height: 1.6;
     margin-top: 10px;
-    margin-bottom: 20px; /* Ensure minimum separation before the bottom bar */
+    margin-bottom: 20px;
+    /* Ensure minimum separation before the bottom bar */
     padding-left: 45px;
     /* Offset text to align with description */
 }
@@ -131,7 +143,7 @@
 
 @media (max-width: 480px) {
     .section-title {
-        font-size: 2em;
+        font-size: 2.2rem;
     }
 
     .feature-card h3 {
@@ -213,7 +225,8 @@
     display: block;
     height: 2px;
     width: 100%;
-    margin-top: auto; /* Push to the bottom of the card to align with others */
+    margin-top: auto;
+    /* Push to the bottom of the card to align with others */
     background-color: var(--accent);
     opacity: 0.8;
 }

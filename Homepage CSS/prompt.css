@@ -17,10 +17,26 @@
 
 .prompt-title {
   font-family: 'Orbitron', sans-serif;
-  font-size: 2.2rem;
-  font-weight: 700;
+  font-size: 3rem;
   color: var(--accent);
-  text-shadow: 0 0 10px rgba(255, 215, 0, 0.3);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 60px;
+  text-shadow: 0 0 20px rgba(255, 215, 0, 0.3);
+  position: relative;
+  display: inline-block;
+}
+
+.prompt-title::after {
+  content: '';
+  position: absolute;
+  width: 60%;
+  height: 3px;
+  background: var(--accent);
+  bottom: -15px;
+  left: 20%;
+  border-radius: 2px;
+  box-shadow: 0 0 10px var(--accent);
 }
 
 [data-theme="light"] .prompt-title {
@@ -256,7 +272,7 @@
   }
 
   .prompt-title {
-    font-size: 1.8rem;
+    font-size: 2.2rem;
   }
 
   .prompt-subtitle {
@@ -346,7 +362,7 @@
   }
 
   .prompt-title {
-    font-size: 1.6rem !important;
+    font-size: 2rem !important;
     /* Prevent header from being too huge */
     line-height: 1.3;
     margin-bottom: 10px;
