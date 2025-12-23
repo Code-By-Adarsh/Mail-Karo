@@ -20,7 +20,8 @@
 
 .mk-pdf-inner {
   display: flex;
-  gap: 28px;
+  gap: 20px;
+  /* Reduced gap from 28px for a more modern, compact feel */
   align-items: center;
 }
 
@@ -59,7 +60,8 @@
   color: var(--accent);
   text-transform: uppercase;
   letter-spacing: 2px;
-  margin-bottom: 30px;
+  margin-bottom: 25px;
+  /* Tighter gap as requested */
   text-shadow: 0 0 20px rgba(255, 215, 0, 0.3);
   position: relative;
   display: inline-block;
