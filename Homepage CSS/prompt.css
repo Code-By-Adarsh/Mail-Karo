@@ -17,11 +17,11 @@
 
 .prompt-title {
   font-family: 'Orbitron', sans-serif;
-  font-size: 3rem;
+  font-size: 1.8rem;
   color: var(--accent);
   text-transform: uppercase;
   letter-spacing: 2px;
-  margin-bottom: 60px;
+  margin-bottom: 30px;
   text-shadow: 0 0 20px rgba(255, 215, 0, 0.3);
   position: relative;
   display: inline-block;

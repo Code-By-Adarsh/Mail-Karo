@@ -12,11 +12,11 @@
 /* Section Title */
 .current-features-section h2 {
     font-family: 'Orbitron', sans-serif;
-    font-size: 3rem;
+    font-size: 1.8rem;
     color: var(--accent);
     text-transform: uppercase;
     letter-spacing: 2px;
-    margin-bottom: 60px;
+    margin-bottom: 30px;
     text-shadow: 0 0 20px rgba(255, 215, 0, 0.3);
     position: relative;
     display: inline-block;
@@ -155,13 +155,13 @@
 /* Select/Dropdowns */
 .cf-select {
     background-color: var(--panel);
-  color: var(--text);
-  border: 1px solid var(--border);
-  padding: 10px 14px;
-  border-radius: 10px;
-  font-size: 0.95rem;
-  cursor: pointer;
-  transition: 0.3s ease;
+    color: var(--text);
+    border: 1px solid var(--border);
+    padding: 10px 14px;
+    border-radius: 10px;
+    font-size: 0.95rem;
+    cursor: pointer;
+    transition: 0.3s ease;
 }
 
 [data-theme="light"] .cf-select {
