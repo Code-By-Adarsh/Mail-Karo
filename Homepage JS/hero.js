@@ -4,12 +4,6 @@ document.addEventListener("DOMContentLoaded", () => {
   const subtitle = document.querySelector(".hero-subtitle");
   const button = document.querySelector(".hero-btn");
 
-  // Fade in subtitle and button
-  setTimeout(() => {
-    subtitle.style.opacity = "1";
-    button.style.opacity = "1";
-  }, 300);
-
   // Typewriter text effect
   const typeText = document.getElementById("typewriter-text");
   const phrases = [
@@ -28,14 +22,15 @@ document.addEventListener("DOMContentLoaded", () => {
     const speed = isDeleting ? 60 : 120;
 
     if (!isDeleting) {
-      typeText.textContent = currentPhrase.substring(0, letterIndex + 1);
+      // Use non-breaking space if empty to prevent layout collapse
+      typeText.textContent = currentPhrase.substring(0, letterIndex + 1) || "\u00A0";
       letterIndex++;
 
       if (letterIndex === currentPhrase.length) {
         setTimeout(() => (isDeleting = true), 1000);
       }
     } else {
-      typeText.textContent = currentPhrase.substring(0, letterIndex - 1);
+      typeText.textContent = currentPhrase.substring(0, letterIndex - 1) || "\u00A0";
       letterIndex--;
 
       if (letterIndex === 0) {
@@ -50,10 +45,12 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // Animate logo
   const logo = document.querySelector(".mailkaro-logo");
-  setTimeout(() => {
-    logo.style.opacity = "1";
-    logo.style.transform = "scale(1)";
-  }, 400);
+  if (logo) {
+    setTimeout(() => {
+      logo.style.opacity = "1";
+      logo.style.transform = "scale(1)";
+    }, 400);
+  }
 
   // Glowing floating particles
   for (let i = 0; i < 10; i++) {
@@ -66,7 +63,7 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 });
 
-// Spark CSS (unchanged)
+// Spark CSS (Optimized)
 const heroStyle = document.createElement("style");
 heroStyle.innerHTML = `
 .spark {
@@ -78,6 +75,9 @@ heroStyle.innerHTML = `
   opacity: 0.8;
   box-shadow: 0 0 8px #FFD700;
   animation: moveSpark linear infinite;
+  pointer-events: none;
+  z-index: -1;
+  will-change: transform;
 }
 @keyframes moveSpark {
   0% { transform: translate(0, 0) scale(1); opacity: 1; }

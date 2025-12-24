@@ -40,7 +40,8 @@
 .hero-content {
   flex: 1;
   color: var(--text);
-  animation: fadeInUp 1s ease;
+  animation: fadeInUp 1s ease forwards;
+  will-change: transform, opacity;
 }
 
 .hero-title {
@@ -51,11 +52,23 @@
   color: var(--text);
   text-shadow: 0 0 12px rgba(255, 215, 0, 0.2);
   min-height: 65px;
+  /* Stabilization properties */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  transform: translateZ(0);
 }
 
 .hero-title span {
   color: var(--accent);
   text-shadow: 0 0 18px rgba(255, 215, 0, 0.6);
+  display: inline-block;
+  vertical-align: middle;
+  will-change: transform, opacity;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  transform: translateZ(0);
 }
 
 .hero-subtitle {
