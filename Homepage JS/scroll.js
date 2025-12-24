@@ -15,8 +15,9 @@ document.addEventListener("DOMContentLoaded", () => {
     { threshold: 0.1 }
   );
 
-  sections.forEach((sec) => {    // Skip testimonials section (handled separately)
-    if (!sec.classList.contains("mk-testimonials")) {
+  sections.forEach((sec) => {
+    // Skip hero and testimonials sections (handled separately)
+    if (!sec.classList.contains("mk-testimonials") && sec.id !== "home") {
       sec.classList.add("fade-in");
       observer.observe(sec);
     }
