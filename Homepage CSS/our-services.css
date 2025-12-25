@@ -131,6 +131,33 @@
   gap: 30px;
 }
 
+.service-badges {
+  position: absolute;
+  top: 22px;
+  right: 22px;
+  display: flex;
+  gap: 8px;
+  z-index: 3;
+}
+
+.service-badge {
+  background: var(--gold-primary);
+  color: #1a1a1a;
+  font-size: 0.65rem;
+  font-weight: 700;
+  padding: 6px 10px;
+  border-radius: 999px;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  box-shadow: 0 4px 12px rgba(255, 215, 0, 0.35);
+  white-space: nowrap;
+}
+
+/* Slight visual difference if needed later */
+.service-badge.available {
+  opacity: 0.95;
+}
+
 /* Service Card Styles */
 .service-card {
   position: relative;
@@ -335,5 +362,12 @@
 
   .services-glow-box:hover::after {
     right: 40%;
+  }
+}
+
+@media (max-width: 600px) {
+  .service-badges {
+    flex-direction: column;
+    align-items: flex-end;
   }
 }
