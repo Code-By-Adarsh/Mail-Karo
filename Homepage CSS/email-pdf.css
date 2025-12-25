@@ -10,12 +10,18 @@
   /* Center the header content */
 
   /* Using global theme variables */
-  background: var(--panel);
+  background: var(--bg);
+  /* Fallback */
+  background: radial-gradient(circle at center, rgba(255, 215, 0, 0.03) 0%, var(--bg) 70%);
   border: 1px solid var(--border);
   color: var(--text);
 
   box-shadow: 0 0 22px rgba(0, 0, 0, 0.08);
   transition: background 0.3s ease, color 0.3s ease;
+}
+
+[data-theme="light"] #mk-instant-pdf {
+  background: radial-gradient(circle at center, rgba(212, 175, 55, 0.08) 0%, #ffffff 70%);
 }
 
 .mk-pdf-inner {

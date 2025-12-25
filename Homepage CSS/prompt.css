@@ -1,11 +1,17 @@
 /* Prompt section styles */
 .prompt-section {
-  background-color: var(--bg);
+  background: var(--bg);
+  /* Fallback */
+  background: radial-gradient(circle at center, rgba(255, 215, 0, 0.03) 0%, var(--bg) 70%);
   padding: 80px 20px;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
+}
+
+[data-theme="light"] .prompt-section {
+  background: radial-gradient(circle at center, rgba(212, 175, 55, 0.08) 0%, #ffffff 70%);
 }
 
 .prompt-container {

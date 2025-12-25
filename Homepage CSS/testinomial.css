@@ -3,8 +3,14 @@
 .mk-testimonials {
   padding: 80px 20px;
   background: var(--bg);
+  /* Fallback */
+  background: radial-gradient(circle at center, rgba(255, 215, 0, 0.03) 0%, var(--bg) 70%);
   color: var(--text);
   text-align: center;
+}
+
+[data-theme="light"] .mk-testimonials {
+  background: radial-gradient(circle at center, rgba(212, 175, 55, 0.08) 0%, #ffffff 70%);
 }
 
 .mk-header {
@@ -16,17 +22,24 @@
   display: inline-block;
   padding: 4px 14px;
   border-radius: 999px;
-  border: 1px solid #ffd700;
+  border: 1px solid var(--accent);
   font-size: 12px;
   text-transform: uppercase;
   letter-spacing: 1px;
-  color: #ffd700;
+  color: var(--accent);
+  text-shadow: 0 0 10px rgba(255, 215, 0, 0.3);
 }
 
 .mk-header h2 {
   margin-top: 16px;
   font-size: 34px;
   font-weight: 700;
+  color: var(--accent);
+  text-shadow: 0 0 20px rgba(255, 215, 0, 0.3);
+}
+
+[data-theme="light"] .mk-header h2 {
+  text-shadow: 0 0 10px rgba(212, 175, 55, 0.15);
 }
 
 .mk-header p {
@@ -134,14 +147,14 @@
   height: 52px;
   border-radius: 50%;
   /* circle */
-  border: 2px solid #ffd700;
+  border: 2px solid var(--accent);
   object-fit: cover;
 }
 
 .mk-user-info h4 {
   margin: 0;
   font-size: 16px;
-  color: #ffd700;
+  color: var(--accent);
 }
 
 .mk-user-info span {
@@ -153,7 +166,7 @@
 .mk-stars {
   font-size: 22px;
   /* bigger stars */
-  color: #ffd700;
+  color: var(--accent);
   letter-spacing: 3px;
   white-space: nowrap;
   margin-left: auto;
@@ -173,16 +186,16 @@
   width: 38px;
   height: 38px;
   border-radius: 50%;
-  border: 1px solid #ffd700;
+  border: 1px solid var(--accent);
   background: transparent;
-  color: #ffd700;
+  color: var(--accent);
   cursor: pointer;
   font-size: 20px;
   transition: background 0.2s ease, color 0.2s ease, transform 0.15s ease;
 }
 
 .mk-controls button:hover {
-  background: #ffd700;
+  background: var(--accent);
   color: #000;
   transform: translateY(-1px);
 }

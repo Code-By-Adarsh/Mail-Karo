@@ -2,6 +2,9 @@
 
 /* Wrapper */
 .mk-faq-wrapper {
+    background: var(--bg);
+    /* Fallback */
+    background: radial-gradient(circle at center, rgba(255, 215, 0, 0.03) 0%, var(--bg) 70%);
     padding: 90px 20px;
     /* Increased gap */
     max-width: 900px;
@@ -9,11 +12,17 @@
     color: var(--text);
 }
 
+[data-theme="light"] .mk-faq-wrapper {
+    background: radial-gradient(circle at center, rgba(212, 175, 55, 0.08) 0%, #ffffff 70%);
+}
+
 /* Header */
 .mk-faq-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     text-align: center;
     margin-bottom: 60px;
-    /* More gap */
 }
 
 /* Badge */
@@ -35,16 +44,35 @@
 
 /* TITLE */
 .mk-faq-title {
+    font-family: 'Orbitron', sans-serif;
     font-size: 42px;
     font-weight: 800;
     margin-top: 10px;
-    margin-bottom: 18px;
-    color: var(--text);
+    margin-bottom: 40px;
+    color: var(--accent);
+    text-shadow: 0 0 20px rgba(255, 215, 0, 0.3);
+    position: relative;
+    display: inline-block;
+}
+
+[data-theme="light"] .mk-faq-title {
+    text-shadow: 0 0 10px rgba(212, 175, 55, 0.15);
+}
+
+.mk-faq-title::after {
+    content: '';
+    position: absolute;
+    width: 60%;
+    height: 3px;
+    background: var(--accent);
+    bottom: -15px;
+    left: 20%;
+    border-radius: 2px;
+    box-shadow: 0 0 10px var(--accent);
 }
 
 .mk-faq-title span {
     color: var(--accent);
-    text-shadow: 0 0 10px rgba(255, 217, 74, 0.4);
 }
 
 /* SUBTITLE */
@@ -76,7 +104,7 @@
 .mk-accordion-item:hover {
     background: var(--panel);
     border-color: var(--accent);
-    box-shadow: 0 0 18px rgba(255, 217, 74, 0.25);
+    box-shadow: 0 0 25px rgba(255, 215, 0, 0.15);
     transform: translateY(-3px);
 }
 

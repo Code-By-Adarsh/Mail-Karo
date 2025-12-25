@@ -4,11 +4,16 @@
 #upcoming-features {
     padding: 80px 0;
     /* Adjusted padding */
-    background-color: var(--bg);
-    /* Using theme variable */
+    background: var(--bg);
+    /* Fallback */
+    background: radial-gradient(circle at center, rgba(255, 215, 0, 0.03) 0%, var(--bg) 70%);
     color: var(--text);
     text-align: center;
     overflow: hidden;
+}
+
+[data-theme="light"] #upcoming-features {
+    background: radial-gradient(circle at center, rgba(212, 175, 55, 0.08) 0%, #ffffff 70%);
 }
 
 .features-container {
@@ -178,7 +183,7 @@
 
 /* NEON glow effect when revealed */
 .feature-card.visible {
-    box-shadow: 0 0 18px rgba(255, 217, 74, 0.22);
+    box-shadow: 0 0 20px rgba(255, 215, 0, 0.15);
     border-bottom: 2px solid var(--accent);
 }
 
