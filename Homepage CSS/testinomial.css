@@ -20,14 +20,17 @@
 
 .mk-tag {
   display: inline-block;
-  padding: 4px 14px;
-  border-radius: 999px;
+  padding: 10px 26px;
+  font-size: 14px;
+  font-weight: 700;
+  border-radius: 50px;
+  background: rgba(255, 217, 74, 0.20);
   border: 1px solid var(--accent);
-  font-size: 12px;
-  text-transform: uppercase;
-  letter-spacing: 1px;
   color: var(--accent);
-  text-shadow: 0 0 10px rgba(255, 215, 0, 0.3);
+  text-transform: uppercase;
+  letter-spacing: 1.6px;
+  backdrop-filter: blur(6px);
+  margin-bottom: 20px;
 }
 
 .mk-header h2 {
@@ -279,10 +282,7 @@
   color: #fff;
 }
 
-[data-theme="light"] .mk-tag {
-  border-color: #d4af37;
-  color: #d4af37;
-}
+
 
 /* ===== Scroll Animation ===== */
 .mk-testimonials-reveal {
