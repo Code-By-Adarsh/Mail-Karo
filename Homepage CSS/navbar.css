@@ -544,3 +544,49 @@ body {
     height: 36px;
   }
 }
+
+/* ======================
+   Profile Dropdown
+   ====================== */
+.dropdown {
+  position: absolute;
+  top: 70px;
+  right: 40px;
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 12px;
+  width: 180px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.35);
+  z-index: 999;
+  animation: fadeIn 0.25s ease forwards;
+}
+
+.dropdown-name {
+  font-weight: 600;
+  color: var(--accent);
+  margin-bottom: 10px;
+}
+
+.dropdown-item {
+  width: 100%;
+  padding: 8px 12px;
+  text-align: left;
+  border-radius: var(--radius);
+  border: none;
+  cursor: pointer;
+  background: transparent;
+  color: var(--text);
+  font-size: 0.9rem;
+  transition: var(--transition);
+}
+
+.dropdown-item:hover {
+  background: var(--panel);
+  color: var(--accent);
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-6px); }
+  to { opacity: 1; transform: translateY(0); }
+}

@@ -100,4 +100,39 @@ onAuthStateChanged(auth, (user) => {
     loginBtn?.classList.remove("hidden");
     userProfileImg.classList.add("hidden");
   }
+
+  /*******************************
+ * PROFILE DROPDOWN + LOGOUT
+ *******************************/
+const dropdown = document.getElementById("userDropdown");
+const logoutBtn = document.getElementById("logoutBtn");
+const userNameHolder = document.getElementById("userName");
+
+// toggle dropdown on profile click
+userProfileImg?.addEventListener("click", () => {
+  dropdown.classList.toggle("hidden");
+});
+
+// click outside to close dropdown
+document.addEventListener("click", e => {
+  if (!dropdown.contains(e.target) && e.target !== userProfileImg) {
+    dropdown.classList.add("hidden");
+  }
+});
+
+// logout button action
+logoutBtn?.addEventListener("click", () => {
+  signOut(auth).then(() => {
+    console.log("Logged out");
+    dropdown.classList.add("hidden");
+  });
+});
+
+// show username when logged in
+onAuthStateChanged(auth, (user) => {
+  if (user) {
+    userNameHolder.textContent = user.displayName;
+  }
+});
+
 });
