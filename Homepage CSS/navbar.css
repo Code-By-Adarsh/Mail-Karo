@@ -590,3 +590,20 @@ body {
   from { opacity: 0; transform: translateY(-6px); }
   to { opacity: 1; transform: translateY(0); }
 }
+
+.dropdown {
+  padding: 10px 14px; /* tighter */
+}
+
+.dropdown-name {
+  margin: 0 0 6px 0; /* shrink space */
+  font-weight: 700;
+  font-size: 1rem;
+  line-height: 1.2;
+}
+
+.dropdown-item {
+  margin: 0; /* remove extra spacing */
+  padding: 6px 8px; /* smaller padding */
+  line-height: 1.1; /* remove vertical stretch */
+}
