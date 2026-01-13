@@ -1,0 +1,577 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>Mail Karo Blog • Introduction</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- ================= SEO ================= -->
+  <meta name="description"
+    content="Mail Karo is an AI Email Assistant that helps you write, analyze, and improve emails in seconds. Learn what it does, how it works, features, and use cases." />
+  <meta name="keywords"
+    content="Mail Karo, AI Email Assistant, email assistant, email generator, email quality checker, professional email, tone optimizer, email improver" />
+  <meta name="author" content="Mail Karo" />
+  <meta name="robots" content="index, follow" />
+
+  <!-- Canonical -->
+  <link rel="canonical" href="https://mail-karo.netlify.app/blog/intro-blog.html" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Mail Karo • AI Email Assistant" />
+  <meta property="og:description"
+    content="Mail Karo helps you write, analyze, and improve emails in seconds. Fast, clean, and privacy-first." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://mail-karo.netlify.app/blog/intro-blog.html" />
+  <meta property="og:image" content="https://mail-karo.netlify.app/All Images/Logo.png" />
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Mail Karo • AI Email Assistant" />
+  <meta name="twitter:description"
+    content="Write + analyze + improve emails in seconds with Mail Karo — a privacy-first AI Email Assistant." />
+  <meta name="twitter:image" content="https://mail-karo.netlify.app/All Images/Logo.png" />
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet">
+
+  <!-- ✅ Same CSS values as Privacy Policy, just blog class names -->
+  <style>
+    :root {
+      --bg: #000;
+      --panel: rgba(10, 10, 10, 0.6);
+      --glass: rgba(255, 255, 255, 0.03);
+      --accent: #ffd94a;
+      --accent-strong: #ffdf6e;
+      --text: #ffffff;
+      --muted: #b6b6b6;
+      --border: rgba(255, 217, 74, 0.13);
+      --radius: 14px;
+    }
+
+    /* ===== BLOG PAGE (same theme) ===== */
+
+    .mk-blog-bg {
+      background: radial-gradient(circle at top, #1a1300 0, #050505 45%, #000000 100%);
+      color: #f5f5f5;
+      margin: 0;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Poppins", sans-serif;
+      overflow-x: hidden;
+    }
+
+    .mk-blog-page {
+      min-height: 100vh;
+      padding: 4rem 1.5rem 4rem;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    /* ===== HEADER ===== */
+
+    .mk-blog-header {
+      text-align: center;
+      margin-bottom: 2.5rem;
+      padding-top: 1rem;
+    }
+
+    .mk-blog-pill {
+      display: inline-flex;
+      padding: 6px 18px;
+      border-radius: 30px;
+      border: 1px solid rgba(255, 214, 0, 0.45);
+      font-size: 0.78rem;
+      letter-spacing: 0.17em;
+      text-transform: uppercase;
+      color: #ffd600;
+      background: rgba(255, 214, 0, 0.08);
+      margin-bottom: 0.5rem;
+    }
+
+    .mk-blog-title {
+      font-size: clamp(2.3rem, 4.5vw, 3.4rem);
+      font-weight: 700;
+      letter-spacing: -0.5px;
+      margin-top: 0.2rem;
+      margin-bottom: 0.4rem;
+    }
+
+    .mk-blog-title span {
+      color: #ffd600;
+      text-shadow:
+        0 0 12px rgba(255, 214, 0, 0.55),
+        0 0 20px rgba(255, 214, 0, 0.25);
+    }
+
+    .mk-blog-updated {
+      font-size: 0.9rem;
+      opacity: 0.75;
+      margin-bottom: 0.6rem;
+    }
+
+    .mk-blog-subtitle {
+      max-width: 650px;
+      margin: 0.8rem auto 0;
+      font-size: 1.03rem;
+      opacity: 0.85;
+      line-height: 1.6;
+    }
+
+    /* ===== CONTENT WRAPPER ===== */
+
+    .mk-blog-layout {
+      display: grid;
+      gap: 2.5rem;
+      align-items: flex-start;
+    }
+
+    .mk-blog-content {
+      background: linear-gradient(145deg, rgba(12, 12, 12, 0.95), rgba(16, 16, 16, 0.98));
+      border-radius: 1.5rem;
+      border: 1px solid rgba(255, 255, 255, 0.05);
+      box-shadow:
+        0 20px 60px rgba(0, 0, 0, 0.8),
+        0 0 40px rgba(255, 214, 0, 0.06);
+      padding: 2.2rem 2.3rem;
+      backdrop-filter: blur(24px);
+    }
+
+    .mk-blog-block+.mk-blog-block {
+      margin-top: 1.75rem;
+      padding-top: 1.5rem;
+      border-top: 1px solid rgba(255, 255, 255, 0.04);
+    }
+
+    .mk-blog-block h2 {
+      font-size: 1.15rem;
+      margin-bottom: 0.55rem;
+      color: #ffe977;
+    }
+
+    .mk-blog-block h3 {
+      font-size: 0.98rem;
+      margin-top: 0.8rem;
+      margin-bottom: 0.35rem;
+      color: #f5f5f5;
+    }
+
+    .mk-blog-block p {
+      font-size: 0.92rem;
+      line-height: 1.7;
+      opacity: 0.9;
+    }
+
+    .mk-blog-block ul {
+      padding-left: 1.2rem;
+      margin: 0.3rem 0 0.7rem;
+    }
+
+    .mk-blog-block li {
+      font-size: 0.9rem;
+      line-height: 1.6;
+      margin-bottom: 0.2rem;
+      opacity: 0.9;
+    }
+
+    .mk-blog-content a {
+      color: #ffd600;
+      text-decoration: underline;
+      text-decoration-thickness: 1px;
+      text-underline-offset: 3px;
+    }
+
+    .mk-blog-content a:hover {
+      text-decoration-style: dashed;
+    }
+
+    /* ===== BUTTONS (same theme) ===== */
+    .mk-cta-row {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin-top: 1rem;
+    }
+
+    .mk-cta-row a {
+      padding: 10px 16px;
+      border-radius: 8px;
+      border: 1px solid var(--border);
+      background: rgba(255, 255, 255, 0.03);
+      color: var(--muted);
+      text-decoration: none;
+      backdrop-filter: blur(6px);
+      transition: all 0.25s ease;
+      font-size: 14px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .mk-cta-row a:hover {
+      background: var(--accent);
+      color: #000;
+      transform: translateY(-2px);
+      box-shadow: 0 4px 15px rgba(255, 217, 74, 0.3);
+    }
+
+    /* ===== Fade-in Animation ===== */
+    .mk-blog-block {
+      opacity: 0;
+      transform: translateY(12px);
+      transition: opacity 0.35s ease, transform 0.35s ease;
+    }
+
+    .mk-blog-block.mk-visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* ===== HERO YELLOW BACKGROUND (REUSED) ===== */
+    .yellow-glow-bg {
+      position: relative;
+      overflow: hidden;
+      background:
+        radial-gradient(circle at 20% 20%, rgba(255, 215, 0, 0.05), transparent 60%),
+        radial-gradient(circle at 80% 80%, rgba(255, 215, 0, 0.07), transparent 60%);
+    }
+
+    /* ===== PARTICLES ===== */
+    .spark {
+      position: absolute;
+      width: 4px;
+      height: 4px;
+      background: #FFD700;
+      border-radius: 50%;
+      opacity: 0.8;
+      box-shadow: 0 0 8px #FFD700;
+      animation: moveSpark linear infinite;
+      pointer-events: none;
+    }
+
+    @keyframes moveSpark {
+      0% {
+        transform: translate(0, 0) scale(1);
+        opacity: 1;
+      }
+
+      50% {
+        transform: translate(20px, -20px) scale(1.4);
+        opacity: 0.6;
+      }
+
+      100% {
+        transform: translate(0, 0) scale(1);
+        opacity: 1;
+      }
+    }
+
+    /* ===== RESPONSIVE ===== */
+    @media (max-width: 900px) {
+      .mk-blog-layout {
+        grid-template-columns: minmax(0, 1fr);
+      }
+
+      .mk-blog-content {
+        padding: 1.6rem 1.4rem;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .mk-blog-page {
+        padding-top: 3.5rem;
+      }
+
+      .mk-blog-title {
+        font-size: 2.1rem;
+      }
+    }
+
+    /* ===== FOOTER ===== */
+    .mk-footer {
+      margin-top: auto;
+      padding: 24px 0;
+      border-top: 1px solid rgba(255, 217, 74, 0.08);
+    }
+
+    .mk-footer,
+    .mk-footer * {
+      font-family: "Poppins", sans-serif;
+    }
+
+    .footer-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    .footer-left h3 {
+      margin: 0 0 8px 0;
+      color: var(--accent);
+      font-size: 20px;
+    }
+
+    .footer-left .muted {
+      margin: 0;
+      font-size: 13px;
+      color: var(--muted);
+    }
+
+    .footer-links {
+      display: flex;
+      gap: 12px;
+    }
+
+    .footer-links a {
+      padding: 8px 16px;
+      border-radius: 8px;
+      border: 1px solid var(--border);
+      background: rgba(255, 255, 255, 0.03);
+      color: var(--muted);
+      text-decoration: none;
+      backdrop-filter: blur(6px);
+      transition: all 0.25s ease;
+      font-size: 14px;
+    }
+
+    .footer-links a:hover {
+      background: var(--accent);
+      color: #000;
+      transform: translateY(-2px);
+      box-shadow: 0 4px 15px rgba(255, 217, 74, 0.3);
+    }
+
+    @media (max-width: 768px) {
+      .footer-inner {
+        flex-direction: column;
+        gap: 16px;
+        text-align: center;
+      }
+    }
+  </style>
+
+  <!-- ✅ FAQ Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What is Mail Karo?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Mail Karo is an AI Email Assistant that helps you write, analyze and improve emails quickly."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Is Mail Karo free?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Mail Karo offers free tools like AI email generation, quality checking and PDF conversion."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Is Mail Karo privacy-first?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Mail Karo follows privacy-first principles. Avoid entering highly sensitive details into prompts."
+        }
+      }
+    ]
+  }
+  </script>
+</head>
+
+<body class="mk-blog-bg" id="page">
+
+  <main class="mk-blog-page">
+    <header class="mk-blog-header">
+      <p class="mk-blog-pill">Blog</p>
+
+      <h1 class="mk-blog-title">
+        Mail Karo <span>AI Email Assistant</span>
+      </h1>
+
+      <p class="mk-blog-updated">
+        Last Updated: January 14, 2026
+      </p>
+
+      <p class="mk-blog-subtitle">
+        Mail Karo helps you write, analyze, and improve emails — faster, clearer, and more professional.
+        If you struggle with tone, structure, or confidence while sending emails, this tool fixes that.
+      </p>
+    </header>
+
+    <section class="mk-blog-layout yellow-glow-bg" id="contact-particle-area">
+      <article class="mk-blog-content yellow-glow-bg">
+
+        <section class="mk-blog-block" id="introduction">
+          <h2>1. Introduction</h2>
+          <p>
+            <strong>Mail Karo</strong> is an AI-powered email assistant designed to help students, professionals,
+            founders, and teams draft clear and effective emails quickly and confidently.
+          </p>
+          <p>
+            This blog is a simple introduction to what Mail Karo does, who it is for, and how you can use it to send
+            better emails.
+          </p>
+        </section>
+
+        <section class="mk-blog-block" id="what-it-does">
+          <h2>2. What Mail Karo does</h2>
+          <p>Mail Karo supports the complete email workflow — not just writing:</p>
+          <ul>
+            <li><strong>Write:</strong> Generate professional emails in seconds using templates + tone.</li>
+            <li><strong>Analyze:</strong> Use the Email Quality Checker to verify clarity and professionalism.</li>
+            <li><strong>Improve:</strong> Upgrade tone and rewriting features (planned premium improvements).</li>
+            <li><strong>Export:</strong> Convert your final email to PDF and download it instantly.</li>
+          </ul>
+        </section>
+
+        <section class="mk-blog-block" id="how-it-works">
+          <h2>3. How it works</h2>
+          <ul>
+            <li>Choose a template like leave request, complaint, follow-up, job application, etc.</li>
+            <li>Select tone (Formal / Friendly / Polite / Confident / Casual / Apologetic).</li>
+            <li>Pick length (Small / Medium / Large).</li>
+            <li>Enter details and generate your email.</li>
+          </ul>
+          <p>
+            You can directly copy the email or export it as PDF for official use.
+          </p>
+        </section>
+
+        <section class="mk-blog-block" id="why-use">
+          <h2>4. Why Mail Karo is useful</h2>
+          <p>
+            Most people waste time rewriting the same email again and again — or they send emails that sound unclear,
+            too casual, or not professional.
+          </p>
+          <p>
+            Mail Karo helps you save time and communicate better with clean formatting and the right tone.
+          </p>
+        </section>
+
+        <section class="mk-blog-block" id="use-cases">
+          <h2>5. Who should use Mail Karo?</h2>
+          <ul>
+            <li><strong>Students:</strong> leave request, permission letters, internship mails</li>
+            <li><strong>Job seekers:</strong> applications, HR follow-ups, interview replies</li>
+            <li><strong>Professionals:</strong> client emails, reporting, escalation, follow-ups</li>
+            <li><strong>Founders/Teams:</strong> outreach, partnerships, updates</li>
+          </ul>
+        </section>
+
+        <section class="mk-blog-block" id="privacy">
+          <h2>6. Privacy-first approach</h2>
+          <p>
+            Mail Karo is built with privacy-first principles. Still, avoid entering highly sensitive personal or
+            confidential information into prompts.
+          </p>
+          <p>
+            Want details? Read our
+            <a href="../All-pages-html/privacyPolicy.html">Privacy Policy</a>.
+          </p>
+        </section>
+
+        <section class="mk-blog-block" id="cta">
+          <h2>7. Ready to try it?</h2>
+          <p>
+            If you want to write emails faster, sound more professional, and stop wasting time rewriting the same lines —
+            Mail Karo is built for you.
+          </p>
+
+          <div class="mk-cta-row">
+            <a href="../index.html">Go to Homepage</a>
+            <a href="../index.html#prompt">Try the Tool</a>
+          </div>
+        </section>
+
+      </article>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="mk-footer">
+    <div class="container footer-inner">
+      <div class="footer-left">
+        <h3>Mail Karo</h3>
+        <p class="muted">Built with privacy-first principles. © <span id="year"></span> Mail Karo</p>
+      </div>
+
+      <div class="footer-right">
+        <nav class="footer-links">
+          <a href="../index.html">Home</a>
+          <a href="../All-pages-html/about.html">About Us</a>
+          <a href="../contactUs.html">Contact Us</a>
+        </nav>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ✅ Same JS logic (1:1) but blog selector -->
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      // Fade-in blocks on scroll
+      const blocks = document.querySelectorAll(".mk-blog-block");
+      if ("IntersectionObserver" in window) {
+        const observer = new IntersectionObserver(
+          (entries) => {
+            entries.forEach((entry) => {
+              if (entry.isIntersecting) {
+                entry.target.classList.add("mk-visible");
+                observer.unobserve(entry.target);
+              }
+            });
+          },
+          { threshold: 0.2 }
+        );
+
+        blocks.forEach((block) => observer.observe(block));
+      } else {
+        blocks.forEach((block) => block.classList.add("mk-visible"));
+      }
+    });
+
+    // ================= YELLOW PARTICLES (FROM HERO) =================
+    function addYellowParticles(targetSelector, count = 30) {
+      const target = document.querySelector(targetSelector);
+      if (!target) return;
+
+      target.style.position = "relative";
+
+      for (let i = 0; i < count; i++) {
+        const spark = document.createElement("div");
+        spark.className = "spark";
+
+        spark.style.left = Math.random() * 100 + "%";
+        spark.style.top = Math.random() * target.scrollHeight + "px";
+        spark.style.animationDuration = 3 + Math.random() * 5 + "s";
+
+        target.appendChild(spark);
+      }
+    }
+
+    window.addEventListener("DOMContentLoaded", () => {
+      addYellowParticles("#contact-particle-area", 30);
+    });
+
+    // Set dynamic year in footer
+    document.addEventListener("DOMContentLoaded", () => {
+      const yearSpan = document.getElementById("year");
+      if (yearSpan) {
+        yearSpan.textContent = new Date().getFullYear();
+      }
+    });
+  </script>
+</body>
+
+</html>
