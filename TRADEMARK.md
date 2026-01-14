@@ -1,6 +1,6 @@
 # Trademark Notice
 
-“Mail Karo” and the Mail Karo logo are trademarks of Adarsh Jayprakash Mishra.
+“Mail Karo” and the Mail Karo logo are brand identifiers of Adarsh Jayprakash Mishra and are protected as trademarks where applicable.
 
 ## What this means
 You may use this repository's source code under the license stated in `LICENSE`, but you may NOT:
