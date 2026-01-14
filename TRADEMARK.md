@@ -18,7 +18,7 @@ You may use this repository's source code under the license stated in `LICENSE`,
 ## Permission
 If you want to use the Mail Karo name or logo, you must get written permission from the owner.
 
-For Contact to Owner:
-Email: adarshmishra70931@gmail.com
-GitHub: https://github.com/Code-By-Adarsh
+For Contact to Owner:<br>
+Email: adarshmishra70931@gmail.com<br>
+GitHub: https://github.com/Code-By-Adarsh<br>
 Linkedin: https://www.linkedin.com/in/adarsh-jayprakash-mishra
