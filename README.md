@@ -180,7 +180,7 @@ and let’s build Mail Karo together.**
 Every contribution counts. ❤️
 
 ```bash
- 🚀  Let's build India's most advanced ⚡ AI Email Writer — TOGETHER 🤝
+ 🚀  Let's build India's most advanced ⚡ AI Email Assistant — TOGETHER 🤝
 ```
 ---
 
