@@ -17,155 +17,70 @@ Built by a passionate and growing community of **developers, designers, and cont
 Big thanks to the people who made **Mail Karo** better 🚀  
 Every contribution matters — code, testing, ideas, and design.
 
-<table>
-  <tr>
-    <td align="center">
-      <a href="https://github.com/jaideepkathiresan">
-        <img src="https://avatars.githubusercontent.com/jaideepkathiresan" width="80" />
-        <br /><b>Jaideep</b>
-      </a>
-      <br />🎨 UI/UX
-    </td>
-   </td>
-    <td align="center">
-      <a href="https://github.com/divyanshi-ghume">
-        <img src="https://avatars.githubusercontent.com/divyanshi-ghume" width="80" />
-        <br /><b>Divyanshi</b>
-      </a>
-      <br />📖 Docs
-    </td>
- <td align="center">
-      <a href="https://github.com/Audyari">
-        <img src="https://avatars.githubusercontent.com/Audyari" width="80" />
-        <br /><b>Audyari</b>
-      </a>
-      <br />💻 Backend
- </td>
-    <td align="center">
-      <a href="https://github.com/Abhishekghadge900">
-        <img src="https://avatars.githubusercontent.com/Abhishekghadge900" width="80" />
-        <br /><b>Abhishek</b>
-      </a>
-      <br />💻 Backend
-    </td>
-  </tr>
-</table>
-<table>
-  <tr>
-    <td align="center">
-      <a href="https://github.com/dev-TarunSingh">
-        <img src="https://avatars.githubusercontent.com/dev-TarunSingh" width="80" />
-        <br /><b>Tarun Singh</b>
-      </a>
-      <br />🎨 UI/UX
-    </td>
-    <td align="center">
-      <a href="https://github.com/akbar-kurnia1">
-        <img src="https://avatars.githubusercontent.com/akbar-kurnia1" width="80" />
-        <br /><b>akbar-kurnia1</b>
-      </a>
-      <br />💻 Frontend
-    </td>
-    <td align="center">
-      <a href="https://github.com/surajkb2005">
-        <img src="https://avatars.githubusercontent.com/surajkb2005" width="80" />
-        <br /><b>Suraj</b>
-      </a>
-      <br />🎨 UI/UX
-    </td>
-    <td align="center">
-      <a href="https://github.com/shubham-08s">
-        <img src="https://avatars.githubusercontent.com/shubham-08s" width="80" />
-        <br /><b>Shubham</b>
-      </a>
-      <br />🎨 UI/UX
-    </td>
-  </tr>
-</table>
-<table>
-  <tr>
-    <td align="center">
-      <a href="https://github.com/sohxmdv">
-        <img src="https://avatars.githubusercontent.com/sohxmdv" width="80" />
-        <br /><b>Shoham</b>
-      </a>
-      <br />🎨 UI/UX
-    </td>
-    <td align="center">
-      <a href="https://github.com/ZainabTravadi">
-        <img src="https://avatars.githubusercontent.com/ZainabTravadi" width="80" />
-        <br /><b>Zainab</b>
-      </a>
-      <br />🎨 UI/UX
-    </td>
-    <td align="center">
-      <a href="https://github.com/laukik08">
-        <img src="https://avatars.githubusercontent.com/laukik08" width="80" />
-        <br /><b></b>laukik08</b>
-      </a>
-      <br />🎨 UI/UX
-    </td>
-    <td align="center">
-      <a href="https://github.com/DunkinOPM">
-        <img src="https://avatars.githubusercontent.com/DunkinOPM" width="80" />
-        <br /><b>DunkinOPM</b>
-      </a>
-      <br />🎨 UI/UX
-    </td>
-  </tr>
-</table>
-<table>
-  <tr>
-    <td align="center">
-      <a href="https://github.com/flacoV">
-        <img src="https://avatars.githubusercontent.com/flacoV" width="80" />
-        <br /><b>flacoV</b>
-      </a>
-      <br />🎨 UI/UX
-    </td>
-    <td align="center">
-      <a href="https://github.com/majidkawouk">
-        <img src="https://avatars.githubusercontent.com/majidkawouk" width="80" />
-        <br /><b>majidkawouk</b>
-      </a>
-      <br />🎨 UI/UX
-    </td>
-    <td align="center">
-      <a href="https://github.com/Tanishq-Raina">
-        <img src="https://avatars.githubusercontent.com/Tanishq-Raina" width="80" />
-        <br /><b>Tanishq</b>
-      </a>
-      <br />🎨 UI/UX
-    </td>
-    <td align="center">
-      <a href="https://github.com/MUmairQadeer">
-        <img src="https://avatars.githubusercontent.com/MUmairQadeer" width="80" />
-        <br /><b>MUmairQadeer</b>
-      </a>
-      <br />🎨 UI/UX
-    </td>
-</table>
-<table>
-  <tr>
-    <td align="center">
-      <a href="https://github.com/bishal-dhakal">
-        <img src="https://avatars.githubusercontent.com/bishal-dhakal" width="80" />
-        <br /><b>Bishal</b>
-      </a>
-      <br />🎨 UI/UX
-    </td>
-    <td align="center">
-      <a href="https://github.com/04suriya07-spec">
-        <img src="https://avatars.githubusercontent.com/04suriya07-spec" width="80" />
-        <br /><b>Suriya</b>
-      </a>
-      <br />🎨 UI/UX
-    </td>
-  </tr>
-</table>
+<div align="center" style="line-height: 1;">
 
-**🤝Want to see your name here? 
-Check issues labeled `good first issue` and start contributing 💚**
+<a href="https://github.com/Code-By-Adarsh" title="@Adarsh">
+  <img src="https://images.weserv.nl/?url=avatars.githubusercontent.com/Code-By-Adarsh&h=80&w=80&fit=cover&mask=circle" />
+</a>
+<a href="https://github.com/jaideepkathiresan" title="@jaideepkathiresan">
+  <img src="https://images.weserv.nl/?url=avatars.githubusercontent.com/jaideepkathiresan&h=80&w=80&fit=cover&mask=circle" />
+</a>
+<a href="https://github.com/divyanshi-ghume" title="@divyanshi-ghume">
+  <img src="https://images.weserv.nl/?url=avatars.githubusercontent.com/divyanshi-ghume&h=80&w=80&fit=cover&mask=circle" />
+</a>
+<a href="https://github.com/Audyari" title="@Audyari">
+  <img src="https://images.weserv.nl/?url=avatars.githubusercontent.com/Audyari&h=80&w=80&fit=cover&mask=circle" />
+</a>
+<a href="https://github.com/Abhishekghadge900" title="@Abhishekghadge900">
+  <img src="https://images.weserv.nl/?url=avatars.githubusercontent.com/Abhishekghadge900&h=80&w=80&fit=cover&mask=circle" />
+</a>
+<a href="https://github.com/dev-TarunSingh" title="@dev-TarunSingh">
+  <img src="https://images.weserv.nl/?url=avatars.githubusercontent.com/dev-TarunSingh&h=80&w=80&fit=cover&mask=circle" />
+</a>
+<a href="https://github.com/akbar-kurnia1" title="@akbar-kurnia1">
+  <img src="https://images.weserv.nl/?url=avatars.githubusercontent.com/akbar-kurnia1&h=80&w=80&fit=cover&mask=circle" />
+</a>
+<a href="https://github.com/surajkb2005" title="@surajkb2005">
+  <img src="https://images.weserv.nl/?url=avatars.githubusercontent.com/surajkb2005&h=80&w=80&fit=cover&mask=circle" />
+</a>
+<a href="https://github.com/shubham-08s" title="@shubham-08s">
+  <img src="https://images.weserv.nl/?url=avatars.githubusercontent.com/shubham-08s&h=80&w=80&fit=cover&mask=circle" />
+</a>
+<a href="https://github.com/sohxmdv" title="@sohxmdv">
+  <img src="https://images.weserv.nl/?url=avatars.githubusercontent.com/sohxmdv&h=80&w=80&fit=cover&mask=circle" />
+</a>
+<a href="https://github.com/ZainabTravadi" title="@ZainabTravadi">
+  <img src="https://images.weserv.nl/?url=avatars.githubusercontent.com/ZainabTravadi&h=80&w=80&fit=cover&mask=circle" />
+</a>
+<a href="https://github.com/laukik08" title="@laukik08">
+  <img src="https://images.weserv.nl/?url=avatars.githubusercontent.com/laukik08&h=80&w=80&fit=cover&mask=circle" />
+</a>
+<a href="https://github.com/DunkinOPM" title="@DunkinOPM">
+  <img src="https://images.weserv.nl/?url=avatars.githubusercontent.com/DunkinOPM&h=80&w=80&fit=cover&mask=circle" />
+</a>
+<a href="https://github.com/flacoV" title="@flacoV">
+  <img src="https://images.weserv.nl/?url=avatars.githubusercontent.com/flacoV&h=80&w=80&fit=cover&mask=circle" />
+</a>
+<a href="https://github.com/majidkawouk" title="@majidkawouk">
+  <img src="https://images.weserv.nl/?url=avatars.githubusercontent.com/majidkawouk&h=80&w=80&fit=cover&mask=circle" />
+</a>
+<a href="https://github.com/Tanishq-Raina" title="@Tanishq-Raina">
+  <img src="https://images.weserv.nl/?url=avatars.githubusercontent.com/Tanishq-Raina&h=80&w=80&fit=cover&mask=circle" />
+</a>
+<a href="https://github.com/MUmairQadeer" title="@MUmairQadeer">
+  <img src="https://images.weserv.nl/?url=avatars.githubusercontent.com/MUmairQadeer&h=80&w=80&fit=cover&mask=circle" />
+</a>
+<a href="https://github.com/bishal-dhakal" title="@bishal-dhakal">
+  <img src="https://images.weserv.nl/?url=avatars.githubusercontent.com/bishal-dhakal&h=80&w=80&fit=cover&mask=circle" />
+</a>
+<a href="https://github.com/04suriya07-spec" title="@04suriya07-spec">
+  <img src="https://images.weserv.nl/?url=avatars.githubusercontent.com/04suriya07-spec&h=80&w=80&fit=cover&mask=circle" />
+</a>
+
+</div>
+
+**🤝 Want to see your face here?**  
+Check issues labeled `good first issue` and start contributing 💚
 
 ---
 
