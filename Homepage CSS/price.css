@@ -19,7 +19,7 @@
 
 /* ================= PRICING SECTION ================= */
 
-.premium-pricing {
+.premium-services {
   background: var(--deep-black);
   background: radial-gradient(circle at center, rgba(255, 215, 0, 0.03) 0%, var(--deep-black) 70%);
   padding: 100px 20px;
@@ -32,7 +32,7 @@
   background: radial-gradient(circle at center, rgba(212, 175, 55, 0.08) 0%, #ffffff 70%);
 }
 
-.pricing-container {
+.services-container {
   max-width: 1200px;
   margin: 0 auto;
   position: relative;
@@ -130,7 +130,7 @@
 }
 
 /* Card */
-.pricing-card {
+.service-card {
   position: relative;
   background: var(--card-bg);
   border: 1px solid rgba(255, 215, 0, 0.15);
@@ -235,6 +235,25 @@
     transform: scale(1);
     opacity: 1;
   }
+}
+
+/* Keep icon box at left, center SVG inside it */
+.service-card .icon-container {
+  width: 48px;
+  height: 48px;
+
+  display: flex;
+  align-items: center;        /* vertical centering */
+  justify-content: center;    /* horizontal centering */
+
+  line-height: 0;             /* fixes SVG baseline shift */
+}
+
+/* SVG */
+.service-card .icon-container svg {
+  width: 24px;
+  height: 24px;
+  display: block;
 }
 
 
