@@ -76,6 +76,21 @@ Every contribution matters — code, testing, ideas, and design.
 <a href="https://github.com/04suriya07-spec" title="@04suriya07-spec">
   <img src="https://images.weserv.nl/?url=avatars.githubusercontent.com/04suriya07-spec&h=60&w=60&fit=cover&mask=circle" />
 </a>
+<a href="https://github.com/suarej" title="@suarej">
+  <img src="https://images.weserv.nl/?url=avatars.githubusercontent.com/suarej&h=60&w=60&fit=cover&mask=circle" />
+</a>
+<a href="https://github.com/adwaithprasanth" title="@adwaithprasanth">
+  <img src="https://images.weserv.nl/?url=avatars.githubusercontent.com/adwaithprasanth&h=60&w=60&fit=cover&mask=circle" />
+</a>
+<a href="https://github.com/Anusha0501" title="@Anusha0501">
+  <img src="https://images.weserv.nl/?url=avatars.githubusercontent.com/Anusha0501&h=60&w=60&fit=cover&mask=circle" />
+</a>
+<a href="https://github.com/aturingprogramming" title="@aturingprogramming">
+  <img src="https://images.weserv.nl/?url=avatars.githubusercontent.com/aturingprogramming&h=60&w=60&fit=cover&mask=circle" />
+</a>
+<a href="https://github.com/Creativeklvn" title="@Creativeklvn">
+  <img src="https://images.weserv.nl/?url=avatars.githubusercontent.com/Creativeklvn&h=60&w=60&fit=cover&mask=circle" />
+</a>
 
 </div>
 
