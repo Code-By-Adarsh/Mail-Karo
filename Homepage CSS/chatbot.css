@@ -1,0 +1,425 @@
+/* ============================================================
+   ✅ MAIL KARO ROBOT ASSISTANT (FINAL PREMIUM CSS + LIGHT MODE)
+   Independent widget — no clash with existing CSS
+   Works: Desktop + Mobile + Theme Support
+=============================================================== */
+
+/* ============================================================
+   ✅ THEME TOKENS (Requirement #2)
+=============================================================== */
+:root{
+  /* position + size */
+  --mk-robot-right: 30px;
+  --mk-robot-bottom: 95px;      /* ✅ robot above backToTop (30px) */
+  --mk-robot-size: 62px;
+
+  --mk-panel-gap: 18px;
+  --mk-panel-width: 390px;
+  --mk-radius: 20px;
+
+  /* ---- DARK MODE DEFAULT ---- */
+  --mk-panel-bg: rgba(0,0,0,0.88);
+  --mk-panel-border: rgba(255,215,0,0.18);
+  --mk-shadow: 0 20px 60px rgba(0,0,0,0.35);
+
+  --mk-text: #ffffff;
+  --mk-subtext: rgba(255,255,255,0.75);
+
+  --mk-msg-bg: rgba(255,215,0,0.12);
+
+  --mk-input-bg: rgba(0,0,0,0.62);
+  --mk-input-border: rgba(255,215,0,0.18);
+  --mk-placeholder: rgba(255,255,255,0.45);
+
+  --mk-chip-bg: rgba(255,215,0,0.14);
+  --mk-chip-hover: rgba(255,215,0,0.22);
+
+  --mk-footer-bg: rgba(0,0,0,0.90);
+  --mk-form-bg: rgba(0,0,0,0.95);
+
+  --mk-scroll-track: rgba(255,255,255,0.06);
+  --mk-scroll-thumb: rgba(255,215,0,0.35);
+  --mk-scroll-thumb-hover: rgba(255,215,0,0.55);
+}
+
+/* ✅ Light Mode */
+[data-theme="light"]{
+  --mk-panel-bg: rgba(255,255,255,0.94);
+  --mk-panel-border: rgba(0,0,0,0.12);
+  --mk-shadow: 0 20px 70px rgba(0,0,0,0.18);
+
+  --mk-text: #111111;
+  --mk-subtext: rgba(0,0,0,0.62);
+
+  --mk-msg-bg: rgba(212,175,55,0.18);
+
+  --mk-input-bg: rgba(255,255,255,0.97);
+  --mk-input-border: rgba(0,0,0,0.12);
+  --mk-placeholder: rgba(0,0,0,0.35);
+
+  --mk-chip-bg: rgba(212,175,55,0.16);
+  --mk-chip-hover: rgba(212,175,55,0.26);
+
+  --mk-footer-bg: rgba(255,255,255,0.92);
+  --mk-form-bg: rgba(255,255,255,0.96);
+
+  --mk-scroll-track: rgba(0,0,0,0.06);
+  --mk-scroll-thumb: rgba(212,175,55,0.45);
+  --mk-scroll-thumb-hover: rgba(212,175,55,0.70);
+}
+
+/* ======================
+   ✅ Floating Robot Button
+====================== */
+.mk-robot-btn{
+  position: fixed;
+  right: var(--mk-robot-right);
+  bottom: var(--mk-robot-bottom);
+  width: var(--mk-robot-size);
+  height: var(--mk-robot-size);
+  border-radius: 50%;
+
+  border: 2px solid rgba(255,215,0,0.30);
+  background: rgba(0,0,0,0.72);
+  backdrop-filter: blur(10px);
+
+  cursor: pointer;
+  z-index: 2000;
+
+  display:flex;
+  align-items:center;
+  justify-content:center;
+
+  box-shadow: 0 0 26px rgba(255,215,0,0.25);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+
+  animation: mkFloat 2.2s ease-in-out infinite;
+}
+
+[data-theme="light"] .mk-robot-btn{
+  background: rgba(255,255,255,0.85);
+  border: 2px solid rgba(0,0,0,0.10);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.12);
+}
+
+.mk-robot-btn:hover{
+  transform: translateY(-6px) scale(1.06);
+  box-shadow: 0 0 38px rgba(255,215,0,0.50);
+}
+
+[data-theme="light"] .mk-robot-btn:hover{
+  box-shadow: 0 18px 40px rgba(0,0,0,0.16);
+}
+
+.mk-robot-icon{
+  font-size: 1.85rem;
+  transform: translateY(-1px);
+}
+
+.mk-robot-pulse{
+  position:absolute;
+  inset:-6px;
+  border-radius:50%;
+  border:2px solid rgba(255,215,0,0.22);
+  animation: mkPulse 2.2s infinite;
+  pointer-events:none;
+}
+
+@keyframes mkFloat{
+  0%,100%{ transform: translateY(0); }
+  50%{ transform: translateY(-7px); }
+}
+@keyframes mkPulse{
+  0%{ opacity: 0.8; transform: scale(1); }
+  70%{ opacity: 0; transform: scale(1.35); }
+  100%{ opacity: 0; transform: scale(1.35); }
+}
+
+/* ======================
+   ✅ Robot Panel (Desktop)
+====================== */
+.mk-robot-panel{
+  position: fixed;
+  right: var(--mk-robot-right);
+
+  /* ✅ below navbar */
+  top: 90px;
+
+  /* ✅ always above robot button */
+  bottom: calc(var(--mk-robot-bottom) + var(--mk-robot-size) + var(--mk-panel-gap));
+
+  width: var(--mk-panel-width);
+
+  background: var(--mk-panel-bg);
+  border: 1px solid var(--mk-panel-border);
+  border-radius: var(--mk-radius);
+  box-shadow: var(--mk-shadow);
+  backdrop-filter: blur(12px);
+
+  overflow: hidden;
+  z-index: 2500;
+
+  display: none;
+  flex-direction: column;
+}
+
+/* ======================
+   Header
+====================== */
+.mk-robot-header{
+  padding: 14px 14px 10px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+
+  border-bottom: 1px solid var(--mk-panel-border);
+  flex: 0 0 auto;
+}
+
+.mk-robot-head-left{
+  display:flex;
+  flex-direction:column;
+  gap: 2px;
+}
+
+.mk-robot-title{
+  font-weight: 900;
+  font-size: 1.05rem;
+  color: var(--accent);
+  letter-spacing: 0.2px;
+}
+
+.mk-robot-subtitle{
+  font-size: 0.78rem;
+  opacity: 0.85;
+  color: var(--mk-subtext);
+}
+
+.mk-robot-close{
+  border: none;
+  background: transparent;
+  color: var(--accent);
+  font-size: 1.1rem;
+
+  cursor: pointer;
+  padding: 8px 10px;
+  border-radius: 12px;
+
+  transition: background 0.2s ease;
+}
+.mk-robot-close:hover{
+  background: rgba(255,215,0,0.10);
+}
+
+[data-theme="light"] .mk-robot-close:hover{
+  background: rgba(0,0,0,0.06);
+}
+
+/* ======================
+   Body (scroll area)
+====================== */
+.mk-robot-body{
+  padding: 14px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  flex: 1 1 auto;
+  scroll-behavior: smooth;
+}
+
+/* ✅ Premium scrollbar inside chat */
+.mk-robot-body::-webkit-scrollbar{
+  width: 8px;
+}
+.mk-robot-body::-webkit-scrollbar-track{
+  background: var(--mk-scroll-track);
+  border-radius: 10px;
+}
+.mk-robot-body::-webkit-scrollbar-thumb{
+  background: var(--mk-scroll-thumb);
+  border-radius: 10px;
+}
+.mk-robot-body::-webkit-scrollbar-thumb:hover{
+  background: var(--mk-scroll-thumb-hover);
+}
+
+/* ======================
+   Messages
+====================== */
+.mk-msg{
+  padding: 11px 12px;
+  border-radius: 16px;
+  margin-bottom: 10px;
+
+  font-size: 0.92rem;
+  line-height: 1.35rem;
+
+  word-break: break-word;
+  color: var(--mk-text);
+}
+
+.mk-bot{
+  background: var(--mk-msg-bg);
+  border: 1px solid var(--mk-panel-border);
+}
+
+/* ======================
+   Chips (suggestions)
+====================== */
+.mk-robot-chips{
+  display:flex;
+  flex-wrap:wrap;
+  gap: 10px;
+  margin-top: 8px;
+}
+
+.mk-robot-chip{
+  border:none;
+  cursor:pointer;
+
+  padding: 10px 13px;
+  border-radius: 999px;
+
+  background: var(--mk-chip-bg);
+  color: var(--accent);
+
+  font-weight: 900;
+  font-size: 0.85rem;
+
+  transition: transform 0.2s ease, background 0.2s ease;
+}
+
+.mk-robot-chip:hover{
+  transform: translateY(-2px);
+  background: var(--mk-chip-hover);
+}
+
+/* ======================
+   Footer (pinned)
+====================== */
+.mk-robot-footer{
+  padding: 12px 14px;
+  border-top: 1px solid var(--mk-panel-border);
+  flex: 0 0 auto;
+
+  background: var(--mk-footer-bg);
+}
+
+.mk-robot-helpbtn{
+  width: 100%;
+  border:none;
+  cursor:pointer;
+
+  padding: 11px 14px;
+  border-radius: 14px;
+
+  font-weight: 900;
+  background: linear-gradient(90deg, var(--accent), var(--accent-hover));
+  color: #000;
+}
+
+/* ======================
+   Form (pinned under footer)
+====================== */
+.mk-robot-form{
+  padding: 12px 14px 14px;
+  border-top: 1px solid var(--mk-panel-border);
+  background: var(--mk-form-bg);
+
+  flex: 0 0 auto;
+
+  display:flex;
+  flex-direction:column;
+  gap: 10px;
+}
+
+.mk-robot-form input,
+.mk-robot-form textarea{
+  width: 100%;
+  border-radius: 14px;
+
+  border: 1px solid var(--mk-input-border);
+  background: var(--mk-input-bg);
+  color: var(--mk-text);
+
+  padding: 10px 12px;
+  outline: none;
+
+  font-size: 0.92rem;
+}
+
+.mk-robot-form input::placeholder,
+.mk-robot-form textarea::placeholder{
+  color: var(--mk-placeholder);
+}
+
+.mk-robot-form textarea{
+  height: 92px;
+  resize: none;
+}
+
+.mk-robot-submit{
+  border:none;
+  cursor:pointer;
+
+  border-radius: 14px;
+  padding: 11px 14px;
+
+  font-weight: 900;
+  background: linear-gradient(90deg, var(--accent), var(--accent-hover));
+  color: #000;
+}
+
+/* ======================
+   ✅ Mobile Bottom Sheet
+====================== */
+@media (max-width: 600px){
+  :root{
+    --mk-robot-right: 18px;
+    --mk-robot-bottom: 78px;
+    --mk-robot-size: 54px;
+    --mk-panel-width: auto;
+    --mk-radius: 18px;
+  }
+
+  .mk-robot-panel{
+    left: 12px;
+    right: 12px;
+    width: auto;
+
+    /* ✅ stable bottom sheet height */
+    height: 72vh;
+    max-height: 72vh;
+
+    bottom: calc(var(--mk-robot-bottom) + var(--mk-robot-size) + 16px);
+  }
+}
+
+/* ============================================================
+   ✅ FORCE FIX: override everything (keep as you have it)
+=============================================================== */
+#mkRobotPanel.mk-robot-panel{
+  position: fixed !important;
+  top: 90px !important;
+  right: 30px !important;
+  bottom: 175px !important; /* robot+gap safe */
+
+  height: auto !important;
+  max-height: none !important;
+  min-height: 0 !important;
+
+  display: none;
+  flex-direction: column !important;
+  overflow: hidden !important;
+  z-index: 999999 !important;
+
+  background: var(--mk-panel-bg) !important;
+  border: 1px solid var(--mk-panel-border) !important;
+  box-shadow: var(--mk-shadow) !important;
+}
+
+#mkRobotPanel .mk-robot-body{
+  flex: 1 1 auto !important;
+  overflow-y: auto !important;
+  min-height: 0 !important;
+}
+

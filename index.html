@@ -87,6 +87,7 @@
   <link rel="stylesheet" href="Homepage CSS/price.css">
   <link rel="stylesheet" href="Homepage CSS/blog.css">
   <link rel="stylesheet" href="Homepage CSS/story.css">
+  <link rel="stylesheet" href="Homepage CSS/chatbot.css">
 
   <!-- Mail Karo — Full SEO Schema -->
   <script type="application/ld+json">
@@ -1237,6 +1238,45 @@
   </footer>
   <!-- ✅ Footer Section End -->
 
+  <!-- ✅ Mail Karo Robot Assistant (Independent Widget) -->
+<button id="mkRobotBtn" class="mk-robot-btn" aria-label="Open Mail Karo Assistant">
+  <span class="mk-robot-icon">🤖</span>
+  <span class="mk-robot-pulse"></span>
+</button>
+
+<!-- ✅ Robot Panel -->
+<div id="mkRobotPanel" class="mk-robot-panel" aria-hidden="true">
+  <div class="mk-robot-header">
+    <div class="mk-robot-head-left">
+      <div class="mk-robot-title">Mail Karo Assistant</div>
+      <div class="mk-robot-subtitle">Smart help • No waiting</div>
+    </div>
+    <button id="mkRobotClose" class="mk-robot-close" aria-label="Close">✕</button>
+  </div>
+
+  <div id="mkRobotBody" class="mk-robot-body">
+    <div class="mk-msg mk-bot">Hey 👋 Choose a topic:</div>
+
+    <div class="mk-robot-chips">
+      <button class="mk-robot-chip" data-topic="otp">OTP not coming</button>
+      <button class="mk-robot-chip" data-topic="inbox">Inbox issue</button>
+      <button class="mk-robot-chip" data-topic="pricing">Pricing</button>
+      <button class="mk-robot-chip" data-topic="bug">Report a bug</button>
+    </div>
+  </div>
+
+  <div class="mk-robot-footer">
+    <button id="mkRobotNeedHelp" class="mk-robot-helpbtn">Still need help?</button>
+  </div>
+
+  <!-- hidden form -->
+  <form id="mkRobotForm" class="mk-robot-form" style="display:none;">
+    <input id="mkRobotTitle" type="text" maxlength="70" placeholder="Issue title (e.g. OTP not received)" required />
+    <textarea id="mkRobotDesc" maxlength="400" placeholder="Explain your issue (max 400 chars)" required></textarea>
+    <input id="mkRobotEmail" type="email" placeholder="Your email (optional)" />
+    <button type="submit" class="mk-robot-submit">Send to Support</button>
+  </form>
+</div>
 
   <!-- ✅ Back to Top Button -->
   <button id="backToTop" aria-label="Back to top">
@@ -1260,6 +1300,7 @@
   <script src="Homepage JS/quality-checker.js" defer></script>
   <script src="Homepage JS/price.js" defer></script>
   <script src="Homepage JS/blog.js" defer></script>
+  <script src="Homepage JS/chatbot.js" defer></script>
 </body>
 
 </html>
