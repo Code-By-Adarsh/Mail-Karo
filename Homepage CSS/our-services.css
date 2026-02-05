@@ -18,7 +18,7 @@
   --gold-glow: rgba(212, 175, 55, 0.2);
 }
 
-.premium-services {
+.our-services {
   background: var(--deep-black);
   /* Fallback */
   background: radial-gradient(circle at center, rgba(255, 215, 0, 0.03) 0%, var(--deep-black) 70%);
@@ -28,7 +28,7 @@
   font-family: 'Poppins', sans-serif;
 }
 
-[data-theme="light"] .premium-services {
+[data-theme="light"] .our-services {
   background: radial-gradient(circle at center, rgba(212, 175, 55, 0.08) 0%, #ffffff 70%);
 }
 

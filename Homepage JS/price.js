@@ -1,60 +1,52 @@
+document.addEventListener("DOMContentLoaded", () => {
+  // 🔒 Scope JS strictly to Pricing section
+  const pricingSection = document.getElementById("pricing");
+  if (!pricingSection) return;
 
-  // Placeholder for future payment / backend integration
-  document.querySelectorAll(".btn").forEach(btn => {
-    btn.addEventListener("click", () => {
-      if (btn.classList.contains("disabled")) return;
-      console.log("Plan clicked");
+  // 🎯 Only pricing CTA buttons
+  const pricingCtas = pricingSection.querySelectorAll(".pricing-cta");
+
+  // 🧾 Alert elements
+  const alertOverlay = document.getElementById("payment-alert");
+  const closeIcon = document.getElementById("close-alert");
+
+  // Safety check
+  if (!alertOverlay || !closeIcon || pricingCtas.length === 0) return;
+
+  // 🔓 Open alert
+  function openAlert() {
+    alertOverlay.style.display = "flex";
+    document.body.style.overflow = "hidden";
+  }
+
+  // 🔒 Close alert
+  function closeAlert() {
+    alertOverlay.style.display = "none";
+    document.body.style.overflow = "";
+  }
+
+  // 🚀 Attach click only to pricing buttons
+  pricingCtas.forEach(btn => {
+    btn.addEventListener("click", (e) => {
+      e.preventDefault();
+      openAlert();
     });
   });
 
-  
+  // ❌ Close icon
+  closeIcon.addEventListener("click", closeAlert);
 
-
-  document.addEventListener("DOMContentLoaded", () => {
-    const ctaButtons = document.querySelectorAll(".cta-button");
-    const alertOverlay = document.getElementById("payment-alert");
-    const closeIcon = document.getElementById("close-alert");
-
-    if (!alertOverlay || !closeIcon) return;
-
-    function openAlert() {
-      alertOverlay.style.display = "flex";
-      document.body.style.overflow = "hidden";
+  // 🖱️ Click outside modal closes it
+  alertOverlay.addEventListener("click", (e) => {
+    if (e.target === alertOverlay) {
+      closeAlert();
     }
-
-    function closeAlert() {
-      alertOverlay.style.display = "none";
-      document.body.style.overflow = "";
-    }
-
-    // Open alert on CTA click
-    ctaButtons.forEach(button => {
-      button.addEventListener("click", e => {
-        e.preventDefault();
-        openAlert();
-      });
-    });
-
-    // Close with ❌
-    closeIcon.addEventListener("click", closeAlert);
-
-    // Close when clicking outside the alert box
-    alertOverlay.addEventListener("click", e => {
-      if (e.target === alertOverlay) {
-        closeAlert();
-      }
-    });
-
-    // Close on ESC key
-    document.addEventListener("keydown", e => {
-      if (e.key === "Escape" && alertOverlay.style.display === "flex") {
-        closeAlert();
-      }
-    });
   });
 
-
-
-
-
-  
+  // ⌨️ ESC key closes modal
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape" && alertOverlay.style.display === "flex") {
+      closeAlert();
+    }
+  });
+});
