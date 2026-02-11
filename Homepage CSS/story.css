@@ -214,6 +214,12 @@
 }
 
 /* decorative shapes */
+.mk-decor {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
 .mk-shape {
   position: absolute;
   pointer-events: none;
@@ -223,25 +229,49 @@
 }
 
 .mk-shape--semi-circle {
-  width: 400px;
+  width: 80%;
   top: 71%;
-  left: 35px;
-  transform: translateY(-55%) rotate(-115deg);
+  left: 7%;
 
-  --s: 0deg;  /* starting angle */
-  --p: 120deg; /* filling angle */
+  /* positioning + rotation */
+  transform: translateY(-55%) rotate(-115deg);
+  transform-origin: center;
+
+  /* arc control */
+  --s: 0deg;     /* starting angle  */
+  --p: 180deg;   /* filling angle   */
 
   aspect-ratio: 1;
   border-radius: 50%;
-  background: linear-gradient(
-    0deg,
-    rgba(255, 208, 0, 0.85) 0%,
-    rgba(255, 208, 0, 0.0) 100%
+
+  /* dual glow applied to BOTH arc tips
+     positioned on the unrotated circle,
+     then rotated with the element */
+  background:
+    radial-gradient(
+      circle at 0% 50%,
+      rgba(255, 208, 0, 0.8) 0%,
+      rgba(255, 208, 0, 0) 40%
+    ),
+    radial-gradient(
+      circle at 100% 50%,
+      rgba(255, 208, 0, 0.9) 0%,
+      rgba(255, 208, 0, 0) 50%
+    );
+
+  /* semi-circle mask */
+  mask: conic-gradient(
+    from var(--s),
+    #0000,
+    #000 1deg var(--p),
+    #0000 calc(var(--p) + 1deg)
   );
-  /* switch #0000 and #000 to get the opposite shape */
-  mask: conic-gradient(from var(--s),#0000,#000 1deg var(--p),#0000 calc(var(--p) + 1deg));
+
   z-index: -2;
+  filter: blur(8px);
+  pointer-events: none;
 }
+
 
 
 .mk-shape--parallelogram-top{
@@ -281,9 +311,10 @@
 
   top: 71.5%;
   transform: translateY(-35%) rotate(-25deg);
+  filter: blur(8px);
 }
 
-.mk-shape--triangle-1 {
+/* .mk-shape--triangle-1 {
   top: 25%;
   right: 15%;
   width: 150px;
@@ -295,10 +326,10 @@
     to top right,
     rgba(255, 208, 0, 0.65) 10%,
     rgba(255, 208, 0, 0.48) 20%,
-    rgba(255, 208, 0, 0) 58%
+    rgba(255, 208, 0, 0) 55%
   );
 
-}
+} */
 
 .mk-shape--triangle-2 {
   top: 15%;
@@ -318,6 +349,22 @@
   aspect-ratio: 1;
   clip-path: polygon(0 100%,0 0,100% 70%);
   background-color: #ffd000;
+  transform: rotate(-60deg);
+  opacity: 0.75;
+}
+
+.mk-shape--triangle-4 {
+  top: 44%;
+  right: 10%;
+  width: 50px;
+  aspect-ratio: 1;
+  clip-path: polygon(0 100%,0 0,100% 70%);
+  background: linear-gradient(
+    210deg,
+    rgba(255, 208, 0, 0.65) 0%,
+    rgba(255, 208, 0, 0.48) 20%,
+    rgba(255, 208, 0, 0) 75%
+  );
   transform: rotate(-60deg);
   opacity: 0.75;
 }
@@ -352,18 +399,105 @@
 /* responsive */
 @media (max-width: 900px){
   .mk-story__card{
-    grid-template-columns: 1fr;
-    padding: 18px;
+    flex-direction: column;
+    padding: 18px 0;
   }
 
   .mk-story__left{
     min-height: 280px;
+    order: 2;
   }
 
   .mk-story__right{
     padding-right: 0;
+    order: 1;
   }
 }
+
+
+@media (max-width: 1260px) {
+    .mk-decor {
+      transform: scale(0.95) translateX(0%);
+  }
+}
+
+
+@media (min-width: 558px) and (max-width: 1045px){
+  .mk-decor {
+    transform: scale(0.9)
+  }
+
+  .mk-shape--triangle-1 {
+    top: 22%;
+    right: 18%;
+    width: 120px;
+  }
+}
+
+@media (max-width: 558px){
+    .mk-decor {
+      transform: scale(0.9) translateX(3%);
+    }
+
+    .mk-shape--triangle-1 {
+      top: 17%;
+      right: 10%;
+    }
+}
+
+  @media (max-width: 460px) {
+    .mk-decor {
+      transform: scale(0.8) translateX(5%);
+    }
+
+    .mk-shape--semi-circle {    
+      width: 90%
+    }
+
+    .mk-shape--parallelogram-bottom {
+      width: 150px;
+    }
+
+    .mk-shape--parallelogram-top {
+      width: 150px;
+    }
+
+
+    .mk-shape--triangle-2 {
+      top: 5%;
+      right: 8%;
+      width: 40px;
+    }
+
+    .mk-shape--triangle-3 {
+      top: 20%;
+      right: 15%;
+      width: 25px;
+    }
+
+    .mk-shape--triangle-4 {
+      top: 45%;
+      right: 8%;
+      width: 40px;
+    }
+
+    .mk-plus {
+      width: 12px;
+      height: 12px;
+    }
+
+    .mk-plus.mk-plus--1 {
+      top: 10%;
+      right: 28%;
+    }
+
+    .mk-plus.mk-plus--2 {
+      top: 20%;
+      right: 33%;
+    }
+}
+
+
 
 
 /* =========================================================
