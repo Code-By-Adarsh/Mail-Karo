@@ -101,12 +101,13 @@
 /* main card */
 .mk-story__card{
   position: relative;
-  display: grid;
-  grid-template-columns: 360px 1fr;
-  gap: 28px;
+  max-width: 1100px;
+  margin: auto;
+  display: flex;
   align-items: center;
+  justify-content: space-between;
 
-  padding: 28px;
+  padding: 0 28px;
   border-radius: 22px;
 
   background: linear-gradient(180deg, rgba(255,255,255,0.06), rgba(255,255,255,0.03));
@@ -123,43 +124,55 @@
   position: relative;
   min-height: 320px;
   border-radius: 18px;
-  background: radial-gradient(circle at 20% 20%, rgba(255,208,0,0.22), transparent 55%),
+  /* background: radial-gradient(circle at 20% 20%, rgba(255,208,0,0.22), transparent 55%),
               radial-gradient(circle at 70% 70%, rgba(255,208,0,0.12), transparent 60%),
-              rgba(0,0,0,0.65);
-  border: 1px solid rgba(255,255,255,0.08);
+              rgba(0,0,0,0.65); */
+  /* border: 1px solid rgba(255,255,255,0.08); */
   overflow: hidden;
-  display: grid;
-  place-items: end center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   padding: 14px;
+}
+
+.mk-story__left,
+.mk-story__right {
+    flex: 1;
 }
 
 .mk-story__imgWrap{
   width: 100%;
-  display: grid;
-  place-items: end center;
+  position: relative;
+  z-index: 99;
 }
 
 .mk-story__img{
-  width: 95%;
-  max-width: 340px;
-  height: auto;
-  border-radius: 16px;
-  filter: drop-shadow(0 18px 40px rgba(0,0,0,0.55));
-  transform: translateY(10px);
+  display: block;
+  width: 100%;
+  max-width: 500px;
+  filter: drop-shadow(0 0 18px rgba(255, 215, 0, 0.35));
+  transition: transform 1s ease;
 }
 
 /* right side */
 .mk-story__right{
   color: #fff;
   padding-right: 10px;
+  position: relative;
+  isolation: isolate;
 }
 
-.mk-story__quote{
-  font-size: clamp(16px, 2.4vw, 34px);
-  line-height: 1.25;
-  font-weight: 800;
+.mk-story__quote {
+  font-size: clamp(16px, 2vw, 28px);
+  line-height: 1.35;
+  font-weight: 500;
+  font-style: italic;
+  letter-spacing: 0;
   margin: 0 0 22px;
-  letter-spacing: -0.01em;
+  max-width: 32ch;
+  text-align: center;
+  text-shadow: 0 8px 30px rgba(0,0,0,0.55), 0 0 18px rgba(255,215,0,0.06);
 }
 
 .mk-story__person{
@@ -185,12 +198,12 @@
   align-items: center;
   text-decoration: none;
   font-weight: 800;
-  color: #fff;
+  color: var(--accent);
   padding: 12px 16px;
   border-radius: 12px;
 
-  background: rgba(255,208,0,0.16);
-  border: 1px solid rgba(255,208,0,0.35);
+  background: rgba(255,208,0,0.05);
+  border: 1px solid rgba(255,208,0,0.1);
   transition: transform 0.2s ease, background 0.2s ease, box-shadow 0.2s ease;
 }
 
@@ -200,57 +213,309 @@
   box-shadow: 0 0 18px rgba(255, 208, 0, 0.15);
 }
 
-/* decorative shapes */
-.mk-shape{
+/* =====================================================
+   Spotlight Card — Decorative Shapes System
+   -----------------------------------------------------
+   Purpose:
+   Decorative glow, geometry and accents layered behind
+   the spotlight card based on mock-up direction.
+
+   Notes:
+   - Purely visual elements (pointer-events disabled)
+   - Scaled responsively via .mk-decor wrapper
+   - Light-mode friendly gradients and glow balance
+===================================================== */
+
+/* ===========================
+   Decor Wrapper (Layout Layer)
+=========================== */
+.mk-decor {
   position: absolute;
-  background: #ffd000;
-  opacity: 0.95;
-  filter: blur(0px);
+  inset: 0;
+  pointer-events: none;
 }
 
-.mk-shape--1{
-  width: 140px;
-  height: 140px;
+/* ===========================
+   Base Shape Rules
+=========================== */
+.mk-shape {
+  position: absolute;
+  pointer-events: none;
+  z-index: 0;
+  background: var(--accent);
+  border: none;
+}
+
+/* ===========================
+   Semi Circle Glow Arc
+   - Dual radial glow tips
+   - Conic mask for arc shaping
+=========================== */
+.mk-shape--semi-circle {
+  width: 80%;
+  top: 71%;
+  left: 7%;
+
+  /* positioning + rotation */
+  transform: translateY(-55%) rotate(-115deg);
+  transform-origin: center;
+
+  /* arc control */
+  --s: 0deg;     /* starting angle  */
+  --p: 180deg;   /* filling angle   */
+
+  aspect-ratio: 1;
   border-radius: 50%;
-  right: -55px;
-  top: -55px;
-  opacity: 0.2;
+
+  /* dual glow applied to BOTH arc tips */
+  background:
+    radial-gradient(
+      circle at 0% 50%,
+      rgba(255, 208, 0, 0.8) 0%,
+      rgba(255, 208, 0, 0) 40%
+    ),
+    radial-gradient(
+      circle at 100% 50%,
+      rgba(255, 208, 0, 0.9) 0%,
+      rgba(255, 208, 0, 0) 50%
+    );
+
+  /* semi-circle mask */
+  mask: conic-gradient(
+    from var(--s),
+    #0000,
+    #000 1deg var(--p),
+    #0000 calc(var(--p) + 1deg)
+  );
+
+  z-index: -2;
+  filter: blur(8px);
+  pointer-events: none;
 }
 
-.mk-shape--2{
-  width: 120px;
-  height: 120px;
-  left: -50px;
-  bottom: -50px;
-  border-radius: 22px;
-  transform: rotate(12deg);
-  opacity: 0.14;
+/* ===========================
+   Parallelogram Light Layers
+   - Soft gradient fade for depth
+=========================== */
+.mk-shape--parallelogram-top{
+  --p: 30px; /* size of the cut corner */
+  width: 300px;
+  height: 100px;
+  opacity: 0.75;
+  left: -12px;
+  aspect-ratio: 3/2;
+  clip-path: polygon(0 0,calc(100% - var(--p)) 0,100% 100%,var(--p) 100%);
+  background: linear-gradient(
+    to bottom,
+    rgba(255,208,0,0.6) 0%,
+    rgba(255,208,0,0.25) 35%,
+    rgba(255,208,0,0.05) 65%,
+    rgba(255,208,0,0) 100%
+  );
+  z-index: 0;
+
+  top: 63%;
+  transform: translateY(-45%) rotate(-25deg);
 }
 
-.mk-shape--3{
-  width: 90px;
-  height: 90px;
-  right: 30px;
-  bottom: 30px;
-  border-radius: 18px;
-  transform: rotate(35deg);
-  opacity: 0.08;
+.mk-shape--parallelogram-bottom{
+  --p: 20px; /* size of the cut corner */
+  width: 300px;
+  height: 50px;
+  left: -42px;
+  opacity: 0.7;
+  aspect-ratio: 3/2;
+  clip-path: polygon(0 0,calc(100% - var(--p)) 0,100% 100%,var(--p) 100%);
+  background: linear-gradient(
+    to bottom,
+    rgba(255,208,0,0.6) 0%,
+    rgba(255,208,0,0.25) 35%,
+    rgba(255,208,0,0.05) 65%,
+    rgba(255,208,0,0) 100%
+  );
+
+  top: 71.5%;
+  transform: translateY(-35%) rotate(-25deg);
+  filter: blur(8px);
 }
 
-/* responsive */
+/* ===========================
+   Triangle Accent Shapes
+   - Secondary visual accents
+   - Varied opacity for hierarchy
+=========================== */
+.mk-shape--triangle-1 {
+  top: 15%;
+  right: 10%;
+  width: 50px;
+  aspect-ratio: 1;
+  clip-path: polygon(0 100%,0 0,100% 70%);
+  background-color: var(--accent);
+  transform: rotate(-60deg);
+  opacity: 0.7;
+}
+
+.mk-shape--triangle-2 {
+  top: 30%;
+  right: 20%;
+  width: 30px;
+  aspect-ratio: 1;
+  clip-path: polygon(0 100%,0 0,100% 70%);
+  background-color: var(--accent);
+  transform: rotate(-60deg);
+  opacity: 0.55;
+}
+
+.mk-shape--triangle-3 {
+  top: 44%;
+  right: 10%;
+  width: 50px;
+  aspect-ratio: 1;
+  clip-path: polygon(0 100%,0 0,100% 70%);
+  background: linear-gradient(
+    210deg,
+    rgba(255, 208, 0, 0.65) 0%,
+    rgba(255, 208, 0, 0.48) 20%,
+    rgba(255, 208, 0, 0) 75%
+  );
+  transform: rotate(-60deg);
+  opacity: 0.75;
+}
+
+/* ===========================
+   Plus Icons (Micro Accents)
+=========================== */
+.mk-plus {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  opacity: 0.75;
+}
+
+.mk-plus.mk-plus--1 {
+  top: 13%;
+  right: 25%;
+}
+
+.mk-plus.mk-plus--2 {
+  top: 25%;
+  right: 30%;
+}
+
+.mk-plus.mk-plus--3 {
+  top: 60%;
+  right: 10%;
+}
+
+.mk-plus.mk-plus--4 {
+  top: 45%;
+  left: 3%;
+}
+
+/* =====================================================
+   Responsive Behaviour
+===================================================== */
+
+/* ===== Card Layout Stack (<=900px) ===== */
 @media (max-width: 900px){
   .mk-story__card{
-    grid-template-columns: 1fr;
-    padding: 18px;
+    flex-direction: column;
+    padding: 18px 0;
   }
 
   .mk-story__left{
     min-height: 280px;
+    order: 2;
   }
 
   .mk-story__right{
     padding-right: 0;
+    order: 1;
   }
+}
+
+/* ===== Decor Global Scaling ===== */
+@media (max-width: 1260px) {
+    .mk-decor {
+      transform: scale(0.95) translateX(0%);
+  }
+}
+
+/* ===== Mid Breakpoint Adjustments ===== */
+@media (min-width: 558px) and (max-width: 1045px){
+  .mk-decor {
+    transform: scale(0.9)
+  }
+
+  .mk-shape--triangle-1 {
+    top: 22%;
+    right: 18%;
+    width: 120px;
+  }
+}
+
+/* ===== Small Screens ===== */
+@media (max-width: 558px){
+    .mk-decor {
+      transform: scale(0.9) translateX(3%);
+    }
+
+    .mk-shape--triangle-1 {
+      top: 17%;
+      right: 10%;
+    }
+}
+
+/* ===== Mobile Refinements ===== */
+@media (max-width: 460px) {
+    .mk-decor {
+      transform: scale(0.8) translateX(5%);
+    }
+
+    .mk-shape--semi-circle {    
+      width: 90%
+    }
+
+    .mk-shape--parallelogram-bottom {
+      width: 150px;
+    }
+
+    .mk-shape--parallelogram-top {
+      width: 150px;
+    }
+
+    .mk-shape--triangle-2 {
+      top: 5%;
+      right: 8%;
+      width: 40px;
+    }
+
+    .mk-shape--triangle-3 {
+      top: 20%;
+      right: 15%;
+      width: 25px;
+    }
+
+    .mk-shape--triangle-4 {
+      top: 45%;
+      right: 8%;
+      width: 40px;
+    }
+
+    .mk-plus {
+      width: 12px;
+      height: 12px;
+    }
+
+    .mk-plus.mk-plus--1 {
+      top: 10%;
+      right: 28%;
+    }
+
+    .mk-plus.mk-plus--2 {
+      top: 20%;
+      right: 33%;
+    }
 }
 
 
@@ -297,13 +562,13 @@
     inset 0 1px 0 rgba(255,255,255,0.7);
 }
 
-[data-theme="light"] .mk-story__left{
+/* [data-theme="light"] .mk-story__left{
   background:
     radial-gradient(circle at 20% 20%, rgba(255,208,0,0.20), transparent 55%),
     radial-gradient(circle at 70% 70%, rgba(255,208,0,0.12), transparent 60%),
     rgba(0,0,0,0.03);
   border: 1px solid rgba(0,0,0,0.08);
-}
+} */
 
 [data-theme="light"] .mk-story__right{
   color: #111;
@@ -318,7 +583,7 @@
 }
 
 [data-theme="light"] .mk-story__cta{
-  color: #111;
+  color: #b8860b;
   background: rgba(255,208,0,0.18);
   border: 1px solid rgba(255,208,0,0.42);
 }
