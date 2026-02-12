@@ -198,12 +198,12 @@
   align-items: center;
   text-decoration: none;
   font-weight: 800;
-  color: #fff;
+  color: var(--accent);
   padding: 12px 16px;
   border-radius: 12px;
 
-  background: rgba(255,208,0,0.16);
-  border: 1px solid rgba(255,208,0,0.35);
+  background: rgba(255,208,0,0.05);
+  border: 1px solid rgba(255,208,0,0.1);
   transition: transform 0.2s ease, background 0.2s ease, box-shadow 0.2s ease;
 }
 
@@ -213,21 +213,44 @@
   box-shadow: 0 0 18px rgba(255, 208, 0, 0.15);
 }
 
-/* decorative shapes */
+/* =====================================================
+   Spotlight Card — Decorative Shapes System
+   -----------------------------------------------------
+   Purpose:
+   Decorative glow, geometry and accents layered behind
+   the spotlight card based on mock-up direction.
+
+   Notes:
+   - Purely visual elements (pointer-events disabled)
+   - Scaled responsively via .mk-decor wrapper
+   - Light-mode friendly gradients and glow balance
+===================================================== */
+
+/* ===========================
+   Decor Wrapper (Layout Layer)
+=========================== */
 .mk-decor {
   position: absolute;
   inset: 0;
   pointer-events: none;
 }
 
+/* ===========================
+   Base Shape Rules
+=========================== */
 .mk-shape {
   position: absolute;
   pointer-events: none;
   z-index: 0;
-  background: #ffd000;
+  background: var(--accent);
   border: none;
 }
 
+/* ===========================
+   Semi Circle Glow Arc
+   - Dual radial glow tips
+   - Conic mask for arc shaping
+=========================== */
 .mk-shape--semi-circle {
   width: 80%;
   top: 71%;
@@ -244,9 +267,7 @@
   aspect-ratio: 1;
   border-radius: 50%;
 
-  /* dual glow applied to BOTH arc tips
-     positioned on the unrotated circle,
-     then rotated with the element */
+  /* dual glow applied to BOTH arc tips */
   background:
     radial-gradient(
       circle at 0% 50%,
@@ -272,8 +293,10 @@
   pointer-events: none;
 }
 
-
-
+/* ===========================
+   Parallelogram Light Layers
+   - Soft gradient fade for depth
+=========================== */
 .mk-shape--parallelogram-top{
   --p: 30px; /* size of the cut corner */
   width: 300px;
@@ -284,9 +307,10 @@
   clip-path: polygon(0 0,calc(100% - var(--p)) 0,100% 100%,var(--p) 100%);
   background: linear-gradient(
     to bottom,
-    rgba(255, 208, 0, 0.65) 0%,
-    rgba(255, 208, 0, 0.48) 40%,
-    rgba(255, 208, 0, 0) 100%
+    rgba(255,208,0,0.6) 0%,
+    rgba(255,208,0,0.25) 35%,
+    rgba(255,208,0,0.05) 65%,
+    rgba(255,208,0,0) 100%
   );
   z-index: 0;
 
@@ -304,9 +328,10 @@
   clip-path: polygon(0 0,calc(100% - var(--p)) 0,100% 100%,var(--p) 100%);
   background: linear-gradient(
     to bottom,
-    rgba(255, 208, 0, 0.65) 0%,
-    rgba(255, 208, 0, 0.48) 40%,
-    rgba(255, 208, 0, 0) 100%
+    rgba(255,208,0,0.6) 0%,
+    rgba(255,208,0,0.25) 35%,
+    rgba(255,208,0,0.05) 65%,
+    rgba(255,208,0,0) 100%
   );
 
   top: 71.5%;
@@ -314,46 +339,34 @@
   filter: blur(8px);
 }
 
-/* .mk-shape--triangle-1 {
-  top: 25%;
-  right: 15%;
-  width: 150px;
-  aspect-ratio: 1;
-  clip-path: polygon(0 100%,0 0,100% 70%);
-  transform: rotate(-7deg);
-  opacity: 0.75;
-  background: linear-gradient(
-    to top right,
-    rgba(255, 208, 0, 0.65) 10%,
-    rgba(255, 208, 0, 0.48) 20%,
-    rgba(255, 208, 0, 0) 55%
-  );
-
-} */
-
-.mk-shape--triangle-2 {
+/* ===========================
+   Triangle Accent Shapes
+   - Secondary visual accents
+   - Varied opacity for hierarchy
+=========================== */
+.mk-shape--triangle-1 {
   top: 15%;
   right: 10%;
   width: 50px;
   aspect-ratio: 1;
   clip-path: polygon(0 100%,0 0,100% 70%);
-  background-color: #ffd000;
+  background-color: var(--accent);
   transform: rotate(-60deg);
-  opacity: 0.75;
+  opacity: 0.7;
 }
 
-.mk-shape--triangle-3 {
+.mk-shape--triangle-2 {
   top: 30%;
   right: 20%;
   width: 30px;
   aspect-ratio: 1;
   clip-path: polygon(0 100%,0 0,100% 70%);
-  background-color: #ffd000;
+  background-color: var(--accent);
   transform: rotate(-60deg);
-  opacity: 0.75;
+  opacity: 0.55;
 }
 
-.mk-shape--triangle-4 {
+.mk-shape--triangle-3 {
   top: 44%;
   right: 10%;
   width: 50px;
@@ -369,6 +382,9 @@
   opacity: 0.75;
 }
 
+/* ===========================
+   Plus Icons (Micro Accents)
+=========================== */
 .mk-plus {
   position: absolute;
   width: 20px;
@@ -396,7 +412,11 @@
   left: 3;
 }
 
-/* responsive */
+/* =====================================================
+   Responsive Behaviour
+===================================================== */
+
+/* ===== Card Layout Stack (<=900px) ===== */
 @media (max-width: 900px){
   .mk-story__card{
     flex-direction: column;
@@ -414,14 +434,14 @@
   }
 }
 
-
+/* ===== Decor Global Scaling ===== */
 @media (max-width: 1260px) {
     .mk-decor {
       transform: scale(0.95) translateX(0%);
   }
 }
 
-
+/* ===== Mid Breakpoint Adjustments ===== */
 @media (min-width: 558px) and (max-width: 1045px){
   .mk-decor {
     transform: scale(0.9)
@@ -434,6 +454,7 @@
   }
 }
 
+/* ===== Small Screens ===== */
 @media (max-width: 558px){
     .mk-decor {
       transform: scale(0.9) translateX(3%);
@@ -445,7 +466,8 @@
     }
 }
 
-  @media (max-width: 460px) {
+/* ===== Mobile Refinements ===== */
+@media (max-width: 460px) {
     .mk-decor {
       transform: scale(0.8) translateX(5%);
     }
@@ -461,7 +483,6 @@
     .mk-shape--parallelogram-top {
       width: 150px;
     }
-
 
     .mk-shape--triangle-2 {
       top: 5%;
@@ -496,8 +517,6 @@
       right: 33%;
     }
 }
-
-
 
 
 /* =========================================================
@@ -564,7 +583,7 @@
 }
 
 [data-theme="light"] .mk-story__cta{
-  color: #111;
+  color: #b8860b;
   background: rgba(255,208,0,0.18);
   border: 1px solid rgba(255,208,0,0.42);
 }
