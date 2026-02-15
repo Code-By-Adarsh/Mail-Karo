@@ -91,6 +91,9 @@ Every contribution matters — code, testing, ideas, and design.
 <a href="https://github.com/Creativeklvn" title="@Creativeklvn">
   <img src="https://images.weserv.nl/?url=avatars.githubusercontent.com/Creativeklvn&h=60&w=60&fit=cover&mask=circle" />
 </a>
+<a href="https://github.com/seanrw93" title="@seanrw93">
+  <img src="https://images.weserv.nl/?url=avatars.githubusercontent.com/seanrw93&h=60&w=60&fit=cover&mask=circle" />
+</a>
 
 </div>
 
