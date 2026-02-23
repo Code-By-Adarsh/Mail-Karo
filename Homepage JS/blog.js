@@ -44,7 +44,16 @@ const mkBlogsData = [
       "This blog explains email basics deeply and how Mail Karo aims to make communication easier for everyone. " +
       "The most important long-term guide.",
     link: "./blog/mail-karo-vision-blog.html"
-  }
+  },
+  {
+  tag: "Guide",
+  title: "Who Should Use Mail Karo?",
+  summary:
+    "Mail Karo is built for anyone who wants to write emails that sound clear, confident, and professional. " +
+    "This guide explains who should use Mail Karo — including students, job seekers, working professionals, freelancers, founders, and small teams. " +
+    "It helps you understand whether Mail Karo fits your email needs and daily communication.",
+  link: "./blog/who-should-use-mail-karo.html"
+}
 ];
 
 // ===== BLOG SECTION RENDER =====
