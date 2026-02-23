@@ -4,7 +4,7 @@
 <!--Main-->
   <url>
     <loc>https://mail-karo.netlify.app/</loc>
-    <lastmod>2026-01-14</lastmod>
+    <lastmod>2026-02-23</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
@@ -70,8 +70,8 @@
   </url>
 
   <url>
-    <loc>https://mail-karo.netlify.app/all-pages-html/terms-of-service</loc>
-    <lastmod>2026-01-19</lastmod>
+    <loc>https://mail-karo.netlify.app/all-pages-html/terms</loc>
+    <lastmod>2026-02-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
