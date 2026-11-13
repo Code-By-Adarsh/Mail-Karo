@@ -308,9 +308,6 @@ Project Owner of **Mail Karo – AI Email Assistant**
 🤝 **Instagram:** [Adarsh Mishra](https://www.instagram.com/ltx_adarsh18)<br>
 📧 **Email:** adarshmishra70931@gmail.com   
 🧠 Always open to collaborations, suggestions, and contributions to make **Mail Karo** even better.
-
-📫**Company Email:** mailkaro2026@gmail.com <br>
- **Company LinkedIn:** [Mail Karo](https://www.linkedin.com/company/mail-karo/)
  
 ---
 
